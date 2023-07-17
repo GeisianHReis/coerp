@@ -1,0 +1,8 @@
+---
+deployment:
+ tasks:
+    - export DEPLOYPATH=/home/igrej478/public_html/
+    - npm ci --production
+    - npm run build
+    - cp -R dist/* $DEPLOYPATH
+    - rm -rf dist

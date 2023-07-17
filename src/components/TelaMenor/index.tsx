@@ -6,16 +6,20 @@ import { useNavigate } from "react-router-dom";
 import Fade from '@mui/material/Fade';
 import { MenuMobile } from './styles';
 import { List } from '@phosphor-icons/react';
+import UnidadeContext from '../../UnidadeContext';
 
 
 export function TelaMenor(){
+
+  const { unidadeSelecionada } = React.useContext(UnidadeContext);
+
   const navigate = useNavigate();
 
-  const handleHome = () => navigate('/home');
-  const handleProgramacao = () => navigate('/programacao');
-  const handleCultos = () => navigate('/cultos');
-  const handleSobre = () => navigate('/sobre');
-  const handleMinisterios = () => navigate('/Ministerios');
+        const handleHome = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/home') : navigate('/guaianases/home')}
+        const handleProgramacao = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/programacao') : navigate('/guaianases/programacao')}
+        const handleCultos = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/cultos') : navigate('/guaianases/cultos')}
+        const handleSobre = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/sobre') : navigate('/guaianases/sobre')}
+        const handleMinisterios = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/Ministerios') : navigate('/guaianases/Ministerios')}
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);

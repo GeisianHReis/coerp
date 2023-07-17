@@ -25,9 +25,9 @@ export function TelaInicial() {
             <Logo>
                 <img src={logo} /></Logo>
             <Titulo>
-                <h1>
-                    SEJA BEM VINDO
-                </h1>
+                <h2>
+                    <p>SEJA&nbsp;</p> BEM VINDO
+                </h2>
             </Titulo>
 
             <Subtitulo>
@@ -39,7 +39,7 @@ export function TelaInicial() {
                     className={location.pathname === '/home' ? 'active' : ''}
                     onClick={handleHomeFerraz}
                 >
-                    <p>Ferraz</p>
+                    Ferraz
                 </ButtonMenu>
                 <ButtonMenu
                     className={location.pathname === '/home' ? 'active' : ''}

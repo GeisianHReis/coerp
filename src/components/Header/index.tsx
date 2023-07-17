@@ -19,8 +19,6 @@ export function Header(){
 
         const handleMudar = () => navigate("/");
 
-
-
     return(
         <BoxMenu>
             {location.pathname === '/ferraz/home' || location.pathname === '/guaianases/home' ? <img src={imagemLogo} onClick={handleMudar}/> : <img/>}

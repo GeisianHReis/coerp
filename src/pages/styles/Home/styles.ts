@@ -13,14 +13,13 @@ export const FaixaDeAvisos = styled.section`
             justify-content: center;
 
             color: ${(props) => props.theme["white"]};
-            font-family: ${(props) => props.theme["font-family-default"]};
-            font-weight: ${(props) => props.theme["weigth-titulo"]};
+            font-family: ${(props) => props.theme["font-family-heading"]};
             font-size: ${(props) => props.theme["size-heading"]};
         }
         p{
             display: flex;
             color: ${(props) => props.theme["black"]};
-            font-family: ${(props) => props.theme["font-family-default"]};
+            font-family: ${(props) => props.theme["font-family-paragraph"]};
             font-size: ${(props) => props.theme["size-paragraph"]};
             width: 500px; 
         }
@@ -52,14 +51,13 @@ export const FaixaDaHome = styled.div`
         align-items: center;
         justify-content: center;
         
-        background-color: #3363B5;
+        background-color: ${(props) => props.theme["blue"]};
         width: 100%;       
         height: 120px;
         color: white;
         h1{
-            font-weight: ${(props) => props.theme["weigth-titulo"]};
             font-size: ${(props) => props.theme["size-heading"]};
-            font-family: ${(props) => props.theme["font-family-default"]};
+            font-family: ${(props) => props.theme["font-family-heading"]};
             @media screen and (max-width: 650px) {
                 font-size: 35px;
             }
@@ -69,7 +67,7 @@ export const FaixaDaHome = styled.div`
         }
         
         p{
-            font-family: ${(props) => props.theme["font-family-default"]};
+            font-family: ${(props) => props.theme["font-family-paragraph"]};
             font-size: ${(props) => props.theme["size-paragraph"]};
             a{ 
                 color: white;

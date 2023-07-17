@@ -17,7 +17,6 @@ export const Box = styled.main`
     align-items: center;
     h1{
         font-family: ${(props) => props.theme["font-family-heading"]};
-        font-weight: ${(props) => props.theme["weigth-titulo"]};
         font-size: ${(props) => props.theme["size-heading"]};
         
     }

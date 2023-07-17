@@ -9,7 +9,7 @@ export const ListaProgramacao = styled.section`
     margin-right: 8%;
 
     font-size: 16pt;
-    font-family: 'Montserrat', sans-serif;
+    font-family: ${(props) => props.theme["font-family-paragraph"]};
     color: black;
 
     h1 {
@@ -18,14 +18,13 @@ export const ListaProgramacao = styled.section`
         justify-content: center;
 
         color: ${(props) => props.theme["black"]};
-        font-family: ${(props) => props.theme["font-family-default"]};
-        font-weight: ${(props) => props.theme["weigth-titulo"]};
+        font-family: ${(props) => props.theme["font-family-heading"]};
         font-size: ${(props) => props.theme["size-heading"]};
     }
     p{
         margin-bottom: 1em;
         color: ${(props) => props.theme["black"]};
-        font-family: ${(props) => props.theme["font-family-default"]};
+        font-family: ${(props) => props.theme["font-family-paragraph"]};
         font-size: ${(props) => props.theme["size-paragraph"]};
     }
 `;

@@ -12,15 +12,19 @@ export const Titulo = styled.div`
     background-color: ${(props) => props.theme["blue"]};
   
     color: white;
-    h1{
+    h2{
+        display: flex;
         margin-top: 82px;
         font-size: 80px;
         font-family: ${(props) => props.theme["font-family-heading"]};
+
         @media screen and (max-width: 650px) {
             font-size: 35px;
+            flex-direction: column;
+            align-items: center;
         }
-        @media screen and (max-width: 470px) {
-            font-size: 25px;
+        p{
+            margin: 0;
         }
     }
 
@@ -42,7 +46,6 @@ export const ButtonMenu = styled.button`
     border: solid 1px black;
     
     text-decoration: none;
-    margin: 0 0 0 0;
 
     font-family: ${(props) => props.theme["font-family-botton"]};
     font-weight: bold;
@@ -55,56 +58,36 @@ export const ButtonMenu = styled.button`
         cursor: pointer;
         transform: scale(1.1);
         box-shadow: 0 16px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-        
     }
-
-    p{
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
     @media screen and (max-width: 650px) {
         &:first-child{
-            margin-left: 0;
-            margin-top: -166px;
-        }
-   
-
-
+        margin-right: 0;
+        margin-bottom: 5px;
     }
-
-   
-
+    }   
 `;
 
 
 export const Subtitulo = styled.div`
-
     display: flex;
-
-
         align-items: center;
         justify-content: center;
          
         background-color: ${(props) => props.theme["blue"]};
         font-size: 35px;
-        
-             
+
         color: white;
         p{
             margin-top: 100px;
             font-size: 30px;
             font-family: ${(props) => props.theme["font-family-heading"]};
-
-            @media screen and (max-width: 650px) {
-                font-size: 35px;
-            
-            }
-            @media screen and (max-width: 470px) {
-                font-size: 18px;
-                margin-top:-387px;
-            }
         }
+        @media screen and (max-width: 650px) {
+            p{
+            margin-top: 50px;
+            font-size: 20px;
+            }
+        }  
 `;
 
 export const Menu = styled.div`
@@ -117,11 +100,7 @@ export const Menu = styled.div`
 
         @media screen and (max-width: 650px) {
             display:flex;
-            flex-direction: column-reverse;
-            margin-left:0;
-            padding-right: 0;
-            margin-top:-77px;
-
+            flex-direction: column;
         }   
 `;
 
@@ -137,13 +116,12 @@ export const Logo = styled.div`
         margin-top: 61px;
         height: 170px;
     }
-
-
     @media screen and (max-width: 650px) {
-        img{     
-            width: 30%;   
-        }
+        img{
+        height: 120px;
     }
+    }
+
 `;
 
 export const Geral = styled.div`

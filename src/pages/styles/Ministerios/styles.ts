@@ -16,15 +16,14 @@ export const Box = styled.main`
         justify-content: center;
         
         color: ${(props) => props.theme["black"]};
-        font-family: ${(props) => props.theme["font-family-default"]};
-        font-weight: ${(props) => props.theme["weigth-titulo"]};
+        font-family: ${(props) => props.theme["font-family-heading"]};
         font-size: ${(props) => props.theme["size-heading"]};
         
     }
     p{
         color: black;
         a{
-            font-weight: bold;
+            font-weight: ${(props) => props.theme["font-family-paragraph"]};
             cursor: pointer;
         }
     }
@@ -55,9 +54,7 @@ export const BotaoSaibaMais = styled.button`
     text-decoration: none;
     margin: 3em 0.5em 0.5em 0.5em;
 
-
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-family: ${(props) => props.theme["font-family-heading"]};
 
     transition: background 0.5s ease;
 `;

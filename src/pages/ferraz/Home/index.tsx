@@ -17,7 +17,7 @@ export function HomeF() {
             </Box>
             <FaixaDaHome>
                 <h1>
-                    CONFERENCIA KOINONIA 2
+                    CONFERENCIA KOINONIA
                 </h1>
                 <p>
                     <a href='https://docs.google.com/forms/d/e/1FAIpQLSdko1BPZVtuDWyC2HvTdulMgDmh8OgH2n9ZalByZT6ToXtrKg/viewform' target='_blank'>faça aqui sua inscrição!</a>

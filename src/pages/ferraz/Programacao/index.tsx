@@ -2,7 +2,6 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-import banner from "../../../assets/WhatsApp Image 2023-07-14 at 23.02.21.jpeg";
 
 export function ProgramacaoF() {
     return (

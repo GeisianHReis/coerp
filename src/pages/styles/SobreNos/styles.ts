@@ -17,14 +17,14 @@ export const ListaProgramacao = styled.section`
         align-items: center;
         justify-content: center;
 
-        color: ${(props) => props.theme["color-titulo"]};
+        color: ${(props) => props.theme["black"]};
         font-family: ${(props) => props.theme["font-family-default"]};
         font-weight: ${(props) => props.theme["weigth-titulo"]};
-        font-size: ${(props) => props.theme["size-titulo"]};
+        font-size: ${(props) => props.theme["size-heading"]};
     }
     p{
         margin-bottom: 1em;
-        color: ${(props) => props.theme["color-paragraph"]};
+        color: ${(props) => props.theme["black"]};
         font-family: ${(props) => props.theme["font-family-default"]};
         font-size: ${(props) => props.theme["size-paragraph"]};
     }

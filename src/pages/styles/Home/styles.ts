@@ -12,17 +12,17 @@ export const FaixaDeAvisos = styled.section`
             display: flex;
             justify-content: center;
 
-            color: ${(props) => props.theme["color-titulo"]};
+            color: ${(props) => props.theme["white"]};
             font-family: ${(props) => props.theme["font-family-default"]};
             font-weight: ${(props) => props.theme["weigth-titulo"]};
-            font-size: ${(props) => props.theme["size-titulo"]};
+            font-size: ${(props) => props.theme["size-heading"]};
         }
         p{
             display: flex;
-            color: ${(props) => props.theme["color-paragraph"]};
+            color: ${(props) => props.theme["black"]};
             font-family: ${(props) => props.theme["font-family-default"]};
             font-size: ${(props) => props.theme["size-paragraph"]};
-            width: 500px;
+            width: 500px; 
         }
     }
 `;
@@ -58,7 +58,7 @@ export const FaixaDaHome = styled.div`
         color: white;
         h1{
             font-weight: ${(props) => props.theme["weigth-titulo"]};
-            font-size: ${(props) => props.theme["size-titulo"]};
+            font-size: ${(props) => props.theme["size-heading"]};
             font-family: ${(props) => props.theme["font-family-default"]};
             @media screen and (max-width: 650px) {
                 font-size: 35px;

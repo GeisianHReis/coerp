@@ -1,14 +1,6 @@
 import { Side } from "../../../components/Side";
 import { ListaProgramacao, GaleriaDaliderança, Liderança, } from "../../styles/SobreNos/styles";
-import fotoJuninho from "../../../assets/LideresCoerp/juninho.jpeg"
-import fotoMarisa from "../../../assets/LideresCoerp/marisa.jpeg"
-import fotoEdson from "../../../assets/LideresCoerp/edson.jpeg"
-import fotoGonsalves from "../../../assets/LideresCoerp/gonsalves.jpeg"
-import fotoSilvana from "../../../assets/LideresCoerp/silvana.jpeg"
-import fotoCris from "../../../assets/LideresCoerp/cris.jpeg"
-import fotoMarquinho from "../../../assets/LideresCoerp/marquinho.jpeg"
-import fotoGilce from "../../../assets/LideresCoerp/gilce.jpeg"
-import fotoArlete from "../../../assets/LideresCoerp/arlete.jpeg"
+
 import fotoSueli from "../../../assets/LideresCoerp/sueli.jpeg"
 import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { TopMobile } from "../../../components/TopMobile";
@@ -59,34 +51,34 @@ export function SobreNos() {
 
                 <GaleriaDaliderança>
                     <Liderança>
-                        <img src={fotoEdson} /> Pr. Edson
-                    </Liderança>
-                    <Liderança>
-                        <img src={fotoSilvana} /> Pra. Silvana
-                    </Liderança>
-                    <Liderança>
-                        <img src={fotoGonsalves} /> Pr. Gonçalves
-                    </Liderança>
-                    <Liderança>
-                        <img src={fotoGilce} /> Pra. Gilce
-                    </Liderança>
-                    <Liderança>
                         <img src={fotoSueli} /> Pra. Sueli
                     </Liderança>
                     <Liderança>
-                        <img src={fotoMarisa} /> Pra. Marisa
+                        <img src="" /> Damiana
                     </Liderança>
                     <Liderança>
-                        <img src={fotoMarquinho} /> Ev. Marcos
+                        <img src="" /> Gilberto
                     </Liderança>
                     <Liderança>
-                        <img src={fotoArlete} /> Ev. Arlete
+                        <img src="" /> Paula
                     </Liderança>
                     <Liderança>
-                        <img src={fotoJuninho} /> Juninho
+                        <img src="" /> Toninho
                     </Liderança>
                     <Liderança>
-                        <img src={fotoCris} /> Cris
+                        <img src="" /> Carla 
+                    </Liderança>
+                    <Liderança>
+                        <img src="" /> Maurício
+                    </Liderança>
+                    <Liderança>
+                        <img src="" /> Bel
+                    </Liderança>
+                    <Liderança>
+                        <img src="" /> Josenildo 
+                    </Liderança>
+                    <Liderança>
+                        <img src="" /> Yara
                     </Liderança>
                 </GaleriaDaliderança>
 

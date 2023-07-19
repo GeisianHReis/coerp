@@ -13,6 +13,7 @@ export const TopMenuStyle = styled.div`
     align-items: center;
     padding: 5px;
     font-size: 10px;
+    font-family: ${(props) => props.theme["font-family-heading"]};
     @media screen and (max-width: 650px) {
         display: none;
     }

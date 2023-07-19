@@ -29,7 +29,7 @@ export const BoxGeral = styled.main`
     display: flex;
     flex-direction: column;
     width: 100%;
-    
+    margin-top: 120px;
     h1 {
         display: flex;
         align-items: center;
@@ -38,10 +38,12 @@ export const BoxGeral = styled.main`
         font-family: ${(props) => props.theme["font-family-heading"]};
         font-size: ${(props) => props.theme["size-heading"]};
         @media screen and (max-width: 650px) {
-            font-size: 25px;
             padding: 15px;
             margin-bottom: 10px;
         }
-}
+    }
+    @media screen and (max-width: 650px) {
+        margin-top: 0;
+    }
 
 `;

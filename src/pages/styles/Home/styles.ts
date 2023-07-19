@@ -31,6 +31,7 @@ export const Box = styled.main`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 120px;
     img{
         width: 50%;
         padding: 10px;
@@ -39,6 +40,7 @@ export const Box = styled.main`
     }
     @media screen and (max-width: 650px) {
         flex-direction: column-reverse;
+        margin-top: 0;
         img{
             width: 100%;
         }

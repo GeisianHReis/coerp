@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+export const Box = styled.div`
+
+`;
 export const TopMobileStyle = styled.div`
     display: grid;
     align-content: center;
@@ -9,12 +12,25 @@ export const TopMobileStyle = styled.div`
     width: 100%;
     background-color: white;
     padding-left: 25px;
+    position: fixed;
+  
     img{
         height: 25px;
     }
     @media screen and (min-width: 650px){
         display: none;
     }
+    top: 0;
+  width: 100%;
+  transition: top 0.3s;
+
+  &.visible {
+    top: 0;
+  }
+
+  &.hidden {
+    top: -100px;
+  } 
 `;
 export const TopMobileStyleB = styled.div`
     display: flex;
@@ -31,4 +47,15 @@ export const TopMobileStyleB = styled.div`
     @media screen and (min-width: 650px){
         display: none;
     }
+    top: 0;
+  width: 100%;
+  transition: top 0.3s;
+
+  &.visible {
+    top: 0;
+  }
+
+  &.hidden {
+    top: -100px;
+  } 
 `;

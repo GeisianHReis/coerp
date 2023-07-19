@@ -6,13 +6,13 @@ import logoMidias from "../../../assets/LogosMinisterios/midias.jpeg";
 import { Box } from "../../styles/Ministerios/styles";
 import AlertDialogSlide from "./Modal";
 
-import fotoLideresKids from "../../../assets/LideresMinisterios/lidersKids.jpeg";
+import fotoLideresKids from "../../../assets/images.png";
 import { TopMobile } from "../../../components/TopMobile";
 import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 
 export function Ministerios() {
 
-    const coerpKids = ["Coerp Kids", "Investimos no futuro das crianças, ensinando a Palavra de Deus de maneira didática e assertiva. Com recursos pedagógicos interativos e um ambiente acolhedor, promovemos um aprendizado significativo, desenvolvendo uma fé genuína e uma relação pessoal com o Senhor. Valorizamos cada criança, fortalecendo laços familiares e preparando-as para uma vida cristã plena.", fotoLideresKids, ""]
+    const coerpKids = ["Coerp Kids", "Investimos no futuro das crianças, ensinando a Palavra de Deus de maneira didática e assertiva. Com recursos pedagógicos interativos e um ambiente acolhedor, promovemos um aprendizado significativo, desenvolvendo uma fé genuína e uma relação pessoal com o Senhor. Valorizamos cada criança, fortalecendo laços familiares e preparando-as para uma vida cristã plena.", fotoLideresKids, "Lucia Sepero"]
 
     return (
         <>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { BoxMenu, ButtonMenu } from "./styles";
 import imagemLogo from "../../assets/Logo Coerp azul.png";
+import imagemLogoCaminho from "../../assets/coerp jesus é o caminho.png";
 import { useContext } from "react";
 import UnidadeContext from "../../UnidadeContext";
 
@@ -62,18 +63,19 @@ export function Header() {
 
   return (
     <BoxMenu className={visible ? "visible" : "hidden"}>
-      {location.pathname === "/ferraz/home" ||
-      location.pathname === "/guaianases/home" ? (
+      {location.pathname === "/ferraz/home" ? (
         <img src={imagemLogo} onClick={handleMudar} />
+      ) : location.pathname === "/guaianases/home" ? (
+        <img src={imagemLogoCaminho} onClick={handleMudar}/>
       ) : (
-        <img />
+        <img src="" />
       )}
 
       <ButtonMenu
         onClick={handleHome}
         className={
           location.pathname === "/guaianases/home" ||
-          location.pathname === "/ferraz/home"
+            location.pathname === "/ferraz/home"
             ? "active"
             : ""
         }
@@ -84,7 +86,7 @@ export function Header() {
         onClick={handleProgramacao}
         className={
           location.pathname === "/guaianases/programacao" ||
-          location.pathname === "/ferraz/programacao"
+            location.pathname === "/ferraz/programacao"
             ? "active"
             : ""
         }
@@ -95,7 +97,7 @@ export function Header() {
         onClick={handleCultos}
         className={
           location.pathname === "/guaianases/cultos" ||
-          location.pathname === "/ferraz/cultos"
+            location.pathname === "/ferraz/cultos"
             ? "active"
             : ""
         }
@@ -106,7 +108,7 @@ export function Header() {
         onClick={handleMinisterios}
         className={
           location.pathname === "/guaianases/Ministerios" ||
-          location.pathname === "/ferraz/Ministerios"
+            location.pathname === "/ferraz/Ministerios"
             ? "active"
             : ""
         }
@@ -117,7 +119,7 @@ export function Header() {
         onClick={handleSobre}
         className={
           location.pathname === "/guaianases/sobre" ||
-          location.pathname === "/ferraz/sobre"
+            location.pathname === "/ferraz/sobre"
             ? "active"
             : ""
         }

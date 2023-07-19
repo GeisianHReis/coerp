@@ -2,7 +2,7 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-
+ 
 export function ProgramacaoF() {
     return (
         <>
@@ -27,7 +27,6 @@ export function ProgramacaoF() {
                         <p>27/07 A 29/07 - CONFERENCIA KOINONIA</p> <p>20h</p>
                     </ListaProgramacao>
                 </BoxGeral>
-               
             </Box>
             <FooterTelaMenor />
         </>

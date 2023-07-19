@@ -4,6 +4,7 @@ import { FooterEnd, FooterStyle, ItemFooter, Secao } from './styles';
 import { Snackbar } from '@mui/material';
 import { WhatsappLogo, MapPin, Copy } from '@phosphor-icons/react';
 import { useNavigate } from 'react-router-dom';
+import UnidadeContext from '../../UnidadeContext';
 
 
 export function FooterTelaMenor() {
@@ -28,13 +29,30 @@ export function FooterTelaMenor() {
 
         setOpen(false);
     };
+    const { unidadeSelecionada } = React.useContext(UnidadeContext);
+
     const navigate = useNavigate();
 
-    const handleHome = () => navigate('/home');
-    const handleProgramacao = () => navigate('/programacao');
-    const handleCultos = () => navigate('/cultos');
-    const handleSobre = () => navigate('/sobre');
-    const handleMinisterios = () => navigate('/Ministerios');
+    const handleHome = () => {
+        unidadeSelecionada === "Ferraz" ? navigate('/ferraz/home') : navigate('/guaianases/home');
+        window.scrollTo(0, 0);
+    };
+    const handleProgramacao = () => {
+        unidadeSelecionada === "Ferraz" ? navigate('/ferraz/programacao') : navigate('/guaianases/programacao');
+        window.scrollTo(0, 0);
+    };
+    const handleCultos = () => {
+        unidadeSelecionada === "Ferraz" ? navigate('/ferraz/cultos') : navigate('/guaianases/cultos');
+        window.scrollTo(0, 0);
+    };
+    const handleSobre = () => {
+        unidadeSelecionada === "Ferraz" ? navigate('/ferraz/sobre') : navigate('/guaianases/sobre');
+        window.scrollTo(0, 0);
+    };
+    const handleMinisterios = () => {
+        unidadeSelecionada === "Ferraz" ? navigate('/ferraz/Ministerios') : navigate('/guaianases/Ministerios')
+        window.scrollTo(0, 0);
+    };
 
     return (
         <>
@@ -57,7 +75,7 @@ export function FooterTelaMenor() {
                 <ItemFooter onClick={handleCultos}>CULTOS</ItemFooter>
                 <ItemFooter onClick={handleMinisterios}>MINISTÉRIOS</ItemFooter>
                 <ItemFooter onClick={handleSobre}>SOBRE NÓS</ItemFooter>
-                
+
             </FooterEnd>
         </>
     )

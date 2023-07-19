@@ -7,7 +7,6 @@ interface ISide{
 export function Side({name}: ISide){
     return(
         <>
-        
             <Lateral>
                 {name}
             </Lateral>

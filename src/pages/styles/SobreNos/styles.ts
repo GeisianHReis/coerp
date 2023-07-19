@@ -7,10 +7,16 @@ export const ListaProgramacao = styled.section`
     
     margin-left: 12%;
     margin-right: 8%;
-
+    margin-top: 120px;
+    
     font-size: 16pt;
     font-family: ${(props) => props.theme["font-family-paragraph"]};
     color: black;
+    @media screen and (max-width: 650px) {
+        margin-top: 0;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 
     h1 {
         display: flex;

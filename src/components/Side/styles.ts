@@ -13,8 +13,7 @@ export const Lateral = styled.div`
 
     background-color: black;
 
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-family: ${(props) => props.theme["font-family-heading"]};
     font-size: 3em;
 
     transform: scale(-1, -1);

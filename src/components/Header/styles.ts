@@ -17,6 +17,19 @@ export const BoxMenu = styled.div`
     @media screen and (max-width: 650px) {
         display: none;
     }
+    
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+
+  &.visible {
+    top: 0;
+  }
+
+  &.hidden {
+    top: -100px; /* Ajuste esse valor para controlar o quanto o cabeçalho fica oculto */
+  }
 
 `;
 

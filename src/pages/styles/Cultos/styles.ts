@@ -14,10 +14,20 @@ export const Box = styled.main`
     flex-grow: 8;
     color: ${(props) => props.theme["black"]};
 
+    font-family: ${(props) => props.theme["font-family-botton"]};
     align-items: center;
+
+    margin-top: 120px;
+    @media screen and (max-width: 650px) {
+        margin-top: 0;
+    }
+    iframe{
+        @media screen and (max-width: 650px){
+            width: 380px;
+        }
+    }
     h1{
         font-family: ${(props) => props.theme["font-family-heading"]};
         font-size: ${(props) => props.theme["size-heading"]};
-        
     }
 `;

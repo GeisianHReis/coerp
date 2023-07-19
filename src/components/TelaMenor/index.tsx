@@ -9,17 +9,32 @@ import { List } from '@phosphor-icons/react';
 import UnidadeContext from '../../UnidadeContext';
 
 
-export function TelaMenor(){
+export function TelaMenor() {
 
   const { unidadeSelecionada } = React.useContext(UnidadeContext);
 
   const navigate = useNavigate();
 
-        const handleHome = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/home') : navigate('/guaianases/home')}
-        const handleProgramacao = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/programacao') : navigate('/guaianases/programacao')}
-        const handleCultos = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/cultos') : navigate('/guaianases/cultos')}
-        const handleSobre = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/sobre') : navigate('/guaianases/sobre')}
-        const handleMinisterios = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/Ministerios') : navigate('/guaianases/Ministerios')}
+  const handleHome = () => {
+    unidadeSelecionada === "Ferraz" ? navigate('/ferraz/home') : navigate('/guaianases/home');
+    window.scrollTo(0, 0);
+  };
+  const handleProgramacao = () => {
+    unidadeSelecionada === "Ferraz" ? navigate('/ferraz/programacao') : navigate('/guaianases/programacao');
+    window.scrollTo(0, 0);
+  };
+  const handleCultos = () => {
+    unidadeSelecionada === "Ferraz" ? navigate('/ferraz/cultos') : navigate('/guaianases/cultos');
+    window.scrollTo(0, 0);
+  };
+  const handleSobre = () => {
+    unidadeSelecionada === "Ferraz" ? navigate('/ferraz/sobre') : navigate('/guaianases/sobre');
+    window.scrollTo(0, 0);
+  };
+  const handleMinisterios = () => {
+    unidadeSelecionada === "Ferraz" ? navigate('/ferraz/Ministerios') : navigate('/guaianases/Ministerios')
+    window.scrollTo(0, 0);
+  };
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -58,4 +73,5 @@ export function TelaMenor(){
         <MenuItem onClick={handleSobre}>SOBRE NÓS</MenuItem>
       </Menu>
     </MenuMobile>
-  );}
+  );
+}

@@ -7,6 +7,7 @@ export const Box = styled.main`
 
     margin-left: 12%;
     margin-right: 5%;
+    margin-top: 120px;
     img{
         width: 100%;
     }
@@ -14,14 +15,15 @@ export const Box = styled.main`
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         color: ${(props) => props.theme["black"]};
         font-family: ${(props) => props.theme["font-family-heading"]};
         font-size: ${(props) => props.theme["size-heading"]};
-        
     }
     p{
         color: black;
+        font-weight: ${(props) => props.theme["font-family-paragraph"]};
+        font-size: ${(props) => props.theme["size-paragraph"]};
         a{
             font-weight: ${(props) => props.theme["font-family-paragraph"]};
             cursor: pointer;
@@ -30,6 +32,7 @@ export const Box = styled.main`
     
     @media screen and (max-width: 650px) {
         margin-left: 2%;
+        margin-top: 0;
     }
     @media screen and (max-width: 450px) {
         margin-left: 2%;

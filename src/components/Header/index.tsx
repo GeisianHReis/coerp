@@ -1,59 +1,129 @@
+import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { BoxMenu, ButtonMenu } from "./styles";
 import imagemLogo from "../../assets/Logo Coerp azul.png";
 import { useContext } from "react";
 import UnidadeContext from "../../UnidadeContext";
 
-export function Header(){
+export function Header() {
+  const { unidadeSelecionada } = useContext(UnidadeContext);
 
-        const { unidadeSelecionada } = useContext(UnidadeContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-        const navigate = useNavigate();
-        const location = useLocation();
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
-        const handleHome = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/home') : navigate('/guaianases/home')}
-        const handleProgramacao = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/programacao') : navigate('/guaianases/programacao')}
-        const handleCultos = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/cultos') : navigate('/guaianases/cultos')}
-        const handleSobre = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/sobre') : navigate('/guaianases/sobre')}
-        const handleMinisterios = () => {unidadeSelecionada === "Ferraz" ? navigate('/ferraz/Ministerios') : navigate('/guaianases/Ministerios')}
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
 
-        const handleMudar = () => navigate("/");
+    setVisible(prevScrollPos > currentScrollPos);
 
-    return(
-        <BoxMenu>
-            {location.pathname === '/ferraz/home' || location.pathname === '/guaianases/home' ? <img src={imagemLogo} onClick={handleMudar}/> : <img/>}
+    setPrevScrollPos(currentScrollPos);
+  };
 
-            <ButtonMenu
-                onClick={handleHome}
-                className={location.pathname === '/guaianases/home' || location.pathname === '/ferraz/home' ? 'active' : ''}
-            >
-                INÍCIO
-            </ButtonMenu>
-            <ButtonMenu
-                onClick={handleProgramacao}
-                className={location.pathname === '/guaianases/programacao' || location.pathname === '/ferraz/programacao' ? 'active' : ''}
-            >
-                PROGRAMAÇÃO
-            </ButtonMenu>
-            <ButtonMenu
-                onClick={handleCultos}
-                className={location.pathname === '/guaianases/cultos' || location.pathname === '/ferraz/cultos' ? 'active' : ''}
-            >
-                CULTOS
-            </ButtonMenu>
-            <ButtonMenu
-                onClick={handleMinisterios}
-                className={location.pathname === '/guaianases/Ministerios' || location.pathname === '/ferraz/Ministerios' ? 'active' : ''}
-            >
-                MINISTÉRIOS
-            </ButtonMenu>
-            <ButtonMenu
-                onClick={handleSobre}
-                className={location.pathname === '/guaianases/sobre' || location.pathname === '/ferraz/sobre' ? 'active' : ''}
-            >
-                SOBRE NÓS
-            </ButtonMenu>
-            
-        </BoxMenu>
-    )
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos, visible]);
+
+  const handleHome = () => {
+    unidadeSelecionada === "Ferraz"
+      ? navigate("/ferraz/home")
+      : navigate("/guaianases/home");
+  };
+
+  const handleProgramacao = () => {
+    unidadeSelecionada === "Ferraz"
+      ? navigate("/ferraz/programacao")
+      : navigate("/guaianases/programacao");
+  };
+
+  const handleCultos = () => {
+    unidadeSelecionada === "Ferraz"
+      ? navigate("/ferraz/cultos")
+      : navigate("/guaianases/cultos");
+  };
+
+  const handleSobre = () => {
+    unidadeSelecionada === "Ferraz"
+      ? navigate("/ferraz/sobre")
+      : navigate("/guaianases/sobre");
+  };
+
+  const handleMinisterios = () => {
+    unidadeSelecionada === "Ferraz"
+      ? navigate("/ferraz/Ministerios")
+      : navigate("/guaianases/Ministerios");
+  };
+
+  const handleMudar = () => navigate("/");
+
+  return (
+    <BoxMenu className={visible ? "visible" : "hidden"}>
+      {location.pathname === "/ferraz/home" ||
+      location.pathname === "/guaianases/home" ? (
+        <img src={imagemLogo} onClick={handleMudar} />
+      ) : (
+        <img />
+      )}
+
+      <ButtonMenu
+        onClick={handleHome}
+        className={
+          location.pathname === "/guaianases/home" ||
+          location.pathname === "/ferraz/home"
+            ? "active"
+            : ""
+        }
+      >
+        INÍCIO
+      </ButtonMenu>
+      <ButtonMenu
+        onClick={handleProgramacao}
+        className={
+          location.pathname === "/guaianases/programacao" ||
+          location.pathname === "/ferraz/programacao"
+            ? "active"
+            : ""
+        }
+      >
+        PROGRAMAÇÃO
+      </ButtonMenu>
+      <ButtonMenu
+        onClick={handleCultos}
+        className={
+          location.pathname === "/guaianases/cultos" ||
+          location.pathname === "/ferraz/cultos"
+            ? "active"
+            : ""
+        }
+      >
+        CULTOS
+      </ButtonMenu>
+      <ButtonMenu
+        onClick={handleMinisterios}
+        className={
+          location.pathname === "/guaianases/Ministerios" ||
+          location.pathname === "/ferraz/Ministerios"
+            ? "active"
+            : ""
+        }
+      >
+        MINISTÉRIOS
+      </ButtonMenu>
+      <ButtonMenu
+        onClick={handleSobre}
+        className={
+          location.pathname === "/guaianases/sobre" ||
+          location.pathname === "/ferraz/sobre"
+            ? "active"
+            : ""
+        }
+      >
+        SOBRE NÓS
+      </ButtonMenu>
+    </BoxMenu>
+  );
 }

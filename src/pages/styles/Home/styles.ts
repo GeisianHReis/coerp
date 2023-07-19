@@ -100,7 +100,9 @@ export const MinCarrossel = styled.section`
 `;
 
 export const GaleriaPc = styled.div`
-
+    h1{
+        color: ${(props) => props.theme["black"]};
+    }
 `;
 export const Galeria = styled.div`
     display: grid;
@@ -108,6 +110,7 @@ export const Galeria = styled.div`
     align-items: center;
     img{
         width: 100%;
+        height: 100%;
         padding: 10px;
     }
     @media screen and (max-width: 650px) {

@@ -1,7 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { Box, FaixaDaHome, FaixaDeAvisos, Galeria, GaleriaPc } from "../../styles/Home/styles";
 import imagemTop from "../../../assets/Ativo 5.png";
-import imagemCulto from "../../../assets/4d576c57-f428-4662-af3d-4adf9245081a.jpg";
+import imagemCulto from "../../../assets/WhatsApp Image 2023-07-19 at 17.52.56.jpeg";
+import imagemCulto2 from "../../../assets/WhatsApp Image 2023-07-19 at 17.52.57.jpeg";
+import imagemCulto3 from "../../../assets/WhatsApp Image 2023-07-19 at 17.52.55.jpeg";
+import imagemCulto4 from "../../../assets/WhatsApp Image 2023-07-19 at 17.52.54.jpeg";
+import imagemCulto5 from "../../../assets/WhatsApp Image 2023-07-19 at 17.52.55 (1).jpeg";
+import imagemCulto6 from "../../../assets/WhatsApp Image 2023-07-19 at 17.52.54 (1).jpeg";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
 
@@ -30,9 +35,9 @@ export function Home() {
                     <div>
                         <h1>GALERIA</h1>
                     </div>
-                    <Galeria> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /></Galeria>
+                    <Galeria> <img src={imagemCulto} alt="" /> <img src={imagemCulto2} alt="" /> <img src={imagemCulto3} alt="" /> <img src={imagemCulto4} alt="" /> <img src={imagemCulto5} alt="" /> <img src={imagemCulto6} alt="" /> </Galeria>
                 </GaleriaPc>
-                <a target='_blank' href='https://www.instagram.com/igrejacoerp/'>Ver mais...</a>
+                <a target='_blank' href='https://www.instagram.com/coerpjesusecaminho/'>Ver mais...</a>
             </FaixaDeAvisos>
             <FooterTelaMenor />
         </>

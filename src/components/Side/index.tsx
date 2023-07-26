@@ -8,21 +8,20 @@ interface ISide {
     name: string;
 }
 
-const { unidadeSelecionada } = useContext(UnidadeContext);
-const navigate = useNavigate();
-
-const handleHome = () => {
-    unidadeSelecionada === "Ferraz"
-        ? navigate("/ferraz/home")
-        : navigate("/guaianases/home");
-    window.scrollTo(0, 0);
-};
-
 export function Side({ name }: ISide) {
+    const { unidadeSelecionada } = useContext(UnidadeContext);
+    const navigate = useNavigate();
+
+    const handleHome = () => {
+        unidadeSelecionada === "Ferraz"
+            ? navigate("/ferraz/home")
+            : navigate("/guaianases/home");
+        window.scrollTo(0, 0);
+    };
     return (
         <>
             <Lateral>
-                <img src={imagemLogo} onClick={handleHome}/>
+                <img src={imagemLogo} onClick={handleHome} />
                 {name}
             </Lateral>
         </>

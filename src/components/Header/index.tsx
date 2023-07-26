@@ -33,30 +33,35 @@ export function Header() {
     unidadeSelecionada === "Ferraz"
       ? navigate("/ferraz/home")
       : navigate("/guaianases/home");
+      window.scrollTo(0, 0);
   };
 
   const handleProgramacao = () => {
     unidadeSelecionada === "Ferraz"
       ? navigate("/ferraz/programacao")
       : navigate("/guaianases/programacao");
+      window.scrollTo(0, 0);
   };
 
   const handleCultos = () => {
     unidadeSelecionada === "Ferraz"
       ? navigate("/ferraz/cultos")
       : navigate("/guaianases/cultos");
+      window.scrollTo(0, 0);
   };
 
   const handleSobre = () => {
     unidadeSelecionada === "Ferraz"
       ? navigate("/ferraz/sobre")
       : navigate("/guaianases/sobre");
+      window.scrollTo(0, 0);
   };
 
   const handleMinisterios = () => {
     unidadeSelecionada === "Ferraz"
       ? navigate("/ferraz/Ministerios")
       : navigate("/guaianases/Ministerios");
+      window.scrollTo(0, 0);
   };
 
   const handleMudar = () => navigate("/");

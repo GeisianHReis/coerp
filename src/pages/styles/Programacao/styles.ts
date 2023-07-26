@@ -4,8 +4,7 @@ export const ListaProgramacao = styled.section`
     display: flex;
     flex-direction: row;
     
-    margin-left: 10%;
-    margin-right: 35%;
+
     padding: 20px;
 
     font-size: ${(props) => props.theme["size-paragraph"]};
@@ -23,7 +22,7 @@ export const ListaProgramacao = styled.section`
 export const Box = styled.main`
     display: flex;
     flex-direction: row;
-   
+    margin-left: 15%;
 `;
 export const BoxGeral = styled.main`
     display: flex;
@@ -44,6 +43,13 @@ export const BoxGeral = styled.main`
     }
     @media screen and (max-width: 650px) {
         margin-top: 0;
+    }
+    img{
+        width: 85%;
+
+    }
+    &:last-child{
+        align-items: center;
     }
 
 `;

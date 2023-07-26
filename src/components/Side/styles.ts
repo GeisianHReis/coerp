@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Lateral = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     top: 0;
@@ -14,12 +14,25 @@ export const Lateral = styled.div`
     background-color: black;
 
     font-family: ${(props) => props.theme["font-family-heading"]};
-    font-size: 3em;
+    font-size: 2.5em;
 
     transform: scale(-1, -1);
     writing-mode: vertical-lr;
 
     color: white;
+    img{
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        width: 50%;
+        margin-top: 35px;
+        bottom: 7%;
+        position: fixed;
+
+        transform: scale(-1, -1);
+        writing-mode: vertical-lr;
+    }
     
    @media screen and (max-width: 650px) {
         display: none;

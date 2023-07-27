@@ -13,20 +13,66 @@ export function ProgramacaoF() {
                 <BoxGeral>
                     <h1>CONFIRA NOSSA AGENDA</h1>
                     <ListaProgramacao>
-                        <p>08/07 - LUAU FEITORES</p> <p>12h</p>
+                        <p>06/08 - INTERCESSÃO HOMENS E MULHERES</p> <p>8:30h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>13/07 A 15/07 - ESCOLA BIBLICA DE FERIAS</p> <p>13h</p>
+                        <p>06/08 - SANTA CEIA</p> <p>13h e 18H</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>22/07 - FESTA DA NAÇÕES</p> <p>19h</p>
+                        <p>07/08 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>25/07 - ENCONTRO MULHERES COM PROPOSITO</p> <p>20h</p>
+                        <p>09/08 - INTERCESSÃO MULHERES</p> <p>14h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>27/07 A 29/07 - CONFERENCIA KOINONIA</p> <p>20h</p>
+                        <p>10/08 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>11/08 - ENTREGA DE MARMITAS</p> <p>18:30h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>12/08 - CULTO FEITORES</p> <p>19h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>13/08 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>14/08 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>16/08 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>17/08 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>19/08 - CULTO FEITORES</p> <p>19h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>20/08 - CULTO DA FAMÍLIA</p> <p>10h e 18H</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>21/08 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>23/08 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>24/08 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>26/08 - CULTO FEITORES</p> <p>19h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>27/08 - CULTO DE DISCIPULADO</p> <p>10h e 18H</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>28/08 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>30/08 - INTERCESSÃO</p> <p>20h</p>
+                    </ListaProgramacao>
+
                 </BoxGeral>
                 <BoxGeral>
                     <img src={cartaz}/>

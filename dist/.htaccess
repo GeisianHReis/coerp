@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# Verifica se o arquivo ou diretório não existe
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redireciona todas as solicitações para o arquivo index.html
+RewriteRule ^(.*)$ index.html [QSA,L]

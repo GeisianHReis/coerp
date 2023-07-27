@@ -1,5 +1,5 @@
 ---
 deployment:
-  tasks:
-    - export DEPLOYPATH=/home/igrej478/public_html
-    - rsync -avz --ignore-existing dist/ $DEPLOYPATH
+ tasks:
+   - export DEPLOYPATH=/home/igrej478/public_html
+   - rsync -avz --delete dist/ $DEPLOYPATH 

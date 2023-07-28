@@ -4,6 +4,7 @@ import imagemTop from "../../../assets/Ativo 5.png";
 import imagemCulto from "../../../assets/4d576c57-f428-4662-af3d-4adf9245081a.jpg";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
+import { Button } from '@mui/material';
 
 
 export function HomeF() {
@@ -17,11 +18,11 @@ export function HomeF() {
             </Box>
             <FaixaDaHome>
                 <h1>
-                    CONFERENCIA KOINONIA
+                    Entrega de Marmitas 11/08
                 </h1>
-                <p>
-                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSdko1BPZVtuDWyC2HvTdulMgDmh8OgH2n9ZalByZT6ToXtrKg/viewform' target='_blank'>faça aqui sua inscrição!</a>
-                </p>
+                <h1>
+                    Envolva-se!
+                </h1>
 
             </FaixaDaHome>
 
@@ -30,9 +31,12 @@ export function HomeF() {
                     <div>
                         <h1>GALERIA</h1>
                     </div>
-                    <Galeria> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /></Galeria>
+                    <Galeria> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> </Galeria>
+                    <Button href='https://www.instagram.com/igrejacoerp/' target="_blank" variant="contained">
+                        Ver mais...
+                    </Button>
                 </GaleriaPc>
-                <a target='_blank' href='https://www.instagram.com/igrejacoerp/'>Ver mais...</a>
+
             </FaixaDeAvisos>
             <FooterTelaMenor />
         </>

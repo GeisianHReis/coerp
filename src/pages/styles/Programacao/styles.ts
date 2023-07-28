@@ -4,8 +4,7 @@ export const ListaProgramacao = styled.section`
     display: flex;
     flex-direction: row;
     
-    margin-left: 10%;
-    margin-right: 35%;
+
     padding: 20px;
 
     font-size: ${(props) => props.theme["size-paragraph"]};
@@ -28,13 +27,13 @@ export const ListaProgramacao = styled.section`
 export const Box = styled.main`
     display: flex;
     flex-direction: row;
-   
+    margin-left: 15%;
 `;
 export const BoxGeral = styled.main`
     display: flex;
     flex-direction: column;
     width: 100%;
-    
+    margin-top: 120px;
     h1 {
         display: flex;
         align-items: center;
@@ -43,10 +42,19 @@ export const BoxGeral = styled.main`
         font-family: ${(props) => props.theme["font-family-heading"]};
         font-size: ${(props) => props.theme["size-heading"]};
         @media screen and (max-width: 650px) {
-            font-size: 25px;
             padding: 15px;
             margin-bottom: 10px;
         }
-}
+    }
+    @media screen and (max-width: 650px) {
+        margin-top: 0;
+    }
+    img{
+        width: 85%;
+
+    }
+    &:last-child{
+        align-items: center;
+    }
 
 `;

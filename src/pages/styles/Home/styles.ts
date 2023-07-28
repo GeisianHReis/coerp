@@ -12,7 +12,7 @@ export const FaixaDeAvisos = styled.section`
             display: flex;
             justify-content: center;
 
-            color: ${(props) => props.theme["white"]};
+            color: ${(props) => props.theme["black"]};
             font-family: ${(props) => props.theme["font-family-heading"]};
             font-size: ${(props) => props.theme["size-heading"]};
         }
@@ -31,6 +31,7 @@ export const Box = styled.main`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 120px;
     img{
         width: 50%;
         padding: 10px;
@@ -39,12 +40,13 @@ export const Box = styled.main`
     }
     @media screen and (max-width: 650px) {
         flex-direction: column-reverse;
+        margin-top: 0;
         img{
             width: 100%;
         }
     }
 `;
-
+ 
 export const FaixaDaHome = styled.div`
         display: flex;
         flex-direction: column;
@@ -98,7 +100,12 @@ export const MinCarrossel = styled.section`
 `;
 
 export const GaleriaPc = styled.div`
-
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    h1{
+        color: ${(props) => props.theme["black"]};
+    }
 `;
 export const Galeria = styled.div`
     display: grid;
@@ -106,6 +113,7 @@ export const Galeria = styled.div`
     align-items: center;
     img{
         width: 100%;
+        height: 100%;
         padding: 10px;
     }
     @media screen and (max-width: 650px) {

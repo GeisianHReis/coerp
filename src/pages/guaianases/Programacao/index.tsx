@@ -2,13 +2,14 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
+import cartaz from "../../../assets/cartaz.jpeg";
 
 export function Programacao() {
     return (
         <>
             <TopMobile name="PROGRAMAÇÃO" />
+            <Side name="PROGRAMAÇÃO" />
             <Box>
-                <Side name="PROGRAMAÇÃO" />
                 <BoxGeral>
                     <h1>CONFIRA NOSSA AGENDA</h1>
                     <ListaProgramacao>
@@ -36,6 +37,10 @@ export function Programacao() {
                         <p>DOMINGOS - CULTO DA FAMÍLIA</p> <p>18h</p>
                     </ListaProgramacao>
                 </BoxGeral>
+                <BoxGeral>
+                    <img src={cartaz} />
+                </BoxGeral>
+
             </Box>
             <FooterTelaMenor />
         </>

@@ -8,6 +8,7 @@ export const FooterStyle = styled.div`
         width: 100%;
         height: 10%;
         bottom: 0;
+        margin-top: 2%;
         @media screen and (max-width: 650px){
                 display: none;
         }

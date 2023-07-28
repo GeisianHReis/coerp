@@ -18,6 +18,6 @@ export const GlobalStyle = createGlobalStyle `
         -webkit-font-smoothing: antialiased;
     }
     body, input, button {
-        font: 400 1rem 'Roboto', sans-serif;
+        font: 400 1rem ${(props) => props.theme["font-family-paragraph"]}, sans-serif;
     }
 `;

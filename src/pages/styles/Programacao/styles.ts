@@ -12,6 +12,7 @@ export const ListaProgramacao = styled.section`
     font-family: ${(props) => props.theme["font-family-paragraph"]};
     justify-content: space-between;
     color: ${(props) => props.theme["black"]};
+
     @media screen and (max-width: 650px) {
         margin-left: 2%;
         margin-right: 5%;
@@ -19,6 +20,10 @@ export const ListaProgramacao = styled.section`
         font-size: 20px;
     }
 `;
+
+
+
+
 
 export const Box = styled.main`
     display: flex;

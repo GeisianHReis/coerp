@@ -17,10 +17,10 @@ export function Home() {
             </Box>
             <FaixaDaHome>
                 <h1>
-                    CONFERENCIA KOINONIA
+                    FESTA DAS NAÇÕES
                 </h1>
                 <p>
-                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSdko1BPZVtuDWyC2HvTdulMgDmh8OgH2n9ZalByZT6ToXtrKg/viewform' target='_blank'>faça aqui sua inscrição!</a>
+                    <a href='https://www.instagram.com/coerpjesusecaminho/?igshid=MzRlODBiNWFlZA%3D%3D' target='_blank'>Saiba mais!</a>
                 </p>
 
             </FaixaDaHome>
@@ -32,7 +32,7 @@ export function Home() {
                     </div>
                     <Galeria> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /></Galeria>
                 </GaleriaPc>
-                <a target='_blank' href='https://www.instagram.com/igrejacoerp/'>Ver mais...</a>
+                <a target='_blank' href='https://www.instagram.com/coerpjesusecaminho/?igshid=MzRlODBiNWFlZA%3D%3D'>Ver mais...</a>
             </FaixaDeAvisos>
             <FooterTelaMenor />
         </>

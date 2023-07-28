@@ -8,7 +8,7 @@ export const defaultTheme = {
     "weigth-titulo": "bold",
 
     "size-button": "16px",
-    "size-paragraph": "20px",
+    "size-paragraph": "18px",
     "size-heading": "37px",
     "size-side": "47px",
     "size-footer": "16px",

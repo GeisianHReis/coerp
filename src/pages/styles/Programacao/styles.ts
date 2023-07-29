@@ -23,6 +23,9 @@ export const Box = styled.main`
     display: flex;
     flex-direction: row;
     margin-left: 15%;
+    @media screen and (max-width: 650px) {
+            flex-direction: column;
+        }
 `;
 export const BoxGeral = styled.main`
     display: flex;

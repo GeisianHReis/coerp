@@ -46,7 +46,7 @@ export function Header() {
   const handleCultos = () => {
     unidadeSelecionada === "Ferraz"
       ? navigate("/ferraz/cultos")
-      : navigate("/guaianases/cultos");
+      : navigate("/guaianases/devocional");
       window.scrollTo(0, 0);
   };
 
@@ -107,7 +107,7 @@ export function Header() {
             : ""
         }
       >
-        CULTOS
+        {unidadeSelecionada === "Ferraz" ? "CULTOS" : "DEVOCIONAIS"}
       </ButtonMenu>
       <ButtonMenu
         onClick={handleMinisterios}

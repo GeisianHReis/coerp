@@ -53,10 +53,8 @@ export const Liderança = styled.div`
 
     border-radius: 8px;
     padding: 0.5em;
-    height: 200px;
     img{
         border-radius: 8px;
         width: 150px;
-        height: 80%;
     }
 `;

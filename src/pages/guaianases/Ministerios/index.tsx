@@ -6,7 +6,8 @@ import logoMidias from "../../../assets/LogosMinisterios/midias.jpeg";
 import { Box } from "../../styles/Ministerios/styles";
 import AlertDialogSlide from "./Modal";
 
-import fotoLideresKids from "../../../assets/images.png";
+import fotoLideresKids from "../../../assets/LideresMinisterios/MinisteriosGuaianases/kids.jpg";
+import fotoLideresCasais from "../../../assets/LideresMinisterios/MinisteriosGuaianases/casais.jpg";
 import { TopMobile } from "../../../components/TopMobile";
 import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 
@@ -14,12 +15,14 @@ export function Ministerios() {
 
     const coerpKids = ["Coerp Kids", "Investimos no futuro das crianças, ensinando a Palavra de Deus de maneira didática e assertiva. Com recursos pedagógicos interativos e um ambiente acolhedor, promovemos um aprendizado significativo, desenvolvendo uma fé genuína e uma relação pessoal com o Senhor. Valorizamos cada criança, fortalecendo laços familiares e preparando-as para uma vida cristã plena.", fotoLideresKids, "Lucia Sepero"]
 
+    const casais = ["Coerp Kids", "Investimos no futuro das crianças, ensinando a Palavra de Deus de maneira didática e assertiva. Com recursos pedagógicos interativos e um ambiente acolhedor, promovemos um aprendizado significativo, desenvolvendo uma fé genuína e uma relação pessoal com o Senhor. Valorizamos cada criança, fortalecendo laços familiares e preparando-as para uma vida cristã plena.", fotoLideresCasais, "Carla e Toninho"]
+
     return (
         <>
         <TopMobile name="MINISTÉRIOS" />
             <Side name="MINISTÉRIOS" />
             <Box>
-                <h1>CONHEÇA NOSSOS MINISTÉRIOS</h1>
+                <h1>NOSSOS MINISTÉRIOS</h1>
                 {/*<Box>
                 <ListaDeMinisterios>
                     <h2>KIDS</h2>
@@ -53,7 +56,7 @@ export function Ministerios() {
                     <Grid item xs={7} md={9}>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptate repellendus deleniti amet, molestiae perspiciatis est veritatis debitis magnam reiciendis, qui quibusdam autem modi consequatur. Quia aspernatur ipsum sunt nam.
-
+                            <AlertDialogSlide titulo={casais[0]} texto={casais[1]} fotoLider1={casais[2]} nomeLider1={casais[3]} ></AlertDialogSlide>
                         </p>
                     </Grid>
                     <Grid item xs={7} md={9}>

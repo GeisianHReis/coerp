@@ -10,8 +10,12 @@ import fotoMarquinho from "../../../assets/LideresCoerp/marquinho.jpeg"
 import fotoGilce from "../../../assets/LideresCoerp/gilce.jpg"
 import fotoArlete from "../../../assets/LideresCoerp/arlete.jpeg"
 import fotoSueli from "../../../assets/LideresCoerp/sueli.jpeg"
+import estatuto from "../../../assets/Documentos/Estatuto da Igreja.pdf"
+import doutrina from "../../../assets/Documentos/DOUTRINAS DO MINISTÉRIO COERP e CIDADE TIRADENTES.pdf"
 import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { TopMobile } from "../../../components/TopMobile";
+import { Button } from "@mui/material";
+import { DownloadSimple } from "@phosphor-icons/react";
 
 export function SobreNosF() {
     return (
@@ -45,6 +49,7 @@ export function SobreNosF() {
                     Aqui na Coerp, valorizamos nossa história, mas estamos comprometidos em olhar para o futuro com fé, amor e dedicação.
                     Junte-se a nós nessa jornada de crescimento espiritual e transformação de vidas.
                 </p>
+                
                 <h1>
                     NOSSA LIDERANÇA
                 </h1>
@@ -79,8 +84,17 @@ export function SobreNosF() {
                     <Liderança>
                         <img src={fotoCris} /> Cris
                     </Liderança>
+                    
+                    
                 </GaleriaDaliderança>
-
+                <Button href={estatuto} target="_blank" variant="contained">
+                    Baixar nosso estatuto &nbsp;<DownloadSimple size={20} weight="bold" color="white" />
+                </Button>
+                <br/>
+                <Button href={doutrina} target="_blank" variant="contained">
+                    Baixar nossa doutrina &nbsp;<DownloadSimple size={20} weight="bold" color="white" />
+                </Button>
+                <br/>
             </ListaProgramacao>
             <FooterTelaMenor />
         </>

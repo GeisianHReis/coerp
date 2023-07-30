@@ -11,7 +11,7 @@ export function ProgramacaoF() {
             <Side name="PROGRAMAÇÃO" />
             <Box>
                 <BoxGeral>
-                    <h1>CONFIRA NOSSA AGENDA</h1>
+                    <h1>NOSSA AGENDA</h1>
                     <ListaProgramacao>
                         <p>06/08 - INTERCESSÃO HOMENS E MULHERES</p> <p>8:30h</p>
                     </ListaProgramacao>

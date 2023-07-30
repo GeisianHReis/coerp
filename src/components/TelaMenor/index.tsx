@@ -24,7 +24,7 @@ export function TelaMenor() {
     window.scrollTo(0, 0);
   };
   const handleCultos = () => {
-    unidadeSelecionada === "Ferraz" ? navigate('/ferraz/cultos') : navigate('/guaianases/cultos');
+    unidadeSelecionada === "Ferraz" ? navigate('/ferraz/cultos') : navigate('/guaianases/devocional');
     window.scrollTo(0, 0);
   };
   const handleSobre = () => {
@@ -68,7 +68,7 @@ export function TelaMenor() {
       >
         <MenuItem onClick={handleHome}>INÍCIO</MenuItem>
         <MenuItem onClick={handleProgramacao}>PROGRAMAÇÃO</MenuItem>
-        <MenuItem onClick={handleCultos}>CULTOS</MenuItem>
+        <MenuItem onClick={handleCultos}>{unidadeSelecionada === "Ferraz" ? "CULTOS" : "DEVOCIONAIS"}</MenuItem>
         <MenuItem onClick={handleMinisterios}>MINISTÉRIOS</MenuItem>
         <MenuItem onClick={handleSobre}>SOBRE NÓS</MenuItem>
       </Menu>

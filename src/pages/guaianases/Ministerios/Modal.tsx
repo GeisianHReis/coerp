@@ -38,7 +38,7 @@ export default function AlertDialogSlide({titulo, texto, fotoLider1, nomeLider1,
 
   return (
     <div>
-      <Button onClick={handleClickOpen}>
+      <Button variant="contained" onClick={handleClickOpen}>
         SAIBA MAIS ...
       </Button>
       <Dialog
@@ -59,7 +59,7 @@ export default function AlertDialogSlide({titulo, texto, fotoLider1, nomeLider1,
           </Liderança>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>OK!</Button>
+          <Button onClick={handleClose}>Fechar!</Button>
         </DialogActions>
       </Dialog>
     </div>

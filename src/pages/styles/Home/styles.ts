@@ -61,10 +61,7 @@ export const FaixaDaHome = styled.div`
             font-size: ${(props) => props.theme["size-heading"]};
             font-family: ${(props) => props.theme["font-family-heading"]};
             @media screen and (max-width: 650px) {
-                font-size: 35px;
-            }
-            @media screen and (max-width: 470px) {
-                font-size: 25px;
+                font-size: 22px;
             }
         }
         

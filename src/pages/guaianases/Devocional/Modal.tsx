@@ -35,7 +35,7 @@ export default function AlertDialogSlide({titulo, texto}: ModalMin) {
 
   return (
     <div>
-      <Button onClick={handleClickOpen}>
+      <Button variant="contained" onClick={handleClickOpen}>
         LEIA MAIS ...
       </Button>
       <Dialog

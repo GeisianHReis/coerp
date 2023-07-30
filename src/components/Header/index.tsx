@@ -101,7 +101,7 @@ export function Header() {
       <ButtonMenu
         onClick={handleCultos}
         className={
-          location.pathname === "/guaianases/cultos" ||
+          location.pathname === "/guaianases/devocional" ||
             location.pathname === "/ferraz/cultos"
             ? "active"
             : ""

@@ -19,6 +19,9 @@ export const Box = styled.main`
         color: ${(props) => props.theme["black"]};
         font-family: ${(props) => props.theme["font-family-heading"]};
         font-size: ${(props) => props.theme["size-heading"]};
+        @media screen and (max-width: 650px) {
+            font-size: ${(props) => props.theme["size-mobile-heading"]};
+    }
     }
     p{
         color: black;
@@ -33,9 +36,6 @@ export const Box = styled.main`
     @media screen and (max-width: 650px) {
         margin-left: 2%;
         margin-top: 0;
-    }
-    @media screen and (max-width: 450px) {
-        margin-left: 2%;
     }
 `;
 export const BotaoSaibaMais = styled.button`

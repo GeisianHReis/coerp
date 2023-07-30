@@ -4,7 +4,7 @@ import imagemTop from "../../../assets/Ativo 5.png";
 import imagemCulto from "../../../assets/FotosCulto/Guaianases/IMG_0787.jpg";
 import imagemCulto2 from "../../../assets/FotosCulto/Guaianases/IMG_0837.jpg";
 import imagemCulto3 from "../../../assets/FotosCulto/Guaianases/IMG_1060 (1).jpg";
-import imagemCulto4 from "../../../assets/FotosCulto/Guaianases/IMG_1415.jpg";
+import imagemCulto4 from "../../../assets/FotosCulto/Guaianases/IMG_0787.jpg";
 import imagemCulto5 from "../../../assets/WhatsApp Image 2023-07-19 at 17.52.55 (1).jpeg";
 import imagemCulto6 from "../../../assets/WhatsApp Image 2023-07-19 at 17.52.54 (1).jpeg";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';

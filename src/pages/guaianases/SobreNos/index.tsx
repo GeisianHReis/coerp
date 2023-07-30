@@ -1,12 +1,27 @@
 import { Side } from "../../../components/Side";
 import { ListaProgramacao, GaleriaDaliderança, Liderança, } from "../../styles/SobreNos/styles";
 
-import fotoSueli from "../../../assets/LideresCoerp/sueli.jpeg"
+import fotoSueli from "../../../assets/LideresGuaianases/sueli.jpg"
 import fotoDiacono from "../../../assets/LideresGuaianases/gilberto.jpg"
 import fotoJaqueline from "../../../assets/LideresGuaianases/jaqueline.jpg"
 import fotoSonia from "../../../assets/LideresGuaianases/sonia.jpg"
+import fotoDcGilberto from "../../../assets/LideresGuaianases/cdGILBERTO.jpg"
+import fotoAnaPaula from "../../../assets/LideresGuaianases/ANAPAULA.jpg"
+import fotoCaroline from "../../../assets/LideresGuaianases/CAROLINE.jpg"
+import fotoDamiana from "../../../assets/LideresGuaianases/DAMIANA.jpg"
+import fotoJosenildo from "../../../assets/LideresGuaianases/JOSENILDO .jpg"
+import fotoLuiz from "../../../assets/LideresGuaianases/LUIZ.jpg"
+import fotoMauricioJosefa from "../../../assets/LideresGuaianases/MAURICIOEJOSEFA.jpg"
+import fotoNena from "../../../assets/LideresGuaianases/NENA.jpg"
+import fotoYara from "../../../assets/LideresGuaianases/YARA.jpg"
+import fotoDcSandra from "../../../assets/LideresGuaianases/dcSANDRA.jpg"
+
+import estatuto from "../../../assets/Documentos/Estatuto da Igreja.pdf"
+import doutrina from "../../../assets/Documentos/DOUTRINAS DO MINISTÉRIO COERP e CIDADE TIRADENTES.pdf"
 import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { TopMobile } from "../../../components/TopMobile";
+import { Button } from "@mui/material";
+import { DownloadSimple } from "@phosphor-icons/react";
 
 export function SobreNos() {
     return (
@@ -48,25 +63,25 @@ export function SobreNos() {
                         <img src={fotoSueli} /> Pra. Sueli
                     </Liderança>
                     <Liderança>
-                        <img src="" /> Damiana
+                        <img src={fotoDcGilberto} /> Dc. Gilberto
+                    </Liderança>
+                    <Liderança>
+                        <img src={fotoAnaPaula} /> Ana Paula
+                    </Liderança>
+                    <Liderança>
+                        <img src={fotoJosenildo} /> Josenildo
+                    </Liderança>
+                    <Liderança>
+                        <img src={fotoYara} /> Yara
+                    </Liderança>
+                    <Liderança>
+                        <img src={fotoMauricioJosefa} /> Maurício e <br/> Josefa
                     </Liderança>
                     <Liderança>
                         <img src={fotoDiacono} /> Dc. Gilberto
                     </Liderança>
                     <Liderança>
-                        <img src="" /> Paula
-                    </Liderança>
-                    <Liderança>
-                        <img src="" /> Toninho
-                    </Liderança>
-                    <Liderança>
-                        <img src="" /> Carla
-                    </Liderança>
-                    <Liderança>
-                        <img src="" /> Maurício
-                    </Liderança>
-                    <Liderança>
-                        <img src="" /> Bel
+                        <img src={fotoDcSandra} /> Dc. Sandra
                     </Liderança>
                     <Liderança>
                         <img src={fotoJaqueline} /> Dc. Jaqueline 
@@ -74,8 +89,27 @@ export function SobreNos() {
                     <Liderança>
                         <img src={fotoSonia} /> Dc. Sônia 
                     </Liderança>
+                    <Liderança>
+                        <img src={fotoCaroline} /> Caroline
+                    </Liderança>
+                    <Liderança>
+                        <img src={fotoDamiana} /> Damiana
+                    </Liderança>
+                    <Liderança>
+                        <img src={fotoLuiz} /> Luiz
+                    </Liderança>
+                    <Liderança>
+                        <img src={fotoNena} /> Nena
+                    </Liderança>
                 </GaleriaDaliderança>
-
+                <Button href={estatuto} target="_blank" variant="contained">
+                    Baixar nosso estatuto &nbsp;<DownloadSimple size={20} weight="bold" color="white" />
+                </Button>
+                <br/>
+                <Button href={doutrina} target="_blank" variant="contained">
+                    Baixar nossa doutrina &nbsp;<DownloadSimple size={20} weight="bold" color="white" />
+                </Button>
+                <br/>
             </ListaProgramacao>
             <FooterTelaMenor />
         </>

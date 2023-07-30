@@ -37,7 +37,7 @@ export function HomeF() {
                         <h1>GALERIA</h1>
                     </div>
                     <Galeria> <img src={imagemCulto1} alt="" /> <img src={imagemCulto2} alt="" /> <img src={imagemCulto3} alt="" /> <img src={imagemCulto4} alt="" /> <img src={imagemCulto5} alt="" /> <img src={imagemCulto6} alt="" /> </Galeria>
-                    <Button href='https://www.instagram.com/igrejacoerp/' target="_blank" variant="contained">
+                    <Button href='https://drive.google.com/drive/folders/1TccHOK4Az0HkYGA1QTj3VmTJOjkv3YHu' target="_blank" variant="contained">
                         Ver mais...
                     </Button>
                 </GaleriaPc>

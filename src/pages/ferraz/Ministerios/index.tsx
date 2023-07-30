@@ -1,23 +1,28 @@
 import { Grid } from "@mui/material";
 import { Side } from "../../../components/Side";
-import imagem from "../../../assets/images.png";
-import logoKids from "../../../assets/LogosMinisterios/coerpKids.png";
+
 import { Box } from "../../styles/Ministerios/styles";
 import AlertDialogSlide from "./Modal";
 
-import fotoLideresKids from "../../../assets/LideresMinisterios/lidersKids.jpeg";
 import fotoLideresHomens from "../../../assets/LideresCoerp/gonsalves.jpg";
-import fotoLideresCasais1 from "../../../assets/LideresCoerp/arlete.jpeg";
-import fotoLideresCasais2 from "../../../assets/LideresCoerp/marquinho.jpeg";
+import fotoLideresCasais1 from "../../../assets/LideresCoerp/arlete.jpg";
+import fotoLideresCasais2 from "../../../assets/LideresCoerp/marquinhos.jpg";
 import fotoLideresFeitores1 from "../../../assets/LideresCoerp/juninho.jpg";
 import fotoLideresFeitores2 from "../../../assets/LideresCoerp/marisa.jpg";
-import fotoLideresMulheres from "../../../assets/LideresCoerp/silvana.jpeg";
+import fotoLideresMulheres from "../../../assets/LideresCoerp/silvana.jpg";
+
+import logoKids from "../../../assets/LogosMinisterios/kids.png";
+import logoFeitores from "../../../assets/LogosMinisterios/feitores.png";
+import logoHomens from "../../../assets/LogosMinisterios/homem.png";
+import logoMulheres from "../../../assets/LogosMinisterios/mulher.png";
+import logoCasais from "../../../assets/LogosMinisterios/CASAIS.png";
+
 import { TopMobile } from "../../../components/TopMobile";
 import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 
 export function MinisteriosF() {
 
-    const coerpKids = ["Coerp Kids", "Investimos no futuro das crianças, ensinando a Palavra de Deus de maneira didática e assertiva. Com recursos pedagógicos interativos e um ambiente acolhedor, promovemos um aprendizado significativo, desenvolvendo uma fé genuína e uma relação pessoal com o Senhor. Valorizamos cada criança, fortalecendo laços familiares e preparando-as para uma vida cristã plena.", "", ""]
+    const coerpKids = ["Coerp Kids", "Investimos no futuro das crianças, ensinando a Palavra de Deus de maneira didática e assertiva. Com recursos pedagógicos interativos e um ambiente acolhedor, promovemos um aprendizado significativo, desenvolvendo uma fé genuína e uma relação pessoal com o Senhor. Valorizamos cada criança, fortalecendo laços familiares e preparando-as para uma vida cristã plena.", "", "Cibele","","Nalva"]
 
     const homens = ["Homens", "Unidos em fé, força e propósito, o Ministério de Homens da Igreja Coerp é uma comunidade de irmãos dedicados a crescer na Palavra e nos ensinamentos de Cristo. Buscamos fortalecer uns aos outros, servir nossa igreja e impactar positivamente nossas famílias e comunidade. Juntos, apoiamos e encorajamos o crescimento espiritual, a oração e o compromisso com o amor cristão. Somos homens de honra, guiados pelo Espírito Santo, prontos para enfrentar desafios, compartilhar alegrias e caminhar juntos na jornada da fé.", fotoLideresHomens, "Pr. Gonsalves"]
 
@@ -53,7 +58,7 @@ export function MinisteriosF() {
                         <p>
                             Ministério Infantil Coerp KIDS, um espaço dedicado a ensinar a Palavra de Deus às crianças. Nosso objetivo é proporcionar um aprendizado significativo e relevante, promovendo uma compreensão clara e correta dos princípios cristãos. Valorizamos o ambiente acolhedor e seguro, cultivando relacionamentos baseados no amor e no respeito.
 
-                            <AlertDialogSlide titulo={coerpKids[0]} texto={coerpKids[1]} fotoLider1={coerpKids[2]} nomeLider1={coerpKids[3]} ></AlertDialogSlide>
+                            <AlertDialogSlide titulo={coerpKids[0]} texto={coerpKids[1]} fotoLider1={coerpKids[2]} nomeLider1={coerpKids[3]} fotoLider2={coerpKids[4]} nomeLider2={coerpKids[5]} ></AlertDialogSlide>
                         </p>
                     </Grid>
                     <Grid item xs={5} md={3}>
@@ -61,7 +66,7 @@ export function MinisteriosF() {
                     </Grid>
 
                     <Grid item xs={5} md={3}>
-                        <img src={imagem} />
+                        <img src={logoHomens} />
                     </Grid>
                     <Grid item xs={7} md={9}>
                         <p>
@@ -76,11 +81,11 @@ export function MinisteriosF() {
                         </p>
                     </Grid>
                     <Grid item xs={5} md={3}>
-                        <img src={imagem} />
+                        <img src={logoCasais} />
                     </Grid>
 
                     <Grid item xs={5} md={3}>
-                        <img src={imagem} />
+                        <img src={logoFeitores} />
                     </Grid>
                     <Grid item xs={7} md={9}>
                         <p>
@@ -96,7 +101,7 @@ export function MinisteriosF() {
                         </p>
                     </Grid>
                     <Grid item xs={5} md={3}>
-                        <img src={imagem} />
+                        <img src={logoMulheres} />
                     </Grid>
                 </Grid>
             </Box>

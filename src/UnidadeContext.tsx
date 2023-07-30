@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode } from 'react';
+import { createContext, useState, ReactNode, useEffect } from 'react';
 
 interface UnidadeContextType {
   unidadeSelecionada: string;
@@ -15,7 +15,13 @@ interface UnidadeProviderProps {
 }
 
 export const UnidadeProvider = ({ children }: UnidadeProviderProps) => {
-  const [unidadeSelecionada, setUnidadeSelecionada] = useState('');
+  const [unidadeSelecionada, setUnidadeSelecionada] = useState<string>(() => {
+    return localStorage.getItem('unidadeSelecionada') || '';
+  });
+  
+  useEffect(() => {
+    localStorage.setItem('unidadeSelecionada', unidadeSelecionada);
+  }, [unidadeSelecionada]);
 
   return (
     <UnidadeContext.Provider value={{ unidadeSelecionada, setUnidadeSelecionada }}>

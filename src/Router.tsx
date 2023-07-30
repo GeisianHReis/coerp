@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { Programacao } from "./pages/guaianases/Programacao";
 import { SobreNos } from "./pages/guaianases/SobreNos";
 import { Home } from "./pages/guaianases/Home";
-import { Cultos } from "./pages/guaianases/Cultos";
+import { Devocional } from "./pages/guaianases/Devocional";
 import { Ministerios } from "./pages/guaianases/Ministerios";
 
 import { TelaInicial } from "./pages/TelaInicial";
@@ -22,7 +22,7 @@ export function Router(){
 
         <Route index path="/guaianases/home" element={<Home />} />
         <Route index path="/guaianases/programacao" element={<Programacao />} />
-        <Route index path="/guaianases/cultos" element={<Cultos />} />
+        <Route index path="/guaianases/devocional" element={<Devocional />} />
         <Route index path="/guaianases/sobre" element={<SobreNos />} />
         <Route index path="/guaianases/ministerios" element={<Ministerios />} />
 

@@ -1,0 +1,120 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #3363B5;
+}
+
+@font-face {
+    font-family: 'outer-sans';
+    src: url(webfonts/bold/made-outer-sans-bold.ttf);
+
+}
+
+.central img {
+    width: 15%;
+    padding-top: 3%;
+    padding-left: 42.5%;
+}
+
+.central {
+    display: grid;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    font-family: 'outer-sans';
+    font-size: 63px;
+    width: 450px;
+    justify-content: center;
+    color: #fff;
+}
+
+.elementos {
+    padding-left: 33%;
+}
+
+.botoes {
+    display: grid;
+    font-family: 'outer-sans';
+    width: 472px;
+    height: 98px;
+    background-color: #fff;
+    color: #3363B5;
+    font-size: 35px;
+    text-decoration: none;
+    border-radius: 38px;
+    align-items: center;
+    margin: 20px;
+}
+
+.meio {
+    padding-top: 3%;
+    padding-left: 35%;
+    padding-bottom: 4%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 4%;
+}
+
+footer img {
+    width: 70px;
+    margin: 0 15px;
+}
+
+@media screen and (max-width:360px) {
+    .central img {
+        width: 350px;
+        padding-top: 30%;
+        padding-left: 30%;
+
+    }
+
+    .elementos {
+        padding-left: 0%;
+    }
+
+    .central {
+        text-align: center;
+    }
+
+    .meio {
+
+        padding-left: 22%;
+
+    }
+
+    .title {
+        display: flex;
+        font-family: 'outer-sans';
+        font-size: 63px;
+        width: 450px;
+        justify-content: center;
+        color: #fff;
+
+    }
+
+    .botoes {
+        display: grid;
+        font-family: 'outer-sans';
+        width: 472px;
+        height: 98px;
+        background-color: #fff;
+        color: #3363B5;
+        font-size: 35px;
+        text-decoration: none;
+        border-radius: 38px;
+        align-items: center;
+        margin: 20px 158px;
+    }
+
+    footer {
+        padding-left: 108%;
+    }
+
+
+}

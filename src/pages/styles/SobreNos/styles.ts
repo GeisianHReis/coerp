@@ -12,6 +12,7 @@ export const ListaProgramacao = styled.section`
     font-size: 16pt;
     font-family: ${(props) => props.theme["font-family-paragraph"]};
     color: black;
+  
     @media screen and (max-width: 650px) {
         margin-top: 0;
         margin-left: 5%;
@@ -26,6 +27,9 @@ export const ListaProgramacao = styled.section`
         color: ${(props) => props.theme["black"]};
         font-family: ${(props) => props.theme["font-family-heading"]};
         font-size: ${(props) => props.theme["size-heading"]};
+        @media screen and (max-width: 650px) {
+            font-size: ${(props) => props.theme["size-mobile-heading"]};
+        }
     }
     p{
         margin-bottom: 1em;
@@ -43,6 +47,7 @@ export const Box = styled.main`
 export const GaleriaDaliderança = styled.div`
     display: grid;
     grid-template-columns: auto auto auto auto auto;
+    margin-bottom: 10%;
     @media screen and (max-width: 650px) {
         grid-template-columns: auto auto;
     }

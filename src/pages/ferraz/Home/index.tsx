@@ -1,7 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { Box, FaixaDaHome, FaixaDeAvisos, Galeria, GaleriaPc } from "../../styles/Home/styles";
 import imagemTop from "../../../assets/Ativo 5.png";
-import imagemCulto from "../../../assets/4d576c57-f428-4662-af3d-4adf9245081a.jpg";
+import imagemCulto1 from "../../../assets/FotosCulto/Ferraz/IMG_0940.jpg";
+import imagemCulto2 from "../../../assets/FotosCulto/Ferraz/IMG_0841.jpg";
+import imagemCulto3 from "../../../assets/FotosCulto/Ferraz/IMG_1060.jpg";
+import imagemCulto4 from "../../../assets/FotosCulto/Ferraz/IMG_1074.jpg";
+import imagemCulto5 from "../../../assets/FotosCulto/Ferraz/IMG_0883.jpg";
+import imagemCulto6 from "../../../assets/FotosCulto/Ferraz/IMG_0797.jpg";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
 import { Button } from '@mui/material';
@@ -31,7 +36,7 @@ export function HomeF() {
                     <div>
                         <h1>GALERIA</h1>
                     </div>
-                    <Galeria> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> </Galeria>
+                    <Galeria> <img src={imagemCulto1} alt="" /> <img src={imagemCulto2} alt="" /> <img src={imagemCulto3} alt="" /> <img src={imagemCulto4} alt="" /> <img src={imagemCulto5} alt="" /> <img src={imagemCulto6} alt="" /> </Galeria>
                     <Button href='https://www.instagram.com/igrejacoerp/' target="_blank" variant="contained">
                         Ver mais...
                     </Button>

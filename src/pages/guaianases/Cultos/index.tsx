@@ -18,7 +18,7 @@ export function Cultos() {
                     Todas as transmissões
                 </Button>
             </Box>
-            <FooterTelaMenor />
+            <FooterTelaMenor/>
         </BoxGeral>
         
     )

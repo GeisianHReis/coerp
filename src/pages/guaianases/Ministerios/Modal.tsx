@@ -21,13 +21,11 @@ const Transition = React.forwardRef(function Transition(
 interface ModalMin{
   titulo: string;
   texto: React.ReactNode;
-  fotoLider1: string;
-  fotoLider2?: string;
   nomeLider1: string;
   nomeLider2?: string;
 }
 
-export default function AlertDialogSlide({titulo, texto, fotoLider1, fotoLider2, nomeLider1, nomeLider2}: ModalMin) {
+export default function AlertDialogSlide({titulo, texto, nomeLider1, nomeLider2}: ModalMin) {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -57,10 +55,10 @@ export default function AlertDialogSlide({titulo, texto, fotoLider1, fotoLider2,
           </DialogContentText>
           <h3>Liderança</h3>
           <Liderança>
-          <img id="pr1" src={fotoLider1} /> {nomeLider1}
+           {nomeLider1}
           </Liderança>
           <Liderança>
-          <img id="pr1" src={fotoLider2} /> {nomeLider2}
+           {nomeLider2}
           </Liderança>
         </DialogContent>
         <DialogActions>

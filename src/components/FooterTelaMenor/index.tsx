@@ -63,6 +63,7 @@ export function FooterTelaMenor() {
                 {unidadeSelecionada === "Ferraz" ? <Secao onClick={handleWhats} > <WhatsappLogo size={28} color="white" /> (11) 99946-1311 </Secao>: ""}
                 {unidadeSelecionada === "Ferraz" ? <Secao><p>Contribua:</p> <p id="texto">Chave PIX: 59.643.692/0001-39 <Copy cursor={"pointer"} size={20} onClick={handleClick} /></p> </Secao> : ""}
 
+
                 <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
                     <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
                         Chave pix copiada com sucesso!

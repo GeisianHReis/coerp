@@ -11,12 +11,12 @@ export function ProgramacaoF() {
             <Side name="PROGRAMAÇÃO" />
             <Box>
                 <BoxGeral>
-                    <h1>CONFIRA NOSSA AGENDA</h1>
+                    <h1>NOSSA AGENDA</h1>
                     <ListaProgramacao>
                         <p>06/08 - INTERCESSÃO HOMENS E MULHERES</p> <p>8:30h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>06/08 - SANTA CEIA</p> <p>13h e 18H</p>
+                        <p>06/08 - SANTA CEIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>07/08 - INTERCESSÃO HOMENS</p> <p>19h</p>
@@ -49,7 +49,7 @@ export function ProgramacaoF() {
                     <p>19/08 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>20/08 - CULTO DA FAMÍLIA</p> <p>10h e 18H</p>
+                    <p>20/08 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                     <p>21/08 - CULTO DE DISCIPULADO</p> <p>20h</p>
@@ -64,7 +64,7 @@ export function ProgramacaoF() {
                     <p>26/08 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>27/08 - CULTO DE DISCIPULADO</p> <p>10h e 18H</p>
+                    <p>27/08 - CULTO DE DISCIPULADO</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                     <p>28/08 - INTERCESSÃO HOMENS</p> <p>19h</p>

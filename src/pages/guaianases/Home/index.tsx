@@ -7,7 +7,6 @@ import imagemCulto3 from "../../../assets/FotosCulto/Guaianases/IMG_1060 (1).jpg
 import imagemCulto4 from "../../../assets/FotosCulto/Guaianases/fd.jpg";
 import imagemCulto5 from "../../../assets/FotosCulto/Guaianases/IMG_1415.jpg";
 import imagemCulto6 from "../../../assets/FotosCulto/Guaianases/IMG_1424.jpg";
-import video from "../../../assets/Documentos/VIDEO INSTITIUCIONAL.mp4";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
 import { Button } from '@mui/material';
@@ -24,8 +23,7 @@ export function Home() {
             <TopMobile name="" />
             <Box>
                 <img src={imagemTop}></img>
-                <video width="100%" height="315" autoPlay controls>
-                    <source src={video} type="video/mp4" /> </video>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/X0SBqUJZRkU?&autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </Box>
             <FaixaDaHome>
                 <h1>

@@ -7,7 +7,6 @@ import imagemCulto3 from "../../../assets/FotosCulto/Ferraz/IMG_1060.jpg";
 import imagemCulto4 from "../../../assets/FotosCulto/Ferraz/IMG_1074.jpg";
 import imagemCulto5 from "../../../assets/FotosCulto/Ferraz/IMG_0883.jpg";
 import imagemCulto6 from "../../../assets/FotosCulto/Ferraz/IMG_0797.jpg";
-import video from "../../../assets/Documentos/VIDEO INSTITIUCIONAL.mp4";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
 import { Button } from '@mui/material';
@@ -20,8 +19,7 @@ export function HomeF() {
             <TopMobile name="" />
             <Box>
                 <img src={imagemTop}></img>
-                <video width="100%" height="315" autoPlay controls>
-                    <source src={video} type="video/mp4" /> </video>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/X0SBqUJZRkU?&autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </Box>
             <FaixaDaHome>
                 <h1>

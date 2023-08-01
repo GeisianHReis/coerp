@@ -2,6 +2,9 @@
     border: 0;
     margin: 0;
     padding: 0;
+}
+
+body {
     background-color: #3363B5;
 }
 
@@ -11,110 +14,78 @@
 
 }
 
-.central img {
-    width: 15%;
-    padding-top: 3%;
-    padding-left: 42.5%;
-}
-
-.central {
-    display: grid;
+.imagem {
+    width: 100%;
     text-align: center;
 }
 
-.title {
-    display: flex;
-    font-family: 'outer-sans';
-    font-size: 63px;
-    width: 450px;
-    justify-content: center;
-    color: #fff;
-}
-
-.elementos {
-    padding-left: 33%;
-}
-
-.botoes {
-    display: grid;
-    font-family: 'outer-sans';
-    width: 472px;
-    height: 98px;
-    background-color: #fff;
-    color: #3363B5;
-    font-size: 35px;
-    text-decoration: none;
-    border-radius: 38px;
-    align-items: center;
-    margin: 20px;
+.imagem img {
+    margin: 30px;
+    width: 200px;
 }
 
 .meio {
-    padding-top: 3%;
-    padding-left: 35%;
-    padding-bottom: 4%;
+    text-align: center;
+    font: 500 37px 'outer-sans';
+    color: white;
+}
+
+.elementos {
+    display: grid;
+    text-align: center;
+    margin: 35px;
+    font: 300 27px 'outer-sans';
+    justify-content: center;
+
+}
+
+a {
+    text-align: center;
+    color: #3363B5;
+    text-decoration: none;
+}
+
+.botoes {
+    display: inherit;
+    align-items: center;
+    width: 400px;
+    height: 80px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 27px;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    padding-top: 4%;
+    text-align: center;
+
 }
 
 footer img {
-    width: 70px;
-    margin: 0 15px;
+    width: 57px;
+    margin: 5px 15px;
+    padding-bottom: 3%;
 }
 
-@media screen and (max-width:360px) {
-    .central img {
-        width: 350px;
-        padding-top: 30%;
-        padding-left: 30%;
-
-    }
-
-    .elementos {
-        padding-left: 0%;
-    }
-
-    .central {
-        text-align: center;
+@media screen and (max-width:520px) {
+    .botoes {
+        width: 320px;
     }
 
     .meio {
-
-        padding-left: 22%;
-
+        font-size: 27px;
     }
 
-    .title {
-        display: flex;
-        font-family: 'outer-sans';
-        font-size: 63px;
-        width: 450px;
-        justify-content: center;
-        color: #fff;
+}
 
+@media screen and (max-width:617px) {
+    .meio {
+        font-size: 27px;
     }
 
+}
+
+@media screen and (max-width:360px) {
     .botoes {
-        display: grid;
-        font-family: 'outer-sans';
-        width: 472px;
-        height: 98px;
-        background-color: #fff;
-        color: #3363B5;
-        font-size: 35px;
-        text-decoration: none;
-        border-radius: 38px;
-        align-items: center;
-        margin: 20px 158px;
+        width: 310px;
     }
-
-    footer {
-        padding-left: 108%;
-    }
-
-
 }

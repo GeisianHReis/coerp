@@ -1,5 +1,5 @@
 import * as React from 'react';
-import qrcoe from "../../assets/qrCode.jpeg";
+import qrcoe from "../../assets/qrCode.webp";
 import Alert from "@mui/material/Alert";
 import { FooterStyle, Secao } from './styles';
 import { Snackbar } from '@mui/material';

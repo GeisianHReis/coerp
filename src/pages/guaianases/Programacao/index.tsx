@@ -2,7 +2,7 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-import cartaz from "../../../assets/WhatsApp Image 2023-07-30 at 00.14.07.jpeg";
+import cartaz from "../../../assets/WhatsApp Image 2023-07-30 at 00.14.07.webp";
 
 export function Programacao() {
     return (

@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { Box, FaixaDaHome, FaixaDeAvisos, Galeria, GaleriaPc } from "../../styles/Home/styles";
 import imagemTop from "../../../assets/Ativo 5.png";
-import imagemCulto from "../../../assets/FotosCulto/Guaianases/dadfafsad.jpg";
-import imagemCulto2 from "../../../assets/FotosCulto/Guaianases/IMG_0837.jpg";
-import imagemCulto3 from "../../../assets/FotosCulto/Guaianases/IMG_1060 (1).jpg";
-import imagemCulto4 from "../../../assets/FotosCulto/Guaianases/fd.jpg";
-import imagemCulto5 from "../../../assets/FotosCulto/Guaianases/IMG_1415.jpg";
-import imagemCulto6 from "../../../assets/FotosCulto/Guaianases/IMG_1424.jpg";
+import imagemCulto from "../../../assets/FotosCulto/Guaianases/dadfafsad.webp";
+import imagemCulto2 from "../../../assets/FotosCulto/Guaianases/IMG_0837.webp";
+import imagemCulto3 from "../../../assets/FotosCulto/Guaianases/IMG_1060 (1).webp";
+import imagemCulto4 from "../../../assets/FotosCulto/Guaianases/fd.webp";
+import imagemCulto5 from "../../../assets/FotosCulto/Guaianases/IMG_1415.webp";
+import imagemCulto6 from "../../../assets/FotosCulto/Guaianases/IMG_1424.webp";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
 import { Button } from '@mui/material';
@@ -18,7 +18,7 @@ export function Home() {
     return (
         <>
             <Helmet>
-                <meta name="description" content="Coerp, uma igreja unida em um unico proposito" />
+                <meta name="description" content="Coerp, uma igreja." />
             </Helmet>
             <TopMobile name="" />
             <Box>

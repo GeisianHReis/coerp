@@ -4,12 +4,12 @@ import { Side } from "../../../components/Side";
 import { Box } from "../../styles/Ministerios/styles";
 import AlertDialogSlide from "./Modal";
 
-import fotoLideresHomens from "../../../assets/LideresCoerp/gonsalves.jpg";
-import fotoLideresCasais1 from "../../../assets/LideresCoerp/arlete.jpg";
-import fotoLideresCasais2 from "../../../assets/LideresCoerp/marquinhos.jpg";
-import fotoLideresFeitores1 from "../../../assets/LideresCoerp/juninho.jpg";
-import fotoLideresFeitores2 from "../../../assets/LideresCoerp/marisa.jpg";
-import fotoLideresMulheres from "../../../assets/LideresCoerp/silvana.jpg";
+import fotoLideresHomens from "../../../assets/LideresCoerp/gonsalves.webp";
+import fotoLideresCasais1 from "../../../assets/LideresCoerp/arlete.webp";
+import fotoLideresCasais2 from "../../../assets/LideresCoerp/marquinhos.webp";
+import fotoLideresFeitores1 from "../../../assets/LideresCoerp/juninho.webp";
+import fotoLideresFeitores2 from "../../../assets/LideresCoerp/marisa.webp";
+import fotoLideresMulheres from "../../../assets/LideresCoerp/silvana.webp";
 
 import logoKids from "../../../assets/LogosMinisterios/kids.png";
 import logoFeitores from "../../../assets/LogosMinisterios/feitores.png";

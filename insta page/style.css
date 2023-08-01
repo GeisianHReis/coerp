@@ -72,20 +72,27 @@ footer img {
     }
 
     .meio {
-        font-size: 27px;
+        font-size: 20px;
+    }
+
+    .elementos{
+        font-size: 22px;
     }
 
 }
 
 @media screen and (max-width:617px) {
     .meio {
-        font-size: 27px;
+        font-size: 25px;
     }
 
 }
 
-@media screen and (max-width:360px) {
+@media screen and (max-width:400px) {
     .botoes {
         width: 310px;
+    } .meio {
+        font-size: 20px;
     }
+
 }

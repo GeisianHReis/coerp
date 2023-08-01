@@ -29,5 +29,8 @@ export const Box = styled.main`
     h1{
         font-family: ${(props) => props.theme["font-family-heading"]};
         font-size: ${(props) => props.theme["size-heading"]};
+        @media screen and (max-width: 650px) {
+            font-size: ${(props) => props.theme["size-mobile-heading"]};
+    }
     }
 `;

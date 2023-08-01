@@ -12,7 +12,7 @@ export const FaixaDeAvisos = styled.section`
             display: flex;
             justify-content: center;
 
-            color: ${(props) => props.theme["white"]};
+            color: ${(props) => props.theme["black"]};
             font-family: ${(props) => props.theme["font-family-heading"]};
             font-size: ${(props) => props.theme["size-heading"]};
         }
@@ -46,7 +46,7 @@ export const Box = styled.main`
         }
     }
 `;
-
+ 
 export const FaixaDaHome = styled.div`
         display: flex;
         flex-direction: column;
@@ -61,10 +61,7 @@ export const FaixaDaHome = styled.div`
             font-size: ${(props) => props.theme["size-heading"]};
             font-family: ${(props) => props.theme["font-family-heading"]};
             @media screen and (max-width: 650px) {
-                font-size: 35px;
-            }
-            @media screen and (max-width: 470px) {
-                font-size: 25px;
+                font-size: 22px;
             }
         }
         
@@ -100,6 +97,9 @@ export const MinCarrossel = styled.section`
 `;
 
 export const GaleriaPc = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
     h1{
         color: ${(props) => props.theme["black"]};
     }

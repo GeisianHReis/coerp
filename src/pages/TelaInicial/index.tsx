@@ -1,8 +1,9 @@
 import { ButtonMenu, Geral, Logo, Menu, Subtitulo, Titulo } from "./styles";
 import logo from "../../assets/logobranco- coerp.svg"
 import { useLocation, useNavigate } from "react-router-dom";
-import {useContext } from 'react';
+import { useContext } from 'react';
 import UnidadeContext from "../../UnidadeContext";
+import { Helmet } from "react-helmet";
 
 
 
@@ -22,8 +23,12 @@ export function TelaInicial() {
     };
     return (
         <Geral>
+            <Helmet>
+                <title>Coerp - Comunidade Evangélica Redenção Plena</title>
+                <meta name="description" content="Uma igreja que ama o que cristo ama. Seja parte da Comunidade Evangélica Redenção Plena e encontre sua família espiritual conosco." />
+            </Helmet>
             <Logo>
-                <img src={logo} /></Logo>
+                <img src={logo} alt="Logo igreja coerp"/></Logo>
             <Titulo>
                 <h2>
                     <p>SEJA&nbsp;</p> BEM VINDO

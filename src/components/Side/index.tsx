@@ -21,7 +21,7 @@ export function Side({ name }: ISide) {
     return (
         <>
             <Lateral>
-                <img src={imagemLogo} onClick={handleHome} />
+                <img src={imagemLogo} onClick={handleHome} alt="Logo igreja coerp"/>
                 {name}
             </Lateral>
         </>

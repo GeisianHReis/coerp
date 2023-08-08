@@ -69,11 +69,11 @@ export function Header() {
   return (
     <BoxMenu className={visible ? "visible" : "hidden"}>
       {location.pathname === "/ferraz/home" ? (
-        <img src={imagemLogo} onClick={handleMudar} />
+        <img src={imagemLogo} onClick={handleMudar} alt="Logo igreja coerp"/>
       ) : location.pathname === "/guaianases/home" ? (
-        <img src={imagemLogoCaminho} onClick={handleMudar}/>
+        <img src={imagemLogoCaminho} onClick={handleMudar} alt="Logo igreja coerp"/>
       ) : (
-        <img src="" />
+        <img src="" alt=""/>
       )}
 
       <ButtonMenu

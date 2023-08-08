@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const ListaProgramacao = styled.section`
     display: flex;
     flex-direction: row;
@@ -16,7 +17,12 @@ export const ListaProgramacao = styled.section`
         margin-right: 5%;
         padding: 7px;
         font-size: ${(props) => props.theme["size-paragraph"]};
+    }  
+    
+    &.destaque{
+        font-weight: bolder;
     }
+
 `;
 
 export const Box = styled.main`

@@ -48,6 +48,12 @@ export const GaleriaDaliderança = styled.div`
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     margin-bottom: 10%;
+    @media screen and (max-width: 1020px) {
+        grid-template-columns: auto auto auto auto;
+    }
+    @media screen and (max-width: 850px) {
+        grid-template-columns: auto auto auto;
+    }
     @media screen and (max-width: 650px) {
         grid-template-columns: auto auto;
     }

@@ -78,7 +78,7 @@ export function SobreNos() {
                         <img src={fotoMauricioJosefa} /> Maurício e <br/> Josefa
                     </Liderança>
                     <Liderança>
-                        <img src={fotoDiacono} /> Dc. Gilberto
+                        <img src={fotoDiacono} /> Dc. Geraldo
                     </Liderança>
                     <Liderança>
                         <img src={fotoDcSandra} /> Dc. Sandra

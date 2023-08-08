@@ -70,13 +70,13 @@ export function SobreNos() {
                         <img src={fotoDamiana} /> Damiana
                     </Liderança>
                     <Liderança>
-                        <img src={fotoJaqueline} /> Jaqueline
+                        <img src={fotoJaqueline} /> Dc. Jaqueline
                     </Liderança>
                     <Liderança>
-                        <img src={fotoSoniaS} /> Sônia Sepero
+                        <img src={fotoSoniaS} /> Dc. Sônia 
                     </Liderança>
                     <Liderança>
-                        <img src={fotoLuciaS} /> Lúcia Sepero
+                        <img src={fotoLuciaS} /> Lúcia
                     </Liderança>
                     <Liderança>
                         <img src={fotoLuciaM} /> Lúcia Maria
@@ -91,7 +91,7 @@ export function SobreNos() {
                         <img src={fotoJosenildo} /> Josenildo e <br/> Yara
                     </Liderança>
                     <Liderança>
-                        <img src={fotoDiacono} /> Dc. Gilberto e <br/> Dc. Sandra
+                        <img src={fotoDiacono} /> Dc. Geraldo e <br/> Dc. Sandra
                     </Liderança>
                     <Liderança>
                         <img src={fotoLuiz} /> Luiz e <br/> Nena

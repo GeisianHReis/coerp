@@ -3,10 +3,15 @@ import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
 import cartaz from "../../../assets/cartaz.webp";
+import { Helmet } from "react-helmet";
 
 export function ProgramacaoF() {
     return (
         <>
+            <Helmet>
+                <title>Programação da Igreja Coerp em Ferraz de Vasconcelos | Cultos, Eventos e Atividades</title>
+                <meta name="description" content="Explore a Programação da Igreja Coerp em Ferraz de Vasconcelos. Descubra cultos, eventos e atividades inspiradoras para fortalecer sua fé e comunidade. Junte-se a nós!" />
+            </Helmet>
             <TopMobile name="PROGRAMAÇÃO" />
             <Side name="PROGRAMAÇÃO" />
             <Box>
@@ -26,7 +31,7 @@ export function ProgramacaoF() {
                     <ListaProgramacao>
                         <p>QUI. 10 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
-                    <ListaProgramacao  className="destaque">
+                    <ListaProgramacao className="destaque">
                         <p>SEX. 11 - ENTREGA DE MARMITAS</p> <p>18:30h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
@@ -74,7 +79,7 @@ export function ProgramacaoF() {
 
                 </BoxGeral>
                 <BoxGeral>
-                    <img src={cartaz} />
+                    <img src={cartaz} alt="Cartaz conferencia koinonia, igreja coerp"/>
                 </BoxGeral>
 
             </Box>

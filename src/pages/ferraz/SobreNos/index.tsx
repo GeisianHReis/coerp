@@ -16,10 +16,15 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { TopMobile } from "../../../components/TopMobile";
 import { Button } from "@mui/material";
 import { DownloadSimple } from "@phosphor-icons/react";
+import { Helmet } from "react-helmet";
 
 export function SobreNosF() {
     return (
         <>
+            <Helmet>
+                <title>Sobre Nós | Igreja Coerp - Conheça Nossa História</title>
+                <meta name="description" content="Descubra a história e valores da Igreja Coerp. Desde nossa origem até nossos princípios atuais, saiba mais sobre nós e nossa dedicação à comunidade." />
+            </Helmet>
             <TopMobile name="SOBRE NÓS" />
             <Side name="SOBRE NÓS" />
             <ListaProgramacao>
@@ -49,7 +54,7 @@ export function SobreNosF() {
                     Aqui na Coerp, valorizamos nossa história, mas estamos comprometidos em olhar para o futuro com fé, amor e dedicação.
                     Junte-se a nós nessa jornada de crescimento espiritual e transformação de vidas.
                 </p>
-                
+
                 <h1>
                     NOSSA LIDERANÇA
                 </h1>
@@ -84,17 +89,17 @@ export function SobreNosF() {
                     <Liderança>
                         <img src={fotoCris} /> Cris
                     </Liderança>
-                    
-                    
+
+
                 </GaleriaDaliderança>
                 <Button href={estatuto} target="_blank" variant="contained">
                     Baixar nosso estatuto &nbsp;<DownloadSimple size={20} weight="bold" color="white" />
                 </Button>
-                <br/>
+                <br />
                 <Button href={doutrina} target="_blank" variant="contained">
                     Baixar nossa doutrina &nbsp;<DownloadSimple size={20} weight="bold" color="white" />
                 </Button>
-                <br/>
+                <br />
             </ListaProgramacao>
             <FooterTelaMenor />
         </>

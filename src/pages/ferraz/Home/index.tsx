@@ -10,12 +10,17 @@ import imagemCulto6 from "../../../assets/FotosCulto/Ferraz/IMG_0797.webp";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
 import { Button } from '@mui/material';
+import { Helmet } from 'react-helmet';
 
 
 export function HomeF() {
 
     return (
         <>
+            <Helmet>
+                <title>Igreja Coerp - Comunidade Evangélica Redenção Plena | Seja Parte da Nossa Missão</title>
+                <meta name="description" content="Uma igreja que entendeu o ide do Senhor. Somos um só corpo, com um só propósito: compartilhar o amor de Cristo e transformar vidas. Venha fazer parte dessa missão!" />
+            </Helmet>
             <TopMobile name="" />
             <Box>
                 <img src={imagemTop}></img>

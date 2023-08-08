@@ -3,10 +3,15 @@ import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
 import cartaz from "../../../assets/WhatsApp Image 2023-07-30 at 00.14.07.webp";
+import { Helmet } from "react-helmet";
 
 export function Programacao() {
     return (
         <>
+            <Helmet>
+                <title>Programação da Igreja Coerp em Guaianases | Cultos, Eventos e Atividades</title>
+                <meta name="description" content="Explore a Programação da Igreja Coerp em Guaianases. Descubra cultos, eventos e atividades inspiradoras para fortalecer sua fé e comunidade. Junte-se a nós!" />
+            </Helmet>
             <TopMobile name="PROGRAMAÇÃO" />
             <Side name="PROGRAMAÇÃO" />
             <Box>

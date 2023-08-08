@@ -12,6 +12,7 @@ import AlertDialogSlide from "./Modal";
 
 import { TopMobile } from "../../../components/TopMobile";
 import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
+import { Helmet } from "react-helmet";
 
 export function Ministerios() {
 
@@ -25,12 +26,16 @@ export function Ministerios() {
 
     const midias = ["Midias", "O Ministério de Mídia é essencial para o crescimento do ministério de Jesus nos dias atuais. Cuidamos de detalhes que muitos não veem, mas que são cruciais. Através das mídias, usamos a internet para alcançar pessoas e apresentar Jesus ao mundo. Somos uma voz que prega a Palavra por meio das redes sociais, permitindo que mais pessoas conheçam a nossa igreja e se aproximem de Deus. Nossa missão é levar a mensagem do Evangelho aos corações, impactando vidas e disseminando a esperança.", "Patricia"]
 
-    const louvorDanca = ["Louvor e Dança", "O Ministério de Louvor e Dança é uma equipe unida, instrumentos nas mãos de Deus, proclamando o Evangelho de Jesus através da música e da dança. Além de expressarmos movimentos artísticos, somos ministros da Palavra de Deus, transmitindo mensagens por atos proféticos. Chamados para trazer vida ao que está morto, nossas coreografias e expressões são um meio poderoso de tocar os corações e levar esperança às vidas. Unidos em um só propósito, buscamos criar um ambiente propício para o Espírito Santo agir e transformar vidas, inspirando a comunhão e a conexão com o divino. Nossa missão é levar a presença de Deus aos corações através da música e das artes, compartilhando a alegria e a paz que vem da adoração genuína.",  "Patricia",  "Jaqueline"]
+    const louvorDanca = ["Louvor e Dança", "O Ministério de Louvor e Dança é uma equipe unida, instrumentos nas mãos de Deus, proclamando o Evangelho de Jesus através da música e da dança. Além de expressarmos movimentos artísticos, somos ministros da Palavra de Deus, transmitindo mensagens por atos proféticos. Chamados para trazer vida ao que está morto, nossas coreografias e expressões são um meio poderoso de tocar os corações e levar esperança às vidas. Unidos em um só propósito, buscamos criar um ambiente propício para o Espírito Santo agir e transformar vidas, inspirando a comunhão e a conexão com o divino. Nossa missão é levar a presença de Deus aos corações através da música e das artes, compartilhando a alegria e a paz que vem da adoração genuína.", "Patricia", "Jaqueline"]
 
     const intercessao = ["Intercessão", "Intercessão é orar por alguém ou por algo, pedindo o que está no coração de Deus. Interceder por algo que não se vê é um ato de fé. Eu creio que devemos ser um povo que tem a alegria de Jesus por completo em nós. Devemos ser assim em todas as áreas de nossa vida e em nosso ministério. A intercessão não pode ser um fardo, e sim uma alegria, amor e satisfação no que fazemos, tendo comunhão e intimidade com Jesus, sempre atentos ao comando do Senhor. Devemos ser intercessores 24 horas, como está escrito em Isaías 21:8, \"Sobre a torre de vigia estou em pé continuamente de dia, e de guarda me ponho nas noites inteiras\". A torre de vigia representa aquele que está atento, vigiando contra todas as investidas do inimigo. O Atalaia, que é o vigia, o sentinela, geralmente está na torre de vigia para que sua visão seja mais ampla e, assim, consiga enxergar mais longe. E quando o inimigo vem, o vigia tem de tocar a trombeta e avisar o povo para que todos se preparem para a guerra, se protejam e não sejam pegos de sobressalto, sem aviso.", "Sônia Sepero"]
 
     return (
         <>
+            <Helmet>
+                <title>Ministérios Coerp em Guaianases | Comunidade e Liderança</title>
+                <meta name="description" content="Explore os Ministérios da Igreja Coerp em Guaianases: Envolva-se em atividades significativas e fortaleça sua conexão espiritual. Descubra como cada ministério contribui para a comunidade. Fique por dentro de tudo!" />
+            </Helmet>
             <TopMobile name="MINISTÉRIOS" />
             <Side name="MINISTÉRIOS" />
             <Box>

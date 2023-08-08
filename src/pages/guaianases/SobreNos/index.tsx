@@ -22,14 +22,19 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { TopMobile } from "../../../components/TopMobile";
 import { Button } from "@mui/material";
 import { DownloadSimple } from "@phosphor-icons/react";
+import { Helmet } from "react-helmet";
 
 export function SobreNos() {
     return (
         <>
+            <Helmet>
+                <title>Sobre Nós | Igreja Coerp - Conheça Nossa História</title>
+                <meta name="description" content="Descubra a história e valores da Igreja Coerp. Desde nossa origem até nossos princípios atuais, saiba mais sobre nós e nossa dedicação à comunidade." />
+            </Helmet>
             <TopMobile name="SOBRE NÓS" />
             <Side name="SOBRE NÓS" />
             <ListaProgramacao>
-                
+
                 <h1>NOSSA HISTÓRIA</h1>
                 <p>
                     Nossa história começou em 13 de Abril de 1976, quando éramos conhecidos como Igreja Batista de Romanópolis. Desde então, passamos por diversas mudanças, tanto em nosso nome quanto em nosso perfil eclesiástico.
@@ -73,7 +78,7 @@ export function SobreNos() {
                         <img src={fotoJaqueline} /> Dc. Jaqueline
                     </Liderança>
                     <Liderança>
-                        <img src={fotoSoniaS} /> Dc. Sônia 
+                        <img src={fotoSoniaS} /> Dc. Sônia
                     </Liderança>
                     <Liderança>
                         <img src={fotoLuciaS} /> Lúcia
@@ -82,35 +87,35 @@ export function SobreNos() {
                         <img src={fotoLuciaM} /> Lúcia Maria
                     </Liderança>
                     <Liderança>
-                        <img src={fotoDcGilberto} /> Dc. Gilberto e <br/> Ana Paula
+                        <img src={fotoDcGilberto} /> Dc. Gilberto e <br /> Ana Paula
                     </Liderança>
                     <Liderança>
-                    <img src={fotoMauricioJosefa} /> Maurício e <br/> Josefa
+                        <img src={fotoMauricioJosefa} /> Maurício e <br /> Josefa
                     </Liderança>
                     <Liderança>
-                        <img src={fotoJosenildo} /> Josenildo e <br/> Yara
+                        <img src={fotoJosenildo} /> Josenildo e <br /> Yara
                     </Liderança>
                     <Liderança>
-                        <img src={fotoDiacono} /> Dc. Geraldo e <br/> Dc. Sandra
+                        <img src={fotoDiacono} /> Dc. Geraldo e <br /> Dc. Sandra
                     </Liderança>
                     <Liderança>
-                        <img src={fotoLuiz} /> Luiz e <br/> Nena
+                        <img src={fotoLuiz} /> Luiz e <br /> Nena
                     </Liderança>
                     <Liderança>
-                        <img src={fotoRenan} /> Renan e <br/> Patrícia
+                        <img src={fotoRenan} /> Renan e <br /> Patrícia
                     </Liderança>
                     <Liderança>
-                        <img src={fotoToninho} /> Toninho e <br/> Carla
+                        <img src={fotoToninho} /> Toninho e <br /> Carla
                     </Liderança>
                 </GaleriaDaliderança>
                 <Button href={estatuto} target="_blank" variant="contained">
                     Baixar nosso estatuto &nbsp;<DownloadSimple size={20} weight="bold" color="white" />
                 </Button>
-                <br/>
+                <br />
                 <Button href={doutrina} target="_blank" variant="contained">
                     Baixar nossa doutrina &nbsp;<DownloadSimple size={20} weight="bold" color="white" />
                 </Button>
-                <br/>
+                <br />
             </ListaProgramacao>
             <FooterTelaMenor />
         </>

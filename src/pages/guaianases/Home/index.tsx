@@ -18,7 +18,8 @@ export function Home() {
     return (
         <>
             <Helmet>
-                <meta name="description" content="Coerp, uma igreja." />
+                <title>Igreja Coerp - Comunidade Evangélica Redenção Plena | Seja Parte da Nossa Missão</title>
+                <meta name="description" content="Uma igreja que entendeu o ide do Senhor. Somos um só corpo, com um só propósito: compartilhar o amor de Cristo e transformar vidas. Venha fazer parte dessa missão!" />
             </Helmet>
             <TopMobile name="" />
             <Box>

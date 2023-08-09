@@ -1,7 +1,6 @@
 import Button from "@mui/material/Button";
 import { Side } from "../../../components/Side";
 import { Box, BoxGeral } from "../../styles/Cultos/styles";
-
 import { TopMobile } from "../../../components/TopMobile";
 import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 

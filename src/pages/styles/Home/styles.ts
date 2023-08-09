@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FaixaDeAvisos = styled.section`
     display: flex;
     flex-direction: column;
-    padding: 7% 7% 7%;
+    padding: 3% 2% 7%;
 
     div{
         flex-grow: 3;

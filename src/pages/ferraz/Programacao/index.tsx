@@ -7,15 +7,19 @@ import cartaz from "../../../assets/banner entrega das marmitas (2).png";
 export function ProgramacaoF() {
     return (
         <>
+            <Helmet>
+                <title>Programação da Igreja Coerp em Ferraz de Vasconcelos | Cultos, Eventos e Atividades</title>
+                <meta name="description" content="Explore a Programação da Igreja Coerp em Ferraz de Vasconcelos. Descubra cultos, eventos e atividades inspiradoras para fortalecer sua fé e comunidade. Junte-se a nós!" />
+            </Helmet>
             <TopMobile name="PROGRAMAÇÃO" />
             <Side name="PROGRAMAÇÃO" />
             <Box>
                 <BoxGeral>
-                    <h1>NOSSA AGENDA</h1>
+                    <h1>AGENDA DE AGOSTO</h1>
                     <ListaProgramacao>
                         <p>DOM. 06 - INTERCESSÃO HOMENS E MULHERES</p> <p>8:30h</p>
                     </ListaProgramacao>
-                    <ListaProgramacao> <p>06/08 - SANTA CEIA</p> <p>13h e 18H</p>
+                    <ListaProgramacao> <p>DOM. 06 - SANTA CEIA</p> <p>13h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>SEG. 07- INTERCESSÃO HOMENS</p> <p>19h</p>
@@ -26,59 +30,59 @@ export function ProgramacaoF() {
                     <ListaProgramacao>
                         <p>QUI. 10 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
-                    <ListaProgramacao>
-                   <b><p>SEX. 11 - ENTREGA DE MARMITAS</p> <p>18:30h</p></b>
+                    <ListaProgramacao className="destaque">
+                        <p>SEX. 11 - ENTREGA DE MARMITAS</p> <p>18:30h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>SAB. 12 - CULTO FEITORES</p> <p>19h</p>
+                        <p>SAB. 12 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>DOM. 13 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
+                        <p>DOM. 13 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>SEG. 14 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                        <p>SEG. 14 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>QUA. 16 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                        <p>QUA. 16 - INTERCESSÃO MULHERES</p> <p>14h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>QUI. 17 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                        <p>QUI. 17 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>SAB. 19 - CULTO FEITORES</p> <p>19h</p>
+                        <p>SAB. 19 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>20/08 - CULTO DA FAMÍLIA</p> <p>10h e 18H</p>
+                        <p>DOM. 18 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>SEG. 21 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                        <p>SEG. 21 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>QUA. 23 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                        <p>QUA. 23 - INTERCESSÃO MULHERES</p> <p>14h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>QUI. 24 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                        <p>QUI. 24 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>SAB. 26 - CULTO FEITORES</p> <p>19h</p>
+                        <p>SAB. 26 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>27/08 - CULTO DE DISCIPULADO</p> <p>10h e 18H</p>
+                        <p>DOM. 27 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>SEG. 28 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                        <p>SEG. 28 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>QUA. 30 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                        <p>QUA. 30 - INTERCESSÃO MULHERES</p> <p>14h</p>
                     </ListaProgramacao>
 
                 </BoxGeral>
                 <BoxGeral>
-                    <img src={cartaz}/>
+                    <img src={cartaz} alt="Cartaz entrega de marmitas, igreja coerp"/>
                 </BoxGeral>
-                
+
             </Box>
             <FooterTelaMenor />
-        </> 
+        </>
     )
 };

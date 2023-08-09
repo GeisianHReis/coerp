@@ -1,25 +1,30 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { Box, FaixaDaHome, FaixaDeAvisos, Galeria, GaleriaPc } from "../../styles/Home/styles";
 import imagemTop from "../../../assets/Ativo 5.png";
-import imagemCulto1 from "../../../assets/FotosCulto/Ferraz/IMG_0940.jpg";
-import imagemCulto2 from "../../../assets/FotosCulto/Ferraz/IMG_0841.jpg";
-import imagemCulto3 from "../../../assets/FotosCulto/Ferraz/IMG_1060.jpg";
-import imagemCulto4 from "../../../assets/FotosCulto/Ferraz/IMG_1074.jpg";
-import imagemCulto5 from "../../../assets/FotosCulto/Ferraz/IMG_0883.jpg";
-import imagemCulto6 from "../../../assets/FotosCulto/Ferraz/IMG_0797.jpg";
+import imagemCulto1 from "../../../assets/FotosCulto/Ferraz/IMG_0940.webp";
+import imagemCulto2 from "../../../assets/FotosCulto/Ferraz/IMG_0841.webp";
+import imagemCulto3 from "../../../assets/FotosCulto/Ferraz/IMG_1060.webp";
+import imagemCulto4 from "../../../assets/FotosCulto/Ferraz/IMG_1074.webp";
+import imagemCulto5 from "../../../assets/FotosCulto/Ferraz/IMG_0883.webp";
+import imagemCulto6 from "../../../assets/FotosCulto/Ferraz/IMG_0797.webp";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
 import { Button } from '@mui/material';
+import { Helmet } from 'react-helmet';
 
 
 export function HomeF() {
 
     return (
         <>
+            <Helmet>
+                <title>Igreja Coerp - Comunidade Evangélica Redenção Plena | Seja Parte da Nossa Missão</title>
+                <meta name="description" content="Uma igreja que entendeu o ide do Senhor. Somos um só corpo, com um só propósito: compartilhar o amor de Cristo e transformar vidas. Venha fazer parte dessa missão!" />
+            </Helmet>
             <TopMobile name="" />
             <Box>
                 <img src={imagemTop}></img>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/3atoVKcLt2M" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/X0SBqUJZRkU?&autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </Box>
             <FaixaDaHome>
                 <h1>

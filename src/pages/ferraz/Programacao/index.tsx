@@ -73,6 +73,9 @@ export function ProgramacaoF() {
                         <p>SEG. 28 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
+                        <p>TER. 29 - ENCONTRO MULHERES COM PROPÓSITO</p> <p>20h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
                         <p>QUA. 30 - INTERCESSÃO MULHERES</p> <p>14h</p>
                     </ListaProgramacao>
 

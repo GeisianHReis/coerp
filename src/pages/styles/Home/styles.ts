@@ -64,6 +64,13 @@ export const FaixaDaHome = styled.div`
                 font-size: 22px;
             }
         }
+        h3{
+            font-family: ${(props) => props.theme["font-family-paragraph"]};
+            font-size: ${(props) => props.theme["size-paragraph"]};
+        a{
+            color: ${(props) => props.theme["white"]};
+        }
+        }
         
         p{
             font-family: ${(props) => props.theme["font-family-paragraph"]};

@@ -66,46 +66,46 @@ export function SobreNos() {
                 </h1>
                 <GaleriaDaliderança>
                     <Liderança>
-                        <img src={fotoSueli} /> Pra. Sueli
+                        <img src={fotoSueli} alt="mulher de cabelo curto preto, blusa rosa com blaser preto"/> Pra. Sueli
                     </Liderança>
                     <Liderança>
-                        <img src={fotoCaroline} /> Caroline
+                        <img src={fotoCaroline} alt="mulher com luzes loiras no cabelo e blusa preta"/> Caroline
                     </Liderança>
                     <Liderança>
-                        <img src={fotoDamiana} /> Damiana
+                        <img src={fotoDamiana} alt="mulher de cabelo curto com blusa preta estampada" /> Damiana
                     </Liderança>
                     <Liderança>
-                        <img src={fotoJaqueline} /> Dc. Jaqueline
+                        <img src={fotoJaqueline} alt="mulher com luzes no cabelo, blusa preta e blaser branco" /> Dc. Jaqueline
                     </Liderança>
                     <Liderança>
-                        <img src={fotoSoniaS} /> Dc. Sônia
+                        <img src={fotoSoniaS} alt="mulher de cabelo curto de óculos com blusa jeans"/> Dc. Sônia
                     </Liderança>
                     <Liderança>
-                        <img src={fotoLuciaS} /> Lúcia
+                        <img src={fotoLuciaS} alt="mulher de cabelo escuro e blusa preta"/> Lúcia
                     </Liderança>
                     <Liderança>
-                        <img src={fotoLuciaM} /> Lúcia Maria
+                        <img src={fotoLuciaM} alt="mulher de cabelo curto, com óculos e blusa azul"/> Lúcia Maria
                     </Liderança>
                     <Liderança>
-                        <img src={fotoDcGilberto} /> Dc. Gilberto e <br /> Ana Paula
+                        <img src={fotoDcGilberto} alt="casal abraçado:homem careca e blusa laranja e mulher com luzes no cabelo e blaser preto"/> Dc. Gilberto e <br /> Ana Paula
                     </Liderança>
                     <Liderança>
-                        <img src={fotoMauricioJosefa} /> Maurício e <br /> Josefa
+                        <img src={fotoMauricioJosefa} alt="casal junto: homem de terno azul e cabelo grisálio e mulher de cabelo vermelho, saia e blaser vermelho" /> Maurício e <br /> Josefa
                     </Liderança>
                     <Liderança>
-                        <img src={fotoJosenildo} /> Josenildo e <br /> Yara
+                        <img src={fotoJosenildo} alt="casal abraçado: homem careca com blusa amarela e mulher cacheada com blusa cinza" /> Josenildo e <br /> Yara
                     </Liderança>
                     <Liderança>
-                        <img src={fotoDiacono} /> Dc. Geraldo e <br /> Dc. Sandra
+                        <img src={fotoDiacono} alt="mulher de cabelo cacheado e hoem careca de terno" /> Dc. Geraldo e <br /> Dc. Sandra
                     </Liderança>
                     <Liderança>
-                        <img src={fotoLuiz} /> Luiz e <br /> Nena
+                        <img src={fotoLuiz} alt="casal abraçados de óculos: mulher de cabelo escuro, óculos e blaser, e homem de blusa azul"/> Luiz e <br /> Nena
                     </Liderança>
                     <Liderança>
-                        <img src={fotoRenan} /> Renan e <br /> Patrícia
+                        <img src={fotoRenan} alt="homem de terno marrom e óculos, e mulher com luzes e blusa verde" /> Renan e <br /> Patrícia
                     </Liderança>
                     <Liderança>
-                        <img src={fotoToninho} /> Toninho e <br /> Carla
+                        <img src={fotoToninho} alt="casal abraçado: mulher loira e com jaqueta jeans e homem de terno cinza"/> Toninho e <br /> Carla
                     </Liderança>
                 </GaleriaDaliderança>
                 <Button href={estatuto} target="_blank" variant="contained">
@@ -114,6 +114,7 @@ export function SobreNos() {
                 <br />
                 <Button href={doutrina} target="_blank" variant="contained">
                     Baixar nossa doutrina &nbsp;<DownloadSimple size={20} weight="bold" color="white" />
+                    
                 </Button>
                 <br />
             </ListaProgramacao>
@@ -121,3 +122,4 @@ export function SobreNos() {
         </>
     )
 };
+

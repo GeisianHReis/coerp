@@ -2,7 +2,7 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-import cartaz from "../../../assets/WhatsApp Image 2023-07-30 at 00.14.07.webp";
+import cartaz from "../../../assets/caldo-das-mulheres.webp";
 import { Helmet } from "react-helmet";
 
 export function Programacao() {
@@ -17,23 +17,9 @@ export function Programacao() {
             <Box>
                 <BoxGeral>
                     <h1>NOSSA AGENDA</h1>
+    
                     <ListaProgramacao>
-                        <p>01/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>05/08 - FESTA DAS NAÇÕES</p> <p>18h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>08/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>12/08 - CULTO DE JOVENS: ADORAÇÃO</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>15/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>19/08 - CULTO DE MULHERES</p> <p>17h</p>
+                        <p>19/08 - CALDO DAS MULHERES</p> <p>17h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>22/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
@@ -55,7 +41,7 @@ export function Programacao() {
                     </ListaProgramacao>
                 </BoxGeral>
                 <BoxGeral>
-                    <img src={cartaz} />
+                    <img src={cartaz} alt="banner informativo sobre o evento do dia 19 de agosto"/>
                 </BoxGeral>
 
             </Box>

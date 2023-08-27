@@ -2,7 +2,7 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-import cartaz from "../../../assets/caldo-das-mulheres.webp";
+// import cartaz from "../../../assets/caldo-das-mulheres.webp";
 import { Helmet } from "react-helmet";
 
 export function Programacao() {
@@ -17,32 +17,17 @@ export function Programacao() {
             <Box>
                 <BoxGeral>
                     <h1>NOSSA AGENDA</h1>
-    
+
                     <ListaProgramacao>
-                        <p>19/08 - CALDO DAS MULHERES</p> <p>17h</p>
+                        <p>TER. 29/08 - CULTO DE ORAÇÃO 19h30</p> <p></p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>22/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>25/08 - CULTO DE CASAIS</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>26/08 - EVANGELISMO: ENTREGA DE MARMITAS</p> <p>18h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>26/08 - CULTO DE JOVENS</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>29/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>DOMINGOS - CULTO DA FAMÍLIA</p> <p>18h</p>
+                        <p>DOMINGOS - CULTO DA FAMÍLIA 18h</p> <p></p>
                     </ListaProgramacao>
                 </BoxGeral>
-                <BoxGeral>
+                {/* <BoxGeral>
                     <img src={cartaz} alt="banner informativo sobre o evento do dia 19 de agosto"/>
-                </BoxGeral>
+                </BoxGeral> */}
 
             </Box>
             <FooterTelaMenor />

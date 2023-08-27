@@ -28,10 +28,10 @@ export function Home() {
             </Box>
             <FaixaDaHome>
                 <h1>
-                    CALDO COM AS MULHERES
+                    CULTO DE ORAÇÃO
                 </h1>
                 <p>
-                    19/08 - NÃO PERCA!
+                    29/08 - PARTICIPE CONOSCO!
                 </p>
             </FaixaDaHome>
 

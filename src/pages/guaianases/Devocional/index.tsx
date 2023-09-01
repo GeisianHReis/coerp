@@ -23,6 +23,10 @@ export function Devocional() {
     const textoQuatro = quatroDevocional.join('<br><br>');
     const textoComQuebrasDeLinhaQuatro = <div dangerouslySetInnerHTML={{ __html: textoQuatro }} />;
 
+    const quintoDevocional = ["O vaso e o seu oleiro", "(Jeremias 18)<br><br> Quando não estamos da forma que Deus gostaria que tivéssemos, ele vai nos lapidar. Assim como o vaso  que está sendo feito novamente, da mesma forma somos nós nas mãos de Deus. <br><br> Para se tornar um vaso de alto valor precisamos suportar o processo de ser moldado. Na maioria das vezes o processo de transformação machuca, dói, mas só confiar no Oleiro por que Ele sabe o que está fazendo.  Quando o vaso não agrada o Oleiro ele quebra, amassa de novo até ir surgindo um vaso novo que agrada o seu Oleiro, um vaso de alto valor, para enfim ser  cheio do azeite.Assim somos nós nas mãos de Deus.<br><br> Ele nos trata no íntimo e no profundo, cuidando de cada detalhe, nos ajudando a nos manter firme enquanto ele começa a nos transformar e a todo tempo está junto para que sabemos estamos em suas mãos até ficar da forma que o agrada. Deus ele perfeito e Ele nos molda da forma que Ele deseja.<ul> <li>Com suas MÃOS: Ele molda o barro. Nossas vidas são transformadas somente quando nos colocamos nas mãos do Senhor.</li> <li>Com seus PÉS: Ele move a roda onde está o barro para que o movimento faça o barro ser moldável. Deste modo Deus tem movido nossas vidas para que nos tornemos moldáveis.</li> <li>Com seus OLHOS: Ele olha para o barro e vê como está ou quando está pronto.Se estiver com defeito, volta e molda novamente o barro. Mas se estiver bonito e pronto ele nos prepara para ser usado com muito carinho.</li> <li>Casa do oleiro- igreja</li> <li>Oleiro- Deus</li> <li>Vaso- todo aquele que aceitou ser moldado por Ele.</li> <li>Azeite- unção</li></ul> Que você seja moldado por Deus e seja cheio do seu azeite, que sua vida seja transformada da forma que Deus deseja.<br>Enquanto você aguenta o processo de ser transformado, Deus está te enchendo com azeite de unção. Você será um vaso de alto valor nas mãos do grande Oleiro! Deus está contigo."];
+    const textoQuinto = quintoDevocional.join('<br><br>');
+    const textoComQuebrasDeLinhaQuinto = <div dangerouslySetInnerHTML={{ __html: textoQuinto }} />;
+
 
 
 
@@ -44,6 +48,12 @@ export function Devocional() {
             <Side name="DEVOCIONAIS" />
             <h1>DEVOCIONAIS</h1>
             <Container>
+                <section>
+                    <h2>O vaso e o seu oleiro.</h2>
+                    <h3>03 de Setembro de 2023</h3>
+                    <p>Para o Senhor somos como um vaso e ele é o nosso Oleiro.<AlertDialogSlide id="O-vaso-e-o-seu-oleiro" isOpen={getIdFromURL() === "O-vaso-e-o-seu-oleiro"} titulo={quintoDevocional[0]} texto={textoComQuebrasDeLinhaQuinto} ></AlertDialogSlide>
+                    </p>
+                </section>
                 <section>
                     <h2>Você é indispensável</h2>
                     <h3>28 de Agosto de 2023</h3>

@@ -25,9 +25,9 @@ export function Programacao() {
                         <p>DOMINGOS - CULTO DA FAMÍLIA 18h</p> <p></p>
                     </ListaProgramacao>
                 </BoxGeral>
-                {/* <BoxGeral>
-                    <img src={cartaz} alt="banner informativo sobre o evento do dia 19 de agosto"/>
-                </BoxGeral> */}
+                <BoxGeral>
+                    
+                </BoxGeral>
 
             </Box>
             <FooterTelaMenor />

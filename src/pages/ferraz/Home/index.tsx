@@ -40,11 +40,7 @@ export function HomeF() {
                         Jovens: <a href="https://docs.google.com/forms/d/e/1FAIpQLSejZUFHdEMg18Gex0-kE78a1n6Nw_DOHzvu7qypo69EguPV2Q/viewform?usp=pp_url." target='_blank'> <i>Inscrições aqui</i></a>
                     </h3>
                 </span>
-                
-                
-
             </FaixaDaHome>
-
             <FaixaDeAvisos>
                 <GaleriaPc>
                     <div>
@@ -55,7 +51,6 @@ export function HomeF() {
                         Ver mais...
                     </Button>
                 </GaleriaPc>
-
             </FaixaDeAvisos>
             <FooterTelaMenor />
         </>

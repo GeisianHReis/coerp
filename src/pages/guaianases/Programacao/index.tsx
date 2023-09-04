@@ -19,16 +19,14 @@ export function Programacao() {
                     <h1>NOSSA AGENDA</h1>
 
                     <ListaProgramacao>
-                        <p>TER. 29/08 - CULTO DE ORAÇÃO 19h30</p> <p></p>
+                        <p>09/09 e 23/09 - CULTO DE JOVENS 19h</p> <p></p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>DOMINGOS - CULTO DA FAMÍLIA 18h</p> <p></p>
                     </ListaProgramacao>
                 </BoxGeral>
                 <BoxGeral>
-                    
                 </BoxGeral>
-
             </Box>
             <FooterTelaMenor />
         </>

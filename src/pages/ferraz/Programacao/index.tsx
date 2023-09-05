@@ -30,16 +30,13 @@ export function ProgramacaoF() {
                         <p>QUA. 06 - INTERCESSÃO MULHERES </p> <p>14h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUI. 07 - CONGRESSO DA FAMÍLIA <b>(JOVENS)</b></p> <p>18h</p>
+                        <p>QUI. 07 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p><b>SEX. 08 - ENTREGA DE MARMITAS</b></p> <p>18h30</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SEX. 08 - CONGRESSO DA FAMÍLIA <b>(JOVENS)</b></p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>SEX. 08 A SAB. 09 - CONGRESSO DA FAMÍLIA <b>(CASAIS E CRIANÇAS)</b></p> <p>19h</p>
+                        <p>SAB. 09 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>DOM. 10 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>

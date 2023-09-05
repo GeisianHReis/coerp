@@ -28,21 +28,11 @@ export function HomeF() {
             </Box>
             <FaixaDaHome>
                 <h1>
-                    Congresso da Família 
+                    Entrega de Marmitas
                 </h1>
-                <span>
                     <h3>
-                        Casais: <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQjz5lQXV_HAZ--HleL4FGGMXi1Z_iO1Imka0xqvDPck4SYw/viewform?usp=pp_url" target='_blank'> <i>Inscrições aqui</i></a>
+                        08/09 - 18h30
                     </h3>
-                </span>
-                <span>
-                    <h3>
-                        Jovens: <a href="https://docs.google.com/forms/d/e/1FAIpQLSejZUFHdEMg18Gex0-kE78a1n6Nw_DOHzvu7qypo69EguPV2Q/viewform?usp=pp_url." target='_blank'> <i>Inscrições aqui</i></a>
-                    </h3>
-                </span>
-                
-                
-
             </FaixaDaHome>
 
             <FaixaDeAvisos>

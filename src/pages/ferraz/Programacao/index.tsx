@@ -33,9 +33,6 @@ export function ProgramacaoF() {
                         <p>QUI. 07 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p><b>SEX. 08 - ENTREGA DE MARMITAS</b></p> <p>18h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
                         <p>SAB. 09 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
@@ -52,6 +49,9 @@ export function ProgramacaoF() {
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>QUI. 14 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p><b>SEX. 15 - ENTREGA DE MARMITAS</b></p> <p>18h30</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>SAB. 16 - CULTO FEITORES</p> <p>19h</p>

@@ -31,7 +31,7 @@ export function HomeF() {
                     Entrega de Marmitas
                 </h1>
                     <h3>
-                        08/09 - 18h30
+                        15/09 - 18h30
                     </h3>
             </FaixaDaHome>
 

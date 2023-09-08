@@ -28,9 +28,11 @@ export function HomeF() {
             </Box>
             <FaixaDaHome>
                 <h1>
-                Entraga de Marmitas - 08/09
+                    Entrega de Marmitas
                 </h1>
-                <h2>Participe!</h2>
+                    <h2>
+                        08/09 - 18h30
+                    </h2>
             </FaixaDaHome>
             <FaixaDeAvisos>
                 <GaleriaPc>

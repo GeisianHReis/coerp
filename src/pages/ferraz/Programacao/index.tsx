@@ -54,6 +54,9 @@ export function ProgramacaoF() {
                     <p><b>SEX. 15 - ENTREGA DE MARMITAS</b></p> <p>18h30</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
+                        <p>SAB. 16 - REUNIÃO COERP KIDS</p> <p>18h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
                         <p>SAB. 16 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>

@@ -22,6 +22,9 @@ export function Programacao() {
                         <p>09/09 e 23/09 - CULTO DE JOVENS 19h</p> <p></p>
                     </ListaProgramacao>
                     <ListaProgramacao>
+                        <p>TERÇAS - CULTO DE ORAÇÃO 19h30</p> <p></p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
                         <p>DOMINGOS - CULTO DA FAMÍLIA 18h</p> <p></p>
                     </ListaProgramacao>
                 </BoxGeral>

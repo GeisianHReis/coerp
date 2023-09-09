@@ -27,6 +27,10 @@ export function Devocional() {
     const textoQuinto = quintoDevocional.join('<br><br>');
     const textoComQuebrasDeLinhaQuinto = <div dangerouslySetInnerHTML={{ __html: textoQuinto }} />;
 
+    const sextoDevocional = ["Adoração um bom perfume", "(João 12:1 - 10)<br><br> A nossa adoração deve ser entregue a Jesus com sinceridade. Maria escolheu o melhor nardo para ungir Jesus, era o que ela tinha de mais valioso, mais caro e mais perfumado. Ela decidiu oferecer o melhor a Jesus.<br><br> Quando adoramos a Deus, entregamos o que temos em nosso coração. Você já parou para pensar no que tem oferecido em sua adoração a Deus? Tem sido como um bom perfume para Jesus?<br><br>A sua adoração, seja por meio da dança, louvores, engrandecimento a Deus, orações, entre outros, deve ser pura e genuína para tocar o coração de Deus. Mesmo nos momentos em que não estamos bem, devemos buscar uma adoração genuína e pura, pois os verdadeiros adoradores adoram em espírito e em verdade.<br><br>Deus anseia por uma adoração verdadeira e genuína, que suba como um agradável perfume e seja a motivação de todos os dias. Assim, a cada vez que estivermos na presença de Deus, ofereçamos nosso coração como um puro nardo."];
+    const textoSexto = sextoDevocional.join('<br><br>');
+    const textoComQuebrasDeLinhaSexto = <div dangerouslySetInnerHTML={{ __html: textoSexto }} />;
+
 
 
 
@@ -48,6 +52,12 @@ export function Devocional() {
             <Side name="DEVOCIONAIS" />
             <h1>DEVOCIONAIS</h1>
             <Container>
+            <section>
+                    <h2>Adoração um bom perfume</h2>
+                    <h3>11 de Setembro de 2023</h3>
+                    <p>A adoração que tem entregado a jesus tem subido ao seu trono como um bom perfume?<AlertDialogSlide id="Adoracao-um-bom-perfume" isOpen={getIdFromURL() === "Adoracao-um-bom-perfume"} titulo={sextoDevocional[0]} texto={textoComQuebrasDeLinhaSexto} ></AlertDialogSlide>
+                    </p>
+                </section>
                 <section>
                     <h2>O vaso e o seu oleiro.</h2>
                     <h3>03 de Setembro de 2023</h3>

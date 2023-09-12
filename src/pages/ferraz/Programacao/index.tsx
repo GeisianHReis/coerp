@@ -2,6 +2,7 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
+import cartaz from "../../../assets/banner minist coração valente.png";
 import { Helmet } from "react-helmet";
  
 export function ProgramacaoF() {
@@ -53,6 +54,9 @@ export function ProgramacaoF() {
                         <p>SEX. 15 - ENTREGA DE MARMITAS</p> <p>18h30</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
+                        <p>SAB. 16 - REUNIÃO COERP KIDS</p> <p>18h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
                         <p>SAB. 16 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
@@ -91,7 +95,7 @@ export function ProgramacaoF() {
 
                 </BoxGeral>
                 <BoxGeral>
-                    
+                    <img src={cartaz} alt="Cartaz Encontro Ministério Coração Valente"/>
                 </BoxGeral>
 
             </Box>

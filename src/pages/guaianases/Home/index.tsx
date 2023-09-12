@@ -31,7 +31,7 @@ export function Home() {
                     CULTO DE JOVENS
                 </h1>
                 <p>
-                    09/09 - PARTICIPE CONOSCO!
+                    23/09 - PARTICIPE CONOSCO!
                 </p>
             </FaixaDaHome>
             <FaixaDeAvisos>

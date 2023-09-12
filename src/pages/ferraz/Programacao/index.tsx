@@ -2,7 +2,6 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-import cartaz from "../../../assets/banner entrega das marmitas (2).png";
 import { Helmet } from "react-helmet";
  
 export function ProgramacaoF() {
@@ -92,7 +91,7 @@ export function ProgramacaoF() {
 
                 </BoxGeral>
                 <BoxGeral>
-                    <img src={cartaz} alt="Cartaz entrega de marmitas, igreja coerp"/>
+                    
                 </BoxGeral>
 
             </Box>

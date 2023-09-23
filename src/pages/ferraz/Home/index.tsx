@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { Box, FaixaDaHome, FaixaDeAvisos, Galeria, GaleriaPc } from "../../styles/Home/styles";
 import imagemTop from "../../../assets/Ativo 5.png";
-import imagemCulto1 from "../../../assets/FotosCulto/Ferraz/IMG_0940.webp";
-import imagemCulto2 from "../../../assets/FotosCulto/Ferraz/IMG_0841.webp";
-import imagemCulto3 from "../../../assets/FotosCulto/Ferraz/IMG_1060.webp";
-import imagemCulto4 from "../../../assets/FotosCulto/Ferraz/IMG_1074.webp";
-import imagemCulto5 from "../../../assets/FotosCulto/Ferraz/IMG_0883.webp";
-import imagemCulto6 from "../../../assets/FotosCulto/Ferraz/IMG_0797.webp";
+import imagemCulto1 from "../../../assets/FotosCulto/Ferraz/IMG_2753.jpg";
+import imagemCulto2 from "../../../assets/FotosCulto/Ferraz/IMG_3138.jpg";
+import imagemCulto3 from "../../../assets/FotosCulto/Ferraz/IMG_3431.jpg";
+import imagemCulto4 from "../../../assets/FotosCulto/Ferraz/IMG_3443.jpg";
+import imagemCulto5 from "../../../assets/FotosCulto/Ferraz/IMG_3465.jpg";
+import imagemCulto6 from "../../../assets/FotosCulto/Ferraz/IMG_3503.jpg";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
 import { Button } from '@mui/material';

@@ -78,6 +78,9 @@ export function ProgramacaoF() {
                         <p>DOM. 24 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
+                        <p>DOM. 24 - CAFÉ DA MANHÃ PARA CASAIS</p> <p>9h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
                         <p>SEG. 25 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>

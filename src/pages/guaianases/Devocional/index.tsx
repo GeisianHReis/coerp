@@ -31,6 +31,10 @@ export function Devocional() {
     const textoSexto = sextoDevocional.join('<br><br>');
     const textoComQuebrasDeLinhaSexto = <div dangerouslySetInnerHTML={{ __html: textoSexto }} />;
 
+    const setimoDevocional = ["Fluir de Deus em nós", "(João 7: 38)Quem crê em mim, como diz a Escritura, rios de água viva correrão do seu ventre.<br>Podemos fluir o que cremos ou o que queremos.Ainda que nossa boca fale a palavra só vai fluir o que está no coração o que de fato cremos .Nossas atitudes revelam o que somos, nossa identidade em Cristo ou em nós mesmo, somos chamados  1° para salvação e depois para fluir essa eterna verdade (Sua presença em nós).<br><br> Precisamos trabalhar para encher as pessoas de Deus, elas precisam desejar o que vc carrega (Jesus). Desejarem te ouvir falar Dele, sempre temos algo a oferecer, por exemplo, o rapaz com 5 pães e dois peixinhos, Jesus multiplicou o que o menino tinha e alimentou mais de 5 mil pessoas e sobrou 12 cestos cheio de pães (João 6 6-13)<br><br>Pedro e João (Atos 3 6) o que eles tinham curou o coxo de nascença. E por esse milagre teve a oportunidade de ensinarem, esclarecerem sobre Jesus, fazendo refletirem o que haviam feito, crucificando o salvador da vida dando oportunidade para se arrependerem.<br><br>Somos apenas testemunhas de Deus que carregamos Sua presença pela fé, ensine ,pregue, viva porque os que não ouvirem serão destruídos. Vivamos como benditos que carrega a presença Dele e transmiti por onde passar.<br>A Ele toda Glória!!!"];
+    const textoSetimo = setimoDevocional.join('<br><br>');
+    const textoComQuebrasDeLinhaSetimo = <div dangerouslySetInnerHTML={{ __html: textoSetimo }} />;
+
 
 
 
@@ -52,7 +56,13 @@ export function Devocional() {
             <Side name="DEVOCIONAIS" />
             <h1>DEVOCIONAIS</h1>
             <Container>
-            <section>
+                <section>
+                    <h2>Fluir de Deus em nós</h2>
+                    <h3>25 de Setembro de 2023</h3>
+                    <p>Podemos fluir o que cremos ou o que queremos.<AlertDialogSlide id="Fluir-de-Deus-em-Nos" isOpen={getIdFromURL() === "Fluir-de-Deus-em-Nos"} titulo={setimoDevocional[0]} texto={textoComQuebrasDeLinhaSetimo} ></AlertDialogSlide>
+                    </p>
+                </section>
+                <section>
                     <h2>Adoração um bom perfume</h2>
                     <h3>11 de Setembro de 2023</h3>
                     <p>A adoração que tem entregado a jesus tem subido ao seu trono como um bom perfume?<AlertDialogSlide id="Adoracao-um-bom-perfume" isOpen={getIdFromURL() === "Adoracao-um-bom-perfume"} titulo={sextoDevocional[0]} texto={textoComQuebrasDeLinhaSexto} ></AlertDialogSlide>

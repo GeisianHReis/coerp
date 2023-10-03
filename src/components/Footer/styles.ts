@@ -37,4 +37,9 @@ export const Secao = styled.section`
         align-items: center;
         justify-content: center;
         color: white;
+
+        a{
+                color:white;
+                text-decoration:none;
+        }
 `;

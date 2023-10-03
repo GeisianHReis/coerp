@@ -32,7 +32,7 @@ export function Footer() {
 
     return (
         <FooterStyle>
-            {unidadeSelecionada === "Ferraz" ? <Secao > <WhatsappLogo size={28} color="white" /> (11) 99946-1311 </Secao> : <Secao > <a href="wa.me/11999461311"><WhatsappLogo size={28} color="white" /> (11) 99834-9992 </a> </Secao>}
+            {unidadeSelecionada === "Ferraz" ? <Secao > <a href="https://wa.me/11999461311"> <WhatsappLogo size={28} color="white" /> (11) 99946-1311</a> </Secao> : <Secao > <a href="https://wa.me/11998349992"><WhatsappLogo size={28} color="white" /> (11) 99834-9992 </a> </Secao>}
 
             <Secao><a href=" https://www.google.com/maps/dir//Coerp+-+Comunidade+Evangelica+Reden%C3%A7%C3%A3o+Plena+-+R.+Quatorze+de+Outubro,+235+-+S%C3%ADtio+Paredao,+Ferraz+de+Vasconcelos+-+SP,+08501-190/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x94ce7acd540cbf55:0x83df1c53608bbf72?sa=X&ved=2ahUKEwij-YuN7b6BAxUWl5UCHT6tAAMQ48ADegQIDhAA&ved=2ahUKEwij-YuN7b6BAxUWl5UCHT6tAAMQ48ADegQIFRAO"><MapPin size={28} /> <p>R: Quatorze de Outubro, 235 </p> <p>Sítio Paredão - Ferraz de Vasconcelos</p> </a></Secao>
 

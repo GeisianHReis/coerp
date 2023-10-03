@@ -16,85 +16,87 @@ export function ProgramacaoF() {
             <Side name="PROGRAMAÇÃO" />
             <Box>
                 <BoxGeral>
-                <h1><b>AGENDA DE SETEMBRO</b></h1>
+                <h1><b>AGENDA DE OUTUBRO</b></h1>
                     <ListaProgramacao>
-                        <p>DOM. 03 - INTERCESSÃO HOMENS E MULHERES</p> <p>8h30</p>
+                        <p>DOM. 01 - INTERCESSÃO HOMENS E MULHERES</p> <p>8h30</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p><b>DOM. 03 - SANTA CEIA</b></p> <p><b>10h E 18h</b></p>
+                        <p><b>DOM. 01 - SANTA CEIA</b></p> <p><b>10h E 18h</b></p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p> SEG. 04 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                        <p> SEG. 02 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUA. 06 - INTERCESSÃO MULHERES </p> <p>14h</p>
+                        <p>QUA. 04 - INTERCESSÃO MULHERES </p> <p>14h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUI. 07 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                        <p>QUI. 05 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SAB. 09 - CULTO FEITORES</p> <p>19h</p>
+                        <p>DOM. 08 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>DOM. 10 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
+                        <p>SEG. 09 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SEG. 11 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                        <p>QUA. 11 - INTERCESSÃO MULHERES</p> <p>14h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUA. 13 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                        <p><b>QUA. 11 - ENCONTRO MINISTÉRIO CORAÇÃO VALENTE</b></p> <p>15h ás 17h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUA. 13 - ENCONTRO MINISTÉRIO CORAÇÃO VALENTE</p> <p>15h ás 17h</p>
+                        <p>QUI. 12 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUI. 14 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                    <p><b>SEX. 13 - ENTREGA DE MARMITAS</b></p> <p>18h30</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p><b>SEX. 15 - ENTREGA DE MARMITAS</b></p> <p>18h30</p>
+                        <p>SAB. 14 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SAB. 16 - REUNIÃO COERP KIDS</p> <p>18h</p>
+                        <p>DOM. 15 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SAB. 16 - CULTO FEITORES</p> <p>19h</p>
+                        <p>SEG. 16 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>DOM. 17 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
+                        <p>QUA. 18 - INTERCESSÃO MULHERES</p> <p>14h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SEG. 18 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                        <p>QUI. 19 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUA. 20 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                        <p>SAB. 21 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUI. 21 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                        <p>DOM. 22 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SAB. 23 - CULTO FEITORES</p> <p>19h</p>
+                        <p>SEG. 23 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>DOM. 24 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
+                        <p>QUA. 25 - INTERCESSÃO MULHERES</p> <p>14h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>DOM. 24 - CAFÉ DA MANHÃ PARA CASAIS</p> <p>9h</p>
+                        <p>QUA. 25 - ENCONTRO MINISTÉRIO CORAÇÃO VALENTE</p> <p>15h ás 17h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SEG. 25 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                        <p>QUI. 26 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUA. 27 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                        <p>SAB. 28 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUA. 27 - ENCONTRO MINISTÉRIO CORAÇÃO VALENTE</p> <p>15h ás 17h</p>
+                        <p>DOM. 29 - CULTO DA FAMÍLIA</p> <p>10h E 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUI. 28 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                        <p>SEG. 30 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SAB. 30 - CULTO FEITORES</p> <p>19h</p>
+                        <p>TER. 31 - CULTO MULHERES COM PROPÓSITO</p> <p>20h</p>
                     </ListaProgramacao>
+                    
+
 
                 </BoxGeral>
                 <BoxGeral>

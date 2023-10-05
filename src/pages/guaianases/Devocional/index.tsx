@@ -35,6 +35,10 @@ export function Devocional() {
     const textoSetimo = setimoDevocional.join('<br><br>');
     const textoComQuebrasDeLinhaSetimo = <div dangerouslySetInnerHTML={{ __html: textoSetimo }} />;
 
+    const oitavoDevocional = ["Batalhando pela fé", "(Judas 1: 20-25)<br>Judas aconselha aos amados (irmãos em Cristo) a crescerem e vigiarem, pois no meio deles havia escarnecedores enganadores que não tinham o Espírito Santo. Como hoje precisamos vigiar para não seguir esses falsos ensinamentos e conselhos.Judas dá três conselhos. Se seguirmos, estaremos lutando pela nossa fé e pelas pessoas ao nosso redor:<br><br><ol><li>Edificando a nós mesmos, crescendo, observando as Escrituras, orando no Espírito e sendo guiados por Ele.</li><li>Conservando o amor de Deus em nós, aguardando a misericórdia de Jesus para a salvação eterna e o retorno ao nosso verdadeiro lar.</li><li>Tendo compaixão dos que têm dúvidas e livrando-os com temor do fogo da condenação, detestando até as roupas manchadas pelo pecado, o que significa não se contaminar com o erro, mas transmitindo a porção que recebemos Dele.</li></ol> Pois Aquele que é poderoso para nos livrar de tropeços e nos apresentar com alegria à Sua presença, seja toda Glória hoje e sempre.<br>Vivamos com gratidão para a Glória Dele!"];
+    const textoOitavo = oitavoDevocional.join('<br><br>');
+    const textoComQuebrasDeLinhaOitavo = <div dangerouslySetInnerHTML={{ __html: textoOitavo }} />;
+
 
 
 
@@ -56,6 +60,12 @@ export function Devocional() {
             <Side name="DEVOCIONAIS" />
             <h1>DEVOCIONAIS</h1>
             <Container>
+            <section>
+                    <h2>Batalhando pela fé </h2>
+                    <h3>2 de Outubro de 2023</h3>
+                    <p>Judas aconselha aos amados (irmãos em Cristo) a crescerem e vigiarem, pois no meio deles havia escarnecedores enganadores que não tinham o Espírito Santo.<AlertDialogSlide id="Batalhando-pela-fé" isOpen={getIdFromURL() === "Batalhando-pela-fé"} titulo={oitavoDevocional[0]} texto={textoComQuebrasDeLinhaOitavo} ></AlertDialogSlide>
+                    </p>
+                </section>
                 <section>
                     <h2>Fluir de Deus em nós</h2>
                     <h3>25 de Setembro de 2023</h3>

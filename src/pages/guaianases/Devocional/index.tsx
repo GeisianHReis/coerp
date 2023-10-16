@@ -39,6 +39,13 @@ export function Devocional() {
     const textoOitavo = oitavoDevocional.join('<br><br>');
     const textoComQuebrasDeLinhaOitavo = <div dangerouslySetInnerHTML={{ __html: textoOitavo }} />;
 
+    const nonoDevocional = ["Presença de Deus", "(Provérbios 30: 8 e 9)<br>Senhor, afasta de nós tudo o que nos separa de Tua presença.<br><br>Onde estiver o nosso coração, que ali esteja o nosso tesouro. Que Tu, Senhor, sejas o único tesouro das nossas vidas. Devemos aceitar o que Tu nos dás, seja apenas o necessário para sobreviver, amém. E, se concederes mais, que isso não nos afaste de Tua presença.<br><br>Tua presença, Senhor, é a maior riqueza que podemos alcançar. Não permitimos que a vaidade, palavras mentirosas ou línguas enganosas nos afastem de Ti, nem que lancemos mão do nosso Deus por qualquer motivo. Nada possuímos, pois tudo é Teu e por Ti, e para Ti são todas as coisas.<br><br>Que nossos corações estejam sempre dispostos a receber somente o necessário para sobreviver de Ti, e, se houver algo em nossa vida que possa nos afastar de Ti, concede-nos a liberdade de nos livrar disso antes que nos distancie de Tua presença. Amém."];
+    const textoNono = nonoDevocional.join('<br><br>');
+    const textoComQuebrasDeLinhaNono = <div dangerouslySetInnerHTML={{ __html: textoNono }} />;
+
+    const decimoDevocional = ["Deus nos chamou para ser a luz do mundo", "(João 8:12)<br>A luz é intrínseca ao amor de Deus, e aqueles que O conhecem e caminham com Ele são portadores dessa luz. Assim como Deus é luz, Seu Filho, Jesus Cristo, também é a luz. Nesse contexto, o Senhor Jesus afirma em João 8:12: 'Eu sou a luz do mundo; quem me segue não andará em trevas, mas terá a luz da vida'.<br><br>Quando Jesus expressa claramente que somos a luz deste mundo, conforme registrado em Mateus 5:14-16, Ele nos aconselha a sermos Seus imitadores, representando-O em todas as áreas da vida. Assim como uma cidade não pode ser escondida no topo de um monte, também não podemos ocultar nossa identidade como filhos de Deus.<br><br>Devemos ser reconhecidos como homens e mulheres de Deus em todos os lugares que frequentamos: entre nossos familiares, vizinhos, escolas, faculdades e locais de trabalho. Desta forma, nos tornamos verdadeiros imitadores e representantes de Cristo neste mundo.<br><br>Portanto, amados irmãos e irmãs, que permaneçamos firmes e constantes na leitura e na prática da Palavra do Senhor, pois ela é a lâmpada para os nossos pés e a luz para o nosso caminho. Que a paz do Senhor, que ultrapassa todo entendimento, esteja com todos nós. Amém."];
+    const textoDecimo = decimoDevocional.join('<br><br>');
+    const textoComQuebrasDeLinhaDecimo = <div dangerouslySetInnerHTML={{ __html: textoDecimo }} />;
 
 
 
@@ -60,7 +67,19 @@ export function Devocional() {
             <Side name="DEVOCIONAIS" />
             <h1>DEVOCIONAIS</h1>
             <Container>
-            <section>
+                <section>
+                    <h2>Deus nos chamou para ser a luz do mundo</h2>
+                    <h3>16 de Outubro de 2023</h3>
+                    <p>A luz é intrínseca ao amor de Deus, e aqueles que O conhecem e caminham com Ele são portadores dessa luz. <AlertDialogSlide id="Deus-Nos-Chamou-Para-Ser-a-Luz-do-Mundo" isOpen={getIdFromURL() === "Deus-Nos-Chamou-Para-Ser-a-Luz-do-Mundo"} titulo={decimoDevocional[0]} texto={textoComQuebrasDeLinhaDecimo} ></AlertDialogSlide>
+                    </p>
+                </section>
+                <section>
+                    <h2>Presença de Deus</h2>
+                    <h3>9 de Outubro de 2023</h3>
+                    <p>Senhor, afasta de nós tudo o que nos separa de Tua presença.<AlertDialogSlide id="Presenca-de-Deus" isOpen={getIdFromURL() === "Presenca-de-Deus"} titulo={nonoDevocional[0]} texto={textoComQuebrasDeLinhaNono} ></AlertDialogSlide>
+                    </p>
+                </section>
+                <section>
                     <h2>Batalhando pela fé </h2>
                     <h3>2 de Outubro de 2023</h3>
                     <p>Judas aconselha aos amados (irmãos em Cristo) a crescerem e vigiarem, pois no meio deles havia escarnecedores enganadores que não tinham o Espírito Santo.<AlertDialogSlide id="Batalhando-pela-fé" isOpen={getIdFromURL() === "Batalhando-pela-fé"} titulo={oitavoDevocional[0]} texto={textoComQuebrasDeLinhaOitavo} ></AlertDialogSlide>

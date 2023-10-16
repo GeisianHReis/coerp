@@ -28,10 +28,10 @@ export function Home() {
             </Box>
             <FaixaDaHome>
                 <h1>
-                    CULTO DE JOVENS
+                    CULTO DE ADORAÇÃO
                 </h1>
                 <p>
-                    14/10 - PARTICIPE CONOSCO!
+                    22/10 E 28/10 - PARTICIPE CONOSCO!
                 </p>
             </FaixaDaHome>
 

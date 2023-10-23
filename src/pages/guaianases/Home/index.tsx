@@ -2,11 +2,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Box, FaixaDaHome, FaixaDeAvisos, Galeria, GaleriaPc } from "../../styles/Home/styles";
 import imagemTop from "../../../assets/Ativo 5.png";
 import imagemCulto from "../../../assets/FotosCulto/Guaianases/dadfafsad.webp";
-import imagemCulto2 from "../../../assets/FotosCulto/Guaianases/IMG_0837.webp";
-import imagemCulto3 from "../../../assets/FotosCulto/Guaianases/IMG_1060 (1).webp";
+import imagemCulto2 from "../../../assets/FotosCulto/Guaianases/homedois.webp";
+import imagemCulto3 from "../../../assets/FotosCulto/Guaianases/hometres.webp";
 import imagemCulto4 from "../../../assets/FotosCulto/Guaianases/fd.webp";
 import imagemCulto5 from "../../../assets/FotosCulto/Guaianases/IMG_1415.webp";
-import imagemCulto6 from "../../../assets/FotosCulto/Guaianases/IMG_1424.webp";
+import imagemCulto6 from "../../../assets/FotosCulto/Guaianases/homeum.webp";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
 import { Button } from '@mui/material';
@@ -31,7 +31,7 @@ export function Home() {
                     CULTO DE ADORAÇÃO
                 </h1>
                 <p>
-                    22/10 E 28/10 - PARTICIPE CONOSCO!
+                    28/10 - PARTICIPE CONOSCO!
                 </p>
             </FaixaDaHome>
 

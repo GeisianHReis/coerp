@@ -47,6 +47,10 @@ export function Devocional() {
     const textoDecimo = decimoDevocional.join('<br><br>');
     const textoComQuebrasDeLinhaDecimo = <div dangerouslySetInnerHTML={{ __html: textoDecimo }} />;
 
+    const onzeDevocional = ["A Importância do pecado confessado", "Portanto, confessem os seus pecados uns aos outros e orem uns pelos outros para serem curados. A oração de um justo é poderosa e eficaz. (Tiago 5:16)<br><br>Tiago enfatiza a importância de confessarmos nossos pecados. Quando permitimos que o pecado persista, ele pode causar destruição, pois essa é a intenção de Satanás: roubar, matar e destruir.<br><br>Vivemos em uma época em que a sociedade frequentemente normaliza o pecado, mas não devemos aceitar comportamentos que são abomináveis aos olhos de Deus como 'normais'. O pecado é prejudicial para a nossa alma e traz sérias consequências. Ao confessarmos nossos pecados, experimentamos alívio, pois estamos liberando um fardo que prejudica nossa alma.<br><br>Quando Tiago fala sobre confessar a alguém, devemos escolher pessoas que tenham conhecimento e discernimento no Senhor. Quando ouvimos alguém confessando seus pecados, nosso papel não é julgar ou apontar o dedo, mas orar junto com a pessoa, fazer uma oração de arrependimento e buscar ajuda de Deus para fortalecer a pessoa e ajudá-la a evitar a repetição do pecado. Como corpo de Cristo, nosso papel é ajudar uns aos outros, não condenar. Se um irmão cair, devemos orientá-lo sobre as consequências de um pecado não confessado e sem arrependimento.<br><br>Todo pecado leva à morte, mas aqueles que se arrependem e confessam seus pecados a Deus são perdoados e curados. Devemos refletir sobre como podemos ajudar um irmão que caiu no pecado e não consegue se levantar. Como discípulos de Cristo, precisamos nos esforçar para ser semelhantes a Ele.<br><br>Jesus resumiu um dos maiores mandamentos quando disse: 'Ame o Senhor, o seu Deus, de todo o seu coração, de toda a sua alma e de todo o seu entendimento'. Este é o primeiro e maior mandamento (Mateus 22:37-38).<br><br><b>Oração:</b><br>Senhor, meu Pai, soberano Deus.<br>Agradeço por sempre enviar pessoas para me ajudar em oração. Envie pessoas que verdadeiramente te buscam, para que eu possa confessar meus pecados e receber ajuda em oração para não pecar novamente. Senhor, faça de mim um canal de bênçãos para ajudar os teus filhos que caíram e não conseguem se levantar. Dê-me discernimento e um coração semelhante ao Teu.<br>Desde já, te agradeço, Senhor!<br>Em nome do Teu amado filho, Jesus Cristo! Amém."];
+    const textoOnze = onzeDevocional.join('<br><br>');
+    const textoComQuebrasDeLinhaOnze = <div dangerouslySetInnerHTML={{ __html: textoOnze }} />;
+
 
 
 
@@ -67,6 +71,12 @@ export function Devocional() {
             <Side name="DEVOCIONAIS" />
             <h1>DEVOCIONAIS</h1>
             <Container>
+            <section>
+                    <h2>A Importância do pecado confessado</h2>
+                    <h3>23 de Outubro de 2023</h3>
+                    <p>Portanto, confessem os seus pecados uns aos outros e orem uns pelos outros para serem curados. A oração de um justo é poderosa e eficaz. (Tiago 5:16) <AlertDialogSlide id="A-Importância-do-Pecado-Confessado" isOpen={getIdFromURL() === "A-Importância-do-Pecado-Confessado"} titulo={onzeDevocional[0]} texto={textoComQuebrasDeLinhaOnze} ></AlertDialogSlide>
+                    </p>
+                </section>
                 <section>
                     <h2>Deus nos chamou para ser a luz do mundo</h2>
                     <h3>16 de Outubro de 2023</h3>

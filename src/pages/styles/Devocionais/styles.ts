@@ -23,8 +23,14 @@ export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    
     margin-left: 15%;
+    
+    button{
+            bottom:0;
+        }
     section{
+        align-items:center;
         width: 250px;
         margin: 10px;
         text-align: start;
@@ -44,5 +50,8 @@ export const Container = styled.div`
             font-size: 14px;
             margin: 0;
         }
+
+        
+
     }
 `;

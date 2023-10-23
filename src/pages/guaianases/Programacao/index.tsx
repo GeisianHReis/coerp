@@ -19,19 +19,13 @@ export function Programacao() {
                     <h1>NOSSA AGENDA</h1>
 
                     <ListaProgramacao>
-                        <p>21/10 - CULTO DE CASAIS COM ÊNFASE NA ADORAÇÃO EM UNIDADE E ENTREGA DE MARMITEX</p> <p></p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>22/10 - CULTO DE ADORAÇÃO: A ADORAÇÃO COMO UMA ARMA DE GUERRA</p> <p></p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
                         <p>28/10 - CULTO DE ADORAÇÃO COM ÊNFASE NA DANÇA: ADORANDO COM TODO O MEU SER</p> <p></p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>29/10 - CULTO DE MISSÕES: ADORANDO EM TODOS OS LUGARES</p> <p></p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>DOMINGOS - CULTO DA FAMÍLIA 18h</p> <p></p>
+                        <p>DOMINGOS - CULTO DA FAMÍLIA - 18h</p> <p></p>
                     </ListaProgramacao>
                 </BoxGeral>
                 {/* <BoxGeral>

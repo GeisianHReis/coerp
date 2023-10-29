@@ -73,7 +73,7 @@ export function Devocional() {
             <Container>
             <section>
                     <h2>A Importância do pecado confessado</h2>
-                    <h3>23 de Outubro de 2023</h3>
+                    <h3>30 de Outubro de 2023</h3>
                     <p>Portanto, confessem os seus pecados uns aos outros e orem uns pelos outros para serem curados. A oração de um justo é poderosa e eficaz. (Tiago 5:16) <AlertDialogSlide id="A-Importância-do-Pecado-Confessado" isOpen={getIdFromURL() === "A-Importância-do-Pecado-Confessado"} titulo={onzeDevocional[0]} texto={textoComQuebrasDeLinhaOnze} ></AlertDialogSlide>
                     </p>
                 </section>

@@ -16,91 +16,86 @@ export function ProgramacaoF() {
             <Side name="PROGRAMAÇÃO" />
             <Box>
                 <BoxGeral>
-                <h1><b>AGENDA DE OUTUBRO</b></h1>
+                <h1><b>AGENDA DE NOVEMBRO</b></h1>
                     <ListaProgramacao>
-                        <p>DOM. 01 - INTERCESSÃO HOMENS E MULHERES</p> <p>8h30</p>
+                        <p>QUA. 01 - INTERCESSÃO MULHERES</p> <p>14h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p><b>DOM. 01 - SANTA CEIA</b></p> <p><b>10h E 18h</b></p>
+                        <p><b>QUI. 02 - CULTO DE DISCIPULADO</b></p> <p><b>20h</b></p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p> SEG. 02 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                        <p> DOM. 05 - SANTA CEIA</p> <p>10h E 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUA. 04 - INTERCESSÃO MULHERES </p> <p>14h</p>
+                        <p>SEG. 06 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUI. 05 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                        <p>QUA. 08 - INTERCESSÃO MULHERES</p> <p>14h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>DOM. 08 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
+                        <p>QUI. 09 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SEG. 09 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                        <p><b>SEX. 10 - ENTREGA DE MARMITAS</b></p> <p>18h30</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUA. 11 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                        <p>SAB. 11 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p><b>QUA. 11 - ENCONTRO MINISTÉRIO CORAÇÃO VALENTE</b></p> <p>15h ás 17h</p>
+                        <p>DOM. 12 - CULTO DA FAMÍLIA</p> <p>10h E 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUI. 12 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                        <p>SEG. 13 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p><b>SEX. 13 - ENTREGA DE MARMITAS</b></p> <p>18h30</p>
+                        <p>QUA. 15 - INTERCESSÃO MULHERES</p> <p>14h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SAB. 14 - CULTO FEITORES</p> <p>19h</p>
+                        <p>QUI. 16 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>DOM. 15 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
+                     <p><b>SEX. 17 - VIGÍLIA</b></p> <p>22h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SEG. 16 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                        <p>SAB. 18 - CULTO FEITORES - EVANGELLISMO NA PRAÇA</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUA. 18 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                        <p>DOM. 19 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUI. 19 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                        <p>SEG. 20 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SAB. 21 - CULTO FEITORES</p> <p>19h</p>
+                        <p>QUA. 22 - INTERCESSÃO MULHERES</p> <p>14h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>DOM. 22 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
+                        <p>QUI. 23 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SEG. 23 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                        <p>SAB. 25 - CULTO FEITORES</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUA. 25 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                        <p>DOM. 26 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUA. 25 - ENCONTRO MINISTÉRIO CORAÇÃO VALENTE</p> <p>15h ás 17h</p>
+                        <p>SEG. 27 - INTERCESSÃO HOMENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUI. 26 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                        <p>TER. 28 - CULTO MULHERES COM PROPÓSITO - FERRAZ E GUAINAZES</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SAB. 28 - CULTO FEITORES</p> <p>19h</p>
+                        <p>QUA. 29 - ENCONTRO MINISTÉRIO CORAÇÃO VALENTE</p> <p>15h ás 17h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>DOM. 29 - CULTO DA FAMÍLIA</p> <p>10h E 18h</p>
+                        <p>QUI. 30 - CULTO DE DISCIPULADO</p> <p>20h</p>
                     </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>SEG. 30 - INTERCESSÃO HOMENS</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>TER. 31 - CULTO MULHERES COM PROPÓSITO</p> <p>20h</p>
-                    </ListaProgramacao>
+                    
                     
 
 
                 </BoxGeral>
                 <BoxGeral>
-                    <img src={cartaz} alt="Cartaz Encontro Ministério Coração Valente"/>
+                    
                 </BoxGeral>
 
             </Box>

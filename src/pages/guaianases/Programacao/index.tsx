@@ -18,7 +18,7 @@ export function Programacao() {
                 <BoxGeral>
                     <h1>NOSSA AGENDA</h1>
                     <ListaProgramacao>
-                        <p>18/10 - ENTREGA DAS MARMITAS (PROJETO SOCIAL) - 19H30</p><p></p>
+                        <p>18/11 - ENTREGA DAS MARMITAS (PROJETO SOCIAL) - 19H30</p><p></p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>2º E 4º SÁBADO - CULTO DOS JOVENS - 19H</p> <p></p>

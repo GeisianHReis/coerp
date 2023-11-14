@@ -78,7 +78,7 @@ export function Devocional() {
             <Container>
                 <section>
                     <h2>Intimidade</h2>
-                    <h3>30 de Outubro de 2023</h3>
+                    <h3>06 de Novembro de 2023</h3>
                     <p>O que Deus espera de nós, como adoradores, deve refletir nossa consagração, nossa entrega total e rendição a Ele. <AlertDialogSlide id="Intimidade" isOpen={getIdFromURL() === "Intimidade"} titulo={dozeDevocional[0]} texto={textoComQuebrasDeLinhaDoze} ></AlertDialogSlide>
                     </p>
                 </section>

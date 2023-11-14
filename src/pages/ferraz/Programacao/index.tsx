@@ -2,7 +2,6 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-import cartaz from "../../../assets/banner minist coração valente.png";
 import { Helmet } from "react-helmet";
  
 export function ProgramacaoF() {

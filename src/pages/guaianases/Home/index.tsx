@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { Box, FaixaDaHome, FaixaDeAvisos, Galeria, GaleriaPc } from "../../styles/Home/styles";
 import imagemTop from "../../../assets/Ativo 5.png";
-import imagemCulto from "../../../assets/FotosCulto/Guaianases/dadfafsad.webp";
+import imagemCulto from "../../../assets/FotosCulto/Guaianases/grupo01.webp";
 import imagemCulto2 from "../../../assets/FotosCulto/Guaianases/homedois.webp";
 import imagemCulto3 from "../../../assets/FotosCulto/Guaianases/hometres.webp";
 import imagemCulto4 from "../../../assets/FotosCulto/Guaianases/fd.webp";
@@ -28,10 +28,10 @@ export function Home() {
             </Box>
             <FaixaDaHome>
                 <h1>
-                    CULTO DA FAMÍLIA
+                    ENTREGA DAS MARMITAS
                 </h1>
                 <p>
-                    DOMINGOS - PARTICIPE CONOSCO!
+                    18/11 - PARTICIPE CONOSCO!
                 </p>
             </FaixaDaHome>
             <FaixaDeAvisos>

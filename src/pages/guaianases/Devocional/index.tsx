@@ -52,6 +52,11 @@ export function Devocional() {
     const textoComQuebrasDeLinhaOnze = <div dangerouslySetInnerHTML={{ __html: textoOnze }} />;
 
 
+    const dozeDevocional = ["Intimidade", "(Romanos 6:13)<br>O que Deus espera de nós, como adoradores, deve refletir nossa consagração, nossa entrega total e rendição a Ele. Somente quando nos entregamos a Deus e permitimos ser conduzidos por Ele é que podemos, de fato, glorificá-Lo. Quando o Senhor está no controle de tudo, nossa vida ganha propósito, e nosso coração se enche de paz e alegria. A partir daí, Ele começa a realizar a boa obra em nossas vidas.<br><br>Como cristãos, devemos seguir o exemplo de Cristo, que se rendeu à vontade do Pai para nos salvar da morte e nos dar a vida eterna. Como adoradores, Deus espera de nós algumas características, sendo a primeira delas INTIMIDADE.<br>(Salmos 25:14)<br><br>Neste mês, vivemos em todos os cultos momentos de adoração e, em todos eles, tivemos a intimidade de buscar e obedecer ao Seu chamado. A adoração é uma arma que devemos ter para romper as barreiras.<br>Qual tem sido a sua entrega e intimidade com Deus?"];
+    const textoDoze = dozeDevocional.join('<br><br>');
+    const textoComQuebrasDeLinhaDoze = <div dangerouslySetInnerHTML={{ __html: textoDoze }} />;
+
+
 
 
     const getIdFromURL = () => {
@@ -71,7 +76,13 @@ export function Devocional() {
             <Side name="DEVOCIONAIS" />
             <h1>DEVOCIONAIS</h1>
             <Container>
-            <section>
+                <section>
+                    <h2>Intimidade</h2>
+                    <h3>06 de Novembro de 2023</h3>
+                    <p>O que Deus espera de nós, como adoradores, deve refletir nossa consagração, nossa entrega total e rendição a Ele. <AlertDialogSlide id="Intimidade" isOpen={getIdFromURL() === "Intimidade"} titulo={dozeDevocional[0]} texto={textoComQuebrasDeLinhaDoze} ></AlertDialogSlide>
+                    </p>
+                </section>
+                <section>
                     <h2>A Importância do pecado confessado</h2>
                     <h3>30 de Outubro de 2023</h3>
                     <p>Portanto, confessem os seus pecados uns aos outros e orem uns pelos outros para serem curados. A oração de um justo é poderosa e eficaz. (Tiago 5:16) <AlertDialogSlide id="A-Importância-do-Pecado-Confessado" isOpen={getIdFromURL() === "A-Importância-do-Pecado-Confessado"} titulo={onzeDevocional[0]} texto={textoComQuebrasDeLinhaOnze} ></AlertDialogSlide>

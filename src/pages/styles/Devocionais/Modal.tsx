@@ -39,7 +39,7 @@ export default function AlertDialogSlide({titulo, texto, fotoLider1, nomeLider1,
   return (
     <div>
       <Button onClick={handleClickOpen}>
-        SAIBA MAIS ...
+        SAIBA MAIS...
       </Button>
       <Dialog
         open={open}

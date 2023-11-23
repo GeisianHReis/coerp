@@ -28,10 +28,10 @@ export function HomeF() {
             </Box>
             <FaixaDaHome>
                 <h1>
-                    Congresso de Mulheres 
+                    Batismo
                 </h1>
                     <h3>
-                       10 e 11 de Novembro - <a href='https://wa.me/11980769808' target='_blank'>Inscreva-se aqui!</a>
+                       10 de Dezembro
                     </h3>
             </FaixaDaHome>
             <FaixaDeAvisos>

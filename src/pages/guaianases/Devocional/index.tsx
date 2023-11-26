@@ -60,6 +60,10 @@ export function Devocional() {
     const textoTreze = trezeDevocional.join('<br><br>');
     const textoComQuebrasDeLinhaTreze = <div dangerouslySetInnerHTML={{ __html: textoTreze }} />;
 
+    const catorzeDevocional = ["O humilde Salmista", "(Salmos 131:1-3)<br><ol><li>Senhor, o meu coração não se elevou, nem os meus olhos se levantaram; não me envolvo em grandes assuntos, nem em coisas muito elevadas para mim.</li><li>Como um deserto, fiz calar e sossegar a minha alma;como uma criança desmamada em relação à sua mãe, assim é a minha alma em relação a mim.</li><li>Espera, Israel, no Senhor, desde agora e para sempre.</li></ol><br>O poeta não se sente mais dividido e perturbado por inquietações interiores. Ele se tranquilizou e está em paz. Para descrever sua serenidade recém-descoberta, o salmista usa a metáfora que todas as mães podem entender bem. Uma criança desmamada não fica mais agitada querendo leite enquanto está perto da mãe.<br><br>Essa imagem também se aplica a um bebê que já mamou e está satisfeito. Qualquer que seja a idade da criança, a metáfora retrata contentamento. O Salmista aconselha os israelitas a confiarem no SENHOR e a não dependerem de si mesmos. Só então o povo de Deus experimentará serenidade, segurança e contentamento.<br><br><b>Exemplo:</b> Crianças que têm de 1 a 5 anos têm a tendência de querer fazer as coisas sozinhas e muitas vezes não conseguem, ficando agitadas. Já um bebê recém-nascido chora querendo a mãe, e a mãe sabe exatamente o que ele precisa; então, ela dá o alimento necessário, e ele logo se acalma.<br><br>Por isso, precisamos ser como bebês recém-nascidos e chorar aos pés do Senhor, pois Ele sabe exatamente do que precisamos, e então Ele nos dá o alimento certo para nos saciar."];
+    const textoCatorze = catorzeDevocional.join('<br><br>');
+    const textoComQuebrasDeLinhaCatorze = <div dangerouslySetInnerHTML={{ __html: textoCatorze }} />;
+
 
 
     const getIdFromURL = () => {
@@ -79,6 +83,12 @@ export function Devocional() {
             <Side name="DEVOCIONAIS" />
             <h1>DEVOCIONAIS</h1>
             <Container>
+            <section>
+                    <h2>O Humilde Salmista</h2>
+                    <h3>27 de Novembro de 2023</h3>
+                    <p>Reflita na palavra de Deus sobre: humildade.<AlertDialogSlide id="o-humilde-salmista" isOpen={getIdFromURL() === "o-humilde-salmista"} titulo={catorzeDevocional[0]} texto={textoComQuebrasDeLinhaCatorze} ></AlertDialogSlide>
+                    </p>
+                </section>
                 <section>
                     <h2>Seja ajudador!</h2>
                     <h3>20 de Novembro de 2023</h3>

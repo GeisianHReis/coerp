@@ -2,7 +2,7 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-import cartaz from "../../../assets/homens.webp";
+import cartaz from "../../../assets/mulheres.webp";
 import { Helmet } from "react-helmet";
 
 export function Programacao() {
@@ -16,12 +16,21 @@ export function Programacao() {
             <Side name="PROGRAMAÇÃO" />
             <Box>
                 <BoxGeral>
-                    <h1>AGENDA DE NOVEMBRO</h1>
-                    <ListaProgramacao>
-                    <b><p>SEX. 24 - CULTO DOS HOMENS</p></b> <p>19h</p>
-                    </ListaProgramacao>
+                    <h1>AGENDA</h1>
                     <ListaProgramacao>
                     <b><p>TER. 28 - CULTO DAS MULHERES - EM FERRAZ</p></b> <p>20h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>SEX. 01/12 - VIGÍLIA DE GRATIDÃO</p> <p>21h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <p>SAB. 23/12 - ENTREGA DAS MARMITAS</p> <p>19h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <b><p>SAB. 23 - CULTO DA FAMÍLIA - FINAL DE ANO</p></b> <p>19h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao>
+                    <b><p>SAB. 30 - CULTO DA FAMÍLIA - FINAL DE ANO</p></b> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>2º E 4º SAB - CULTO DE JOVENS</p> <p>19h</p>

@@ -56,6 +56,9 @@ export function Devocional() {
     const textoDoze = dozeDevocional.join('<br><br>');
     const textoComQuebrasDeLinhaDoze = <div dangerouslySetInnerHTML={{ __html: textoDoze }} />;
 
+    const trezeDevocional = ["Seja ajudador!", "(1 Pedro 3:15)<br>Temos que nos santificar todos os dias, Deus nos ensina a estar preparado pra ajudar as pessoas que precisam ouvir a palavra Dele com amor e com correção, demostrando  carinho.<br><br>Ensinando apenas na Palavra que o Senhor  Jesus é nosso refúgio e Salvador. Ele que nos traz a esperança e alegria, de dias melhores para nos fortalecer, assim podemos ajudar nossos irmãos!<br><b>O que você tem feito em relação para ajudar seu irmão a se santificar?</b> <br><br>Seja um instrumento nas mãos de Deus!! Tendo temor ao Senhor, vivendo o testemunho vivo de Jesus na nossa vida!"];
+    const textoTreze = trezeDevocional.join('<br><br>');
+    const textoComQuebrasDeLinhaTreze = <div dangerouslySetInnerHTML={{ __html: textoTreze }} />;
 
 
 
@@ -77,73 +80,79 @@ export function Devocional() {
             <h1>DEVOCIONAIS</h1>
             <Container>
                 <section>
+                    <h2>Seja ajudador!</h2>
+                    <h3>20 de Novembro de 2023</h3>
+                    <p>Reflita na palavra de Deus sobre: santificação.<AlertDialogSlide id="seja-Ajudador" isOpen={getIdFromURL() === "seja-Ajudador"} titulo={trezeDevocional[0]} texto={textoComQuebrasDeLinhaTreze} ></AlertDialogSlide>
+                    </p>
+                </section>
+                <section>
                     <h2>Intimidade</h2>
                     <h3>06 de Novembro de 2023</h3>
-                    <p>O que Deus espera de nós, como adoradores, deve refletir nossa consagração, nossa entrega total e rendição a Ele. <AlertDialogSlide id="Intimidade" isOpen={getIdFromURL() === "Intimidade"} titulo={dozeDevocional[0]} texto={textoComQuebrasDeLinhaDoze} ></AlertDialogSlide>
+                    <p>Reflita na palavra de Deus sobre: intimidade. <AlertDialogSlide id="Intimidade" isOpen={getIdFromURL() === "Intimidade"} titulo={dozeDevocional[0]} texto={textoComQuebrasDeLinhaDoze} ></AlertDialogSlide>
                     </p>
                 </section>
                 <section>
-                    <h2>A Importância do pecado confessado</h2>
+                    <h2>Pecado confessado</h2>
                     <h3>30 de Outubro de 2023</h3>
-                    <p>Portanto, confessem os seus pecados uns aos outros e orem uns pelos outros para serem curados. A oração de um justo é poderosa e eficaz. (Tiago 5:16) <AlertDialogSlide id="A-Importância-do-Pecado-Confessado" isOpen={getIdFromURL() === "A-Importância-do-Pecado-Confessado"} titulo={onzeDevocional[0]} texto={textoComQuebrasDeLinhaOnze} ></AlertDialogSlide>
+                    <p>Reflita na palavra de Deus sobre: pecado.<AlertDialogSlide id="A-Importância-do-Pecado-Confessado" isOpen={getIdFromURL() === "A-Importância-do-Pecado-Confessado"} titulo={onzeDevocional[0]} texto={textoComQuebrasDeLinhaOnze} ></AlertDialogSlide>
                     </p>
                 </section>
                 <section>
-                    <h2>Deus nos chamou para ser a luz do mundo</h2>
+                    <h2>Seja a luz do mundo</h2>
                     <h3>16 de Outubro de 2023</h3>
-                    <p>A luz é intrínseca ao amor de Deus, e aqueles que O conhecem e caminham com Ele são portadores dessa luz. <AlertDialogSlide id="Deus-Nos-Chamou-Para-Ser-a-Luz-do-Mundo" isOpen={getIdFromURL() === "Deus-Nos-Chamou-Para-Ser-a-Luz-do-Mundo"} titulo={decimoDevocional[0]} texto={textoComQuebrasDeLinhaDecimo} ></AlertDialogSlide>
+                    <p>Reflita na palavra de Deus sobre: luz de Deus. <AlertDialogSlide id="Deus-Nos-Chamou-Para-Ser-a-Luz-do-Mundo" isOpen={getIdFromURL() === "Deus-Nos-Chamou-Para-Ser-a-Luz-do-Mundo"} titulo={decimoDevocional[0]} texto={textoComQuebrasDeLinhaDecimo} ></AlertDialogSlide>
                     </p>
                 </section>
                 <section>
                     <h2>Presença de Deus</h2>
                     <h3>9 de Outubro de 2023</h3>
-                    <p>Senhor, afasta de nós tudo o que nos separa de Tua presença.<AlertDialogSlide id="Presenca-de-Deus" isOpen={getIdFromURL() === "Presenca-de-Deus"} titulo={nonoDevocional[0]} texto={textoComQuebrasDeLinhaNono} ></AlertDialogSlide>
+                    <p>Reflita na palavra de Deus sobre: a presença de Deus.<AlertDialogSlide id="Presenca-de-Deus" isOpen={getIdFromURL() === "Presenca-de-Deus"} titulo={nonoDevocional[0]} texto={textoComQuebrasDeLinhaNono} ></AlertDialogSlide>
                     </p>
                 </section>
                 <section>
                     <h2>Batalhando pela fé </h2>
                     <h3>2 de Outubro de 2023</h3>
-                    <p>Judas aconselha aos amados (irmãos em Cristo) a crescerem e vigiarem, pois no meio deles havia escarnecedores enganadores que não tinham o Espírito Santo.<AlertDialogSlide id="Batalhando-pela-fé" isOpen={getIdFromURL() === "Batalhando-pela-fé"} titulo={oitavoDevocional[0]} texto={textoComQuebrasDeLinhaOitavo} ></AlertDialogSlide>
+                    <p>Reflita na palavra de Deus sobre: a luta na fé.<AlertDialogSlide id="Batalhando-pela-fé" isOpen={getIdFromURL() === "Batalhando-pela-fé"} titulo={oitavoDevocional[0]} texto={textoComQuebrasDeLinhaOitavo} ></AlertDialogSlide>
                     </p>
                 </section>
                 <section>
                     <h2>Fluir de Deus em nós</h2>
                     <h3>25 de Setembro de 2023</h3>
-                    <p>Podemos fluir o que cremos ou o que queremos.<AlertDialogSlide id="Fluir-de-Deus-em-Nos" isOpen={getIdFromURL() === "Fluir-de-Deus-em-Nos"} titulo={setimoDevocional[0]} texto={textoComQuebrasDeLinhaSetimo} ></AlertDialogSlide>
+                    <p>Reflita na palavra de Deus sobre: crer em Deus.<AlertDialogSlide id="Fluir-de-Deus-em-Nos" isOpen={getIdFromURL() === "Fluir-de-Deus-em-Nos"} titulo={setimoDevocional[0]} texto={textoComQuebrasDeLinhaSetimo} ></AlertDialogSlide>
                     </p>
                 </section>
                 <section>
-                    <h2>Adoração um bom perfume</h2>
+                    <h2>A adoração</h2>
                     <h3>11 de Setembro de 2023</h3>
-                    <p>A adoração que tem entregado a jesus tem subido ao seu trono como um bom perfume?<AlertDialogSlide id="Adoracao-um-bom-perfume" isOpen={getIdFromURL() === "Adoracao-um-bom-perfume"} titulo={sextoDevocional[0]} texto={textoComQuebrasDeLinhaSexto} ></AlertDialogSlide>
+                    <p>Reflita na palavra de Deus sobre: adoração.<AlertDialogSlide id="Adoracao-um-bom-perfume" isOpen={getIdFromURL() === "Adoracao-um-bom-perfume"} titulo={sextoDevocional[0]} texto={textoComQuebrasDeLinhaSexto} ></AlertDialogSlide>
                     </p>
                 </section>
                 <section>
-                    <h2>O vaso e o seu oleiro.</h2>
-                    <h3>04 de Setembro de 2023</h3>
-                    <p>Para o Senhor somos como um vaso e ele é o nosso Oleiro.<AlertDialogSlide id="O-vaso-e-o-seu-oleiro" isOpen={getIdFromURL() === "O-vaso-e-o-seu-oleiro"} titulo={quintoDevocional[0]} texto={textoComQuebrasDeLinhaQuinto} ></AlertDialogSlide>
+                    <h2>O vaso e o seu oleiro</h2>
+                    <h3>03 de Setembro de 2023</h3>
+                    <p>Reflita na palavra de Deus sobre: o vaso e o oleiro.<AlertDialogSlide id="O-vaso-e-o-seu-oleiro" isOpen={getIdFromURL() === "O-vaso-e-o-seu-oleiro"} titulo={quintoDevocional[0]} texto={textoComQuebrasDeLinhaQuinto} ></AlertDialogSlide>
                     </p>
                 </section>
                 <section>
                     <h2>Você é indispensável</h2>
                     <h3>28 de Agosto de 2023</h3>
-                    <p>Deus deu a mulher um papel que nenhum outro pode fazer , você tem um propósito a qual Deus te chamou! <AlertDialogSlide id="Voce-e-indispensavel" isOpen={getIdFromURL() === "Voce-e-indispensavel"} titulo={quatroDevocional[0]} texto={textoComQuebrasDeLinhaQuatro} ></AlertDialogSlide>
+                    <p>Reflita na palavra de Deus sobre: o propósito de Deus.<AlertDialogSlide id="Voce-e-indispensavel" isOpen={getIdFromURL() === "Voce-e-indispensavel"} titulo={quatroDevocional[0]} texto={textoComQuebrasDeLinhaQuatro} ></AlertDialogSlide>
                     </p>
                 </section>
                 <section>
                     <h2>Lugar secreto</h2>
                     <h3>21 de agosto de 2023</h3>
-                    <p>Paulo aconselha Timóteo a se manter nas Escrituras, usar seus dons para ensinar e ser um exemplo firme na fé.... <AlertDialogSlide id="Lugar-secreto" isOpen={getIdFromURL() === "Lugar-secreto"} titulo={terceiroDevocional[0]} texto={textoComQuebrasDeLinhaTres} ></AlertDialogSlide></p>
+                    <p>Reflita na palavra de Deus sobre: as escrituras.<AlertDialogSlide id="Lugar-secreto" isOpen={getIdFromURL() === "Lugar-secreto"} titulo={terceiroDevocional[0]} texto={textoComQuebrasDeLinhaTres} ></AlertDialogSlide></p>
                 </section>
                 <section>
-                    <h2>Deus te chama a ser Forte</h2>
+                    <h2>Seja Forte</h2>
                     <h3>07 de agosto de 2023</h3>
-                    <p>Deus nos chama para obedecer, nos entregar e estar dispostos a servir a Jesus... <AlertDialogSlide id="Deus-te-chama-a-ser-Forte" isOpen={getIdFromURL() === "Deus-te-chama-a-ser-Forte"} titulo={segundoDevocional[0]} texto={textoComQuebrasDeLinhaDois} ></AlertDialogSlide></p>
+                    <p>Reflita na palavra de Deus sobre: a obediência.<AlertDialogSlide id="Deus-te-chama-a-ser-Forte" isOpen={getIdFromURL() === "Deus-te-chama-a-ser-Forte"} titulo={segundoDevocional[0]} texto={textoComQuebrasDeLinhaDois} ></AlertDialogSlide></p>
                 </section>
                 <section>
                     <h2>Deus te chama</h2>
                     <h3>30 de Julho de 2023</h3>
-                    <p>O mesmo Deus que chamou Paulo ao ministério, também te chama hoje, não somente a Paulo, mas... <AlertDialogSlide id="Deus-te-chama" isOpen={getIdFromURL() === "Deus-te-chama"} titulo={primeiroDevocional[0]} texto={textoComQuebrasDeLinha} ></AlertDialogSlide>
+                    <p>Reflita na palavra de Deus sobre: o chamado de Deus.<AlertDialogSlide id="Deus-te-chama" isOpen={getIdFromURL() === "Deus-te-chama"} titulo={primeiroDevocional[0]} texto={textoComQuebrasDeLinha} ></AlertDialogSlide>
                     </p>
                 </section>
 

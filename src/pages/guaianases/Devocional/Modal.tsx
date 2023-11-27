@@ -21,14 +21,14 @@ const Transition = React.forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-interface ModalMin{
+interface ModalMin {
   titulo: string;
   texto: React.ReactNode;
   id: string;
   isOpen: boolean
 }
 
-export default function AlertDialogSlide({id, titulo, isOpen, texto}: ModalMin) {
+export default function AlertDialogSlide({ id, titulo, isOpen, texto }: ModalMin) {
   const navigate = useNavigate()
   const [open, setOpen] = React.useState(false);
 
@@ -64,9 +64,10 @@ export default function AlertDialogSlide({id, titulo, isOpen, texto}: ModalMin) 
 
   return (
     <div>
-      <Button variant="contained" onClick={handleClickOpen}>
-        LEIA MAIS ...
+      <Button variant="contained" onClick={handleClickOpen} style={{ position: 'relative', top: '11px', width: '249px' }}>
+        LEIA MAIS
       </Button>
+
       <Dialog
         open={open}
         TransitionComponent={Transition}
@@ -79,10 +80,10 @@ export default function AlertDialogSlide({id, titulo, isOpen, texto}: ModalMin) 
           <DialogContentText id="alert-dialog-slide-description">
             {texto}
           </DialogContentText>
-          
+
         </DialogContent>
         <DialogActions style={{ justifyContent: 'space-between' }}>
-          <p>Compartilhe:  &nbsp;<WhatsappLogo size={32} color='green' onClick={shareOnWhatsApp} style={{ cursor: 'pointer' }}/></p>
+          <p>Compartilhe:  &nbsp;<WhatsappLogo size={32} color='green' onClick={shareOnWhatsApp} style={{ cursor: 'pointer' }} /></p>
           <Button onClick={handleClose}>Fechar!</Button>
         </DialogActions>
       </Dialog>

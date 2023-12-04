@@ -64,6 +64,10 @@ export function Devocional() {
     const textoCatorze = catorzeDevocional.join('<br><br>');
     const textoComQuebrasDeLinhaCatorze = <div dangerouslySetInnerHTML={{ __html: textoCatorze }} />;
 
+    const quinzeDevocional = ["A obediência", "(João 2:3-5)<br>Tendo acabado o vinho, a mãe de Jesus lhe disse: <b>Eles não têm mais vinho</b>. Jesus respondeu: <b>Que temos nós em comum, mulher? A minha hora ainda não chegou.</b> Sua mãe disse aos serviçais: <b>Façam tudo o que ele mandar.</b><br><br>Os anfitriões daquela cerimônia enfrentavam um problema: a festa já tinha começado, os convidados estavam presentes, os noivos e familiares em celebração, mas o vinho acabara. O vinho nas festas de casamento daquela época era como o bolo nas nossas festas de aniversário: era essencial. O vinho simbolizava a alegria, e não oferecê-lo poderia parecer desconsideração pelos convidados.<br><br>Maria reagiu ao dilema da falta do vinho, recorrendo a Jesus. Ele respondeu a ela com a autoridade de quem sabe que não está sujeito às instruções de sua mãe. Ele agiria no tempo certo e conforme a vontade do Seu Pai Celestial. Mas Maria acabou dando um bom conselho aos servos: <b>Façam tudo o que Ele mandar!</b> Eles obedeceram a Jesus e assistiram a um grande milagre: água transformada em excelente vinho.<br><br>Identifique o seu problema. É o primeiro passo a dar para resolvê-lo. Ore a Deus! Sempre que enfrentar um problema diário, apresente-o a Jesus. Confie e espere nele. Submeta-se à vontade e ao tempo de Deus. Ele quer lhe ajudar. Busque ouvir a Palavra do Senhor (leia, medite e aplique em sua vida). Obedeça! Faça o que Ele disser e verá Ele agir em seu favor.<br><br><b>Oração:</b> Querido Deus, e Adorado Pai, obrigado porque sempre me ajudas nos meus dilemas diários... Ajuda-me a entregar todos meus problemas em Tuas mãos, confiando que o Senhor faz a Tua vontade em minha vida, no Teu precioso tempo. Tu és um Deus de milagres! Ensina-me a Te obedecer em tudo que mandas e ensinas na Tua Palavra! Em nome de Jesus, Amém."];
+    const textoQuinze = quinzeDevocional.join('<br><br>');
+    const textoComQuebrasDeLinhaQuinze = <div dangerouslySetInnerHTML={{ __html: textoQuinze }} />;
+
 
 
     const getIdFromURL = () => {
@@ -84,6 +88,12 @@ export function Devocional() {
             <h1>DEVOCIONAIS</h1>
             <Container>
             <section>
+                    <h2>A obediência</h2>
+                    <h3>04 de Dezembro de 2023</h3>
+                    <p>Reflita na palavra de Deus sobre: obediência.<AlertDialogSlide id="A-obediência" isOpen={getIdFromURL() === "A-obediência"} titulo={quinzeDevocional[0]} texto={textoComQuebrasDeLinhaQuinze} ></AlertDialogSlide>
+                    </p>
+                </section>
+                <section>
                     <h2>O Humilde Salmista</h2>
                     <h3>27 de Novembro de 2023</h3>
                     <p>Reflita na palavra de Deus sobre: humildade.<AlertDialogSlide id="o-humilde-salmista" isOpen={getIdFromURL() === "o-humilde-salmista"} titulo={catorzeDevocional[0]} texto={textoComQuebrasDeLinhaCatorze} ></AlertDialogSlide>

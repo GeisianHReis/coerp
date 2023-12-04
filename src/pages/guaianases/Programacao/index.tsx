@@ -2,7 +2,7 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-import cartaz from "../../../assets/mulheres.webp";
+import cartaz from "../../../assets/ano2023.webp";
 import { Helmet } from "react-helmet";
 
 export function Programacao() {
@@ -16,21 +16,22 @@ export function Programacao() {
             <Side name="PROGRAMAÇÃO" />
             <Box>
                 <BoxGeral>
-                    <h1>AGENDA</h1>
+                    <h1>AGENDA DE DEZEMBRO</h1>
+
                     <ListaProgramacao>
-                    <b><p>TER. 28 - CULTO DAS MULHERES - EM FERRAZ</p></b> <p>20h</p>
+                        <p>SEX. 01 - VIGÍLIA DE GRATIDÃO</p> <p>21h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>SEX. 01/12 - VIGÍLIA DE GRATIDÃO</p> <p>21h</p>
+                        <b><p>SAB. 09 - CULTO DE CASAIS - EM FERRAZ</p></b> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <p>SAB. 23/12 - ENTREGA DAS MARMITAS</p> <p>19h</p>
+                        <p>SAB. 23 - ENTREGA DAS MARMITAS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <b><p>SAB. 23 - CULTO DA FAMÍLIA - FINAL DE ANO</p></b> <p>19h</p>
+                        <b><p>SAB. 23 - CULTO DA FAMÍLIA - FINAL DE ANO</p></b> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                    <b><p>SAB. 30 - CULTO DA FAMÍLIA - FINAL DE ANO</p></b> <p>19h</p>
+                        <b><p>SAB. 30 - CULTO DA FAMÍLIA - FINAL DE ANO</p></b> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>2º E 4º SAB - CULTO DE JOVENS</p> <p>19h</p>
@@ -40,7 +41,7 @@ export function Programacao() {
                     </ListaProgramacao>
                 </BoxGeral>
                 <BoxGeral>
-                <img src={cartaz} alt="Cartaz culto dos homens, igreja coerp"/>
+                    <img src={cartaz} alt="Cartaz culto dos homens, igreja coerp" />
                 </BoxGeral>
 
             </Box>

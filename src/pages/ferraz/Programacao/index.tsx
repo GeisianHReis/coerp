@@ -21,10 +21,10 @@ export function ProgramacaoF() {
                         <p>SAB. 02 - VIGÍLIA FEITORES</p> <p>21h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p> DOM. 03 - SANTA CEIA</p> <p>10h E 18h</p>
+                        <p> DOM. 03 - SANTA CEIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao className="destaque">
-                        <p>TER. 05 - ALMOÇO CORAÇÃO VALENTE</p> <p>11h30</p>
+                        <p>QUA. 06 - ALMOÇO CORAÇÃO VALENTE</p> <p>11h30</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>SAB. 09 - CULTO DE CASAIS</p> <p>20h</p>
@@ -32,11 +32,14 @@ export function ProgramacaoF() {
                     <ListaProgramacao>
                         <p>DOM. 10 - BATISMO</p> <p>10h</p>
                     </ListaProgramacao>
+                    <ListaProgramacao>
+                        <p>DOM. 17 - CULTO DA FAMÍLIA</p> <p>18h</p>
+                    </ListaProgramacao>
                     <ListaProgramacao className="destaque">
                         <p>SAB. 16 - SANTA CEIA REDE DE JOVENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>DOM. 17 - CULTO DA FAMÍLIA</p> <p>10h E 18h</p>
+                        <p>DOM. 17 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
                         <p>SEX. 22 - VIGÍLIA</p> <p>21h</p>

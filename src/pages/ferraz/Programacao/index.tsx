@@ -2,7 +2,7 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-// import cartaz from "../../../assets/cartaz.webp";
+import cartaz from "../../../assets/BATISMO.png";
 import { Helmet } from "react-helmet";
  
 export function ProgramacaoF() {
@@ -16,86 +16,40 @@ export function ProgramacaoF() {
             <Side name="PROGRAMAÇÃO" />
             <Box>
                 <BoxGeral>
-                <h1><b>AGENDA DE NOVEMBRO</b></h1>
+                <h1><b>AGENDA DE DEZEMBRO</b></h1>
                     <ListaProgramacao>
-                        <p>QUA. 01 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                        <p>SAB. 02 - VIGÍLIA FEITORES</p> <p>21h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p><b>QUI. 02 - CULTO DE DISCIPULADO</b></p> <p><b>20h</b></p>
+                        <p> DOM. 03 - SANTA CEIA</p> <p>10h E 18h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao className="destaque">
+                        <p>TER. 05 - ALMOÇO CORAÇÃO VALENTE</p> <p>11h30</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p> DOM. 05 - SANTA CEIA</p> <p>10h E 18h</p>
+                        <p>SAB. 09 - CULTO DE CASAIS</p> <p>20h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SEG. 06 - INTERCESSÃO HOMENS</p> <p>19h</p>
+                        <p>DOM. 10 - BATISMO</p> <p>10h</p>
+                    </ListaProgramacao>
+                    <ListaProgramacao className="destaque">
+                        <p>SAB. 16 - SANTA CEIA REDE DE JOVENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUA. 08 - INTERCESSÃO MULHERES</p> <p>14h</p>
+                        <p>DOM. 17 - CULTO DA FAMÍLIA</p> <p>10h E 18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>QUI. 09 - CULTO DE DISCIPULADO</p> <p>20h</p>
+                        <p>SEX. 22 - VIGÍLIA</p> <p>21h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p><b>SEX. 10 - ENTREGA DE MARMITAS</b></p> <p>18h30</p>
+                        <p>DOM. 24 - CULTO DA FAMÍLIA</p> <p>10h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>SAB. 11 - CULTO FEITORES</p> <p>19h</p>
+                        <p>DOM. 31 - CULTO DA FAMÍLIA</p> <p>10h</p>
                     </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>DOM. 12 - CULTO DA FAMÍLIA</p> <p>10h E 18h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>SEG. 13 - INTERCESSÃO HOMENS</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>QUA. 15 - INTERCESSÃO MULHERES</p> <p>14h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>QUI. 16 - CULTO DE DISCIPULADO</p> <p>20h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                     <p><b>SEX. 17 - VIGÍLIA</b></p> <p>22h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>SAB. 18 - CULTO FEITORES - EVANGELLISMO NA PRAÇA</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>DOM. 19 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>SEG. 20 - INTERCESSÃO HOMENS</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>QUA. 22 - INTERCESSÃO MULHERES</p> <p>14h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>QUI. 23 - CULTO DE DISCIPULADO</p> <p>20h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>SAB. 25 - CULTO FEITORES</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>DOM. 26 - CULTO DA FAMÍLIA</p> <p>10h e 18h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>SEG. 27 - INTERCESSÃO HOMENS</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>TER. 28 - CULTO MULHERES COM PROPÓSITO - FERRAZ E GUAINAZES</p> <p>20h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>QUA. 29 - ENCONTRO MINISTÉRIO CORAÇÃO VALENTE</p> <p>15h ás 17h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>QUI. 30 - CULTO DE DISCIPULADO</p> <p>20h</p>
-                    </ListaProgramacao>
-                    
-                    
-
-
                 </BoxGeral>
                 <BoxGeral>
-                    {/* <img src={cartaz} alt="Cartaz conferencia koinonia, igreja coerp"/> */}
+                    <img src={cartaz} alt="Cartaz batismo, igreja coerp"/> 
                 </BoxGeral>
 
             </Box>

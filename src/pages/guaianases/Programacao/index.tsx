@@ -41,7 +41,7 @@ export function Programacao() {
                     </ListaProgramacao>
                 </BoxGeral>
                 <BoxGeral>
-                    <img src={cartaz} alt="Cartaz culto dos homens, igreja coerp" />
+                    <img src={cartaz} alt="Comunicado cultos de fim do ano, igreja coerp" />
                 </BoxGeral>
 
             </Box>

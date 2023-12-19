@@ -19,12 +19,6 @@ export function Programacao() {
                     <h1>AGENDA DE DEZEMBRO</h1>
 
                     <ListaProgramacao>
-                        <p>SEX. 01 - VIGÍLIA DE GRATIDÃO</p> <p>21h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <b><p>SAB. 09 - CULTO DE CASAIS - EM FERRAZ</p></b> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
                         <p>SAB. 23 - ENTREGA DAS MARMITAS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>

@@ -25,6 +25,10 @@ export const Secao = styled.section`
         p{
                 margin: 0;
         }
+        a{
+                color:white;
+                text-decoration:none;
+        }
 `;
 export const FooterEnd = styled.div`
         display: grid;

@@ -5,6 +5,7 @@ export const Box = styled.main`
     flex-direction: column;
     margin-top: 120px;
     h1{
+        padding-left: 141px;
         display: flex;
         justify-content: center;
         font-family: ${(props) => props.theme["font-family-heading"]};
@@ -16,6 +17,9 @@ export const Box = styled.main`
     }
     @media screen and (max-width: 650px) {
         margin-top: 0;
+        h1{
+            padding:0;
+        }
     }
 `;
 
@@ -23,10 +27,16 @@ export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    
     margin-left: 15%;
+    
+    button{
+            bottom:0;
+        }
     section{
+        align-items:center;
         width: 250px;
-        margin: 10px;
+        margin: 26px;
         text-align: start;
         h2{
             font-family: ${(props) => props.theme["font-family-heading"]};
@@ -35,7 +45,7 @@ export const Container = styled.div`
         }
         h3{
             font-family: ${(props) => props.theme["font-family-heading"]};
-            font-size: 12px;
+            font-size: 13.3px;
             color: ${(props) => props.theme["black"]};
         }
         p{
@@ -43,6 +53,10 @@ export const Container = styled.div`
             font-family: ${(props) => props.theme["font-family-paragraph"]};
             font-size: 14px;
             margin: 0;
+            padding: 5px 0;
         }
+
+        
+
     }
 `;

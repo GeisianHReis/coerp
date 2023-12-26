@@ -64,11 +64,11 @@ export function Ministerios() {
                         </p>
                     </Grid>
                     <Grid item xs={5} md={3}>
-                        <img src={logoKids} />
+                        <img src={logoKids} alt="forma em geoide azul com o texto: coerp kids"/>
                     </Grid>
 
                     <Grid item xs={5} md={3}>
-                        <img src={logoMissoes} />
+                        <img src={logoMissoes} alt=" forma em geoide azul com o texto: missões" />
                     </Grid>
                     <Grid item xs={7} md={9}>
                         <p>
@@ -83,11 +83,11 @@ export function Ministerios() {
                         </p>
                     </Grid>
                     <Grid item xs={5} md={3}>
-                        <img src={logoJovens} />
+                        <img src={logoJovens} alt=" forma em geoide azul com o texto: jovens"/>
                     </Grid>
 
                     <Grid item xs={5} md={3}>
-                        <img src={logoMidia} />
+                        <img src={logoMidia} alt="forma em geoide azul com o texto: mídia"/>
                     </Grid>
                     <Grid item xs={7} md={9}>
                         <p>
@@ -102,11 +102,11 @@ export function Ministerios() {
                         </p>
                     </Grid>
                     <Grid item xs={5} md={3}>
-                        <img src={logoLouvor} />
+                        <img src={logoLouvor} alt="forma em geoide azul com o texto: louvor" />
                     </Grid>
 
                     <Grid item xs={5} md={3}>
-                        <img src={logoInter} />
+                        <img src={logoInter} alt="forma em geoide azul com o texto: intecessão" />
                     </Grid>
                     <Grid item xs={7} md={9}>
                         <p>
@@ -121,7 +121,7 @@ export function Ministerios() {
                         </p>
                     </Grid>
                     <Grid item xs={5} md={3}>
-                        <img src={logoCasais} />
+                        <img src={logoCasais} alt="forma em geoide azul com o texto: casais"/>
                     </Grid>
                 </Grid>
             </Box>

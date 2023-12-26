@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { Box, FaixaDaHome, FaixaDeAvisos, Galeria, GaleriaPc } from "../../styles/Home/styles";
 import imagemTop from "../../../assets/Ativo 5.png";
-import imagemCulto1 from "../../../assets/FotosCulto/Ferraz/IMG_0940.webp";
-import imagemCulto2 from "../../../assets/FotosCulto/Ferraz/IMG_0841.webp";
-import imagemCulto3 from "../../../assets/FotosCulto/Ferraz/IMG_1060.webp";
-import imagemCulto4 from "../../../assets/FotosCulto/Ferraz/IMG_1074.webp";
-import imagemCulto5 from "../../../assets/FotosCulto/Ferraz/IMG_0883.webp";
-import imagemCulto6 from "../../../assets/FotosCulto/Ferraz/IMG_0797.webp";
+import imagemCulto1 from "../../../assets/FotosCulto/Ferraz/IMG_2753.webp";
+import imagemCulto2 from "../../../assets/FotosCulto/Ferraz/IMG_3138.webp";
+import imagemCulto3 from "../../../assets/FotosCulto/Ferraz/IMG_3431.webp";
+import imagemCulto4 from "../../../assets/FotosCulto/Ferraz/IMG_3443.webp";
+import imagemCulto5 from "../../../assets/FotosCulto/Ferraz/IMG_3465.webp";
+import imagemCulto6 from "../../../assets/FotosCulto/Ferraz/IMG_3503.webp";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
 import { Button } from '@mui/material';
@@ -28,14 +28,12 @@ export function HomeF() {
             </Box>
             <FaixaDaHome>
                 <h1>
-                    Entrega de Marmitas 11/08
+                    Batismo
                 </h1>
-                <h1>
-                    Envolva-se!
-                </h1>
-
+                    <h3>
+                       10 de Dezembro
+                    </h3>
             </FaixaDaHome>
-
             <FaixaDeAvisos>
                 <GaleriaPc>
                     <div>
@@ -46,7 +44,6 @@ export function HomeF() {
                         Ver mais...
                     </Button>
                 </GaleriaPc>
-
             </FaixaDeAvisos>
             <FooterTelaMenor />
         </>

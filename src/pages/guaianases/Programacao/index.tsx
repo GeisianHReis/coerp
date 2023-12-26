@@ -2,7 +2,7 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-import cartaz from "../../../assets/WhatsApp Image 2023-07-30 at 00.14.07.webp";
+import cartaz from "../../../assets/ano2023.webp";
 import { Helmet } from "react-helmet";
 
 export function Programacao() {
@@ -16,46 +16,32 @@ export function Programacao() {
             <Side name="PROGRAMAÇÃO" />
             <Box>
                 <BoxGeral>
-                    <h1>NOSSA AGENDA</h1>
+                    <h1>AGENDA DE DEZEMBRO</h1>
+
                     <ListaProgramacao>
-                        <p>01/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
+                        <p>SEX. 01 - VIGÍLIA DE GRATIDÃO</p> <p>21h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>05/08 - FESTA DAS NAÇÕES</p> <p>18h</p>
+                        <b><p>SAB. 09 - CULTO DE CASAIS - EM FERRAZ</p></b> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>08/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
+                        <p>SAB. 23 - ENTREGA DAS MARMITAS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>12/08 - CULTO DE JOVENS: ADORAÇÃO</p> <p>19h</p>
+                        <b><p>SAB. 23 - CULTO DA FAMÍLIA - FINAL DE ANO</p></b> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>15/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
+                        <b><p>SAB. 30 - CULTO DA FAMÍLIA - FINAL DE ANO</p></b> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>19/08 - CULTO DE MULHERES</p> <p>17h</p>
+                        <p>2º E 4º SAB - CULTO DE JOVENS</p> <p>19h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>22/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>25/08 - CULTO DE CASAIS</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>26/08 - EVANGELISMO: ENTREGA DE MARMITAS</p> <p>18h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>26/08 - CULTO DE JOVENS</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>29/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>DOMINGOS - CULTO DA FAMÍLIA</p> <p>18h</p>
+                        <p>DOM - CULTO DA FAMÍLIA</p> <p>18h</p>
                     </ListaProgramacao>
                 </BoxGeral>
                 <BoxGeral>
-                    <img src={cartaz} />
+                    <img src={cartaz} alt="Comunicado cultos de fim do ano, igreja coerp" />
                 </BoxGeral>
 
             </Box>

@@ -33,7 +33,7 @@ export function ProgramacaoF() {
                         <p>DOM. 10 - BATISMO</p> <p>10h</p>
                     </ListaProgramacao>
                     <ListaProgramacao>
-                        <p>DOM. 17 - CULTO DA FAMÍLIA</p> <p>18h</p>
+                        <p>DOM. 10 - CULTO DA FAMÍLIA</p> <p>18h</p>
                     </ListaProgramacao>
                     <ListaProgramacao className="destaque">
                         <p>SAB. 16 - SANTA CEIA REDE DE JOVENS</p> <p>19h</p>

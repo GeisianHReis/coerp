@@ -38,8 +38,14 @@ export default function AlertDialogSlide({titulo, texto, nomeLider1, nomeLider2}
 
   return (
     <div>
-      <Button variant="contained" onClick={handleClickOpen}>
-        SAIBA MAIS ...
+       <Button
+        variant="contained"
+        onClick={handleClickOpen}
+        style={{ borderRadius: '14px', fontSize: '13px' , width: '202px',
+        padding: '3px 16px', textTransform: 'capitalize'}}
+      >
+        Saber Mais
+        
       </Button>
       <Dialog
         open={open}

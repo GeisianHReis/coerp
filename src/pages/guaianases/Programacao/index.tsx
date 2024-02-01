@@ -2,10 +2,56 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-import cartaz from "../../../assets/WhatsApp Image 2023-07-30 at 00.14.07.webp";
 import { Helmet } from "react-helmet";
+import gql from 'graphql-tag';
+import { useEffect, useState } from "react";
+import client  from "../../../CMS/Service/dato";
 
 export function Programacao() {
+    interface Evento {
+        evento: string;
+        horario: string;
+        destaque: boolean;
+    }
+    const [eventos, setEventos] = useState<Evento[]>([]);
+    const [cartaz, setCartaz] = useState<{ url: string, alt: string }>({ url: "", alt: ""});
+
+      useEffect(() => {
+        client.query({
+            query: gql`{
+                allProgramacaoguaianases{
+                  evento
+                  horario
+                  destaque
+                }
+              }`
+        })
+        .then((res) => {
+            setEventos(res.data.allProgramacaoguaianases);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    }, []);
+
+      useEffect(() => {
+        client.query({
+            query: gql`{
+                cartazprogramacaoguaianase{
+                  cartaz{
+                    url
+                }
+                alt
+                }
+              }`
+        })
+        .then((res) => {
+            setCartaz(res.data.cartazprogramacaoguaianase.cartaz);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    }, []);
     return (
         <>
             <Helmet>
@@ -16,46 +62,18 @@ export function Programacao() {
             <Side name="PROGRAMAÇÃO" />
             <Box>
                 <BoxGeral>
-                    <h1>NOSSA AGENDA</h1>
-                    <ListaProgramacao>
-                        <p>01/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>05/08 - FESTA DAS NAÇÕES</p> <p>18h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>08/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>12/08 - CULTO DE JOVENS: ADORAÇÃO</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>15/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>19/08 - CULTO DE MULHERES</p> <p>17h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>22/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>25/08 - CULTO DE CASAIS</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>26/08 - EVANGELISMO: ENTREGA DE MARMITAS</p> <p>18h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>26/08 - CULTO DE JOVENS</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>29/08 - CULTO DE ORAÇÃO</p> <p>19h30</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>DOMINGOS - CULTO DA FAMÍLIA</p> <p>18h</p>
-                    </ListaProgramacao>
+                <h1><b>AGENDA</b></h1>
+                {eventos.map((evento) => (
+                <ListaProgramacao className={evento.destaque ? "destaque" : ""}>
+                    <p>{evento.evento.toUpperCase()}</p>
+                    <p>{evento.horario}</p>
+                </ListaProgramacao>
+                ))}
                 </BoxGeral>
                 <BoxGeral>
-                    <img src={cartaz} />
+                {cartaz && (
+                <img src={cartaz.url} alt={cartaz.alt}/> 
+                )}
                 </BoxGeral>
 
             </Box>

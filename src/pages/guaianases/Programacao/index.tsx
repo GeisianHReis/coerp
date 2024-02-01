@@ -2,10 +2,56 @@ import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Side } from "../../../components/Side";
 import { TopMobile } from "../../../components/TopMobile";
 import { ListaProgramacao, Box, BoxGeral } from "../../styles/Programacao/styles";
-import cartaz from "../../../assets/ano2023.webp";
 import { Helmet } from "react-helmet";
+import gql from 'graphql-tag';
+import { useEffect, useState } from "react";
+import client  from "../../../CMS/Service/dato";
 
 export function Programacao() {
+    interface Evento {
+        evento: string;
+        horario: string;
+        destaque: boolean;
+    }
+    const [eventos, setEventos] = useState<Evento[]>([]);
+    const [cartaz, setCartaz] = useState<{ url: string, alt: string }>({ url: "", alt: ""});
+
+      useEffect(() => {
+        client.query({
+            query: gql`{
+                allProgramacaoguaianases{
+                  evento
+                  horario
+                  destaque
+                }
+              }`
+        })
+        .then((res) => {
+            setEventos(res.data.allProgramacaoguaianases);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    }, []);
+
+      useEffect(() => {
+        client.query({
+            query: gql`{
+                cartazprogramacaoguaianase{
+                  cartaz{
+                    url
+                }
+                alt
+                }
+              }`
+        })
+        .then((res) => {
+            setCartaz(res.data.cartazprogramacaoguaianase.cartaz);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    }, []);
     return (
         <>
             <Helmet>
@@ -16,32 +62,18 @@ export function Programacao() {
             <Side name="PROGRAMAÇÃO" />
             <Box>
                 <BoxGeral>
-                    <h1>AGENDA DE DEZEMBRO</h1>
-
-                    <ListaProgramacao>
-                        <p>SEX. 01 - VIGÍLIA DE GRATIDÃO</p> <p>21h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <b><p>SAB. 09 - CULTO DE CASAIS - EM FERRAZ</p></b> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>SAB. 23 - ENTREGA DAS MARMITAS</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <b><p>SAB. 23 - CULTO DA FAMÍLIA - FINAL DE ANO</p></b> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <b><p>SAB. 30 - CULTO DA FAMÍLIA - FINAL DE ANO</p></b> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>2º E 4º SAB - CULTO DE JOVENS</p> <p>19h</p>
-                    </ListaProgramacao>
-                    <ListaProgramacao>
-                        <p>DOM - CULTO DA FAMÍLIA</p> <p>18h</p>
-                    </ListaProgramacao>
+                <h1><b>AGENDA</b></h1>
+                {eventos.map((evento) => (
+                <ListaProgramacao className={evento.destaque ? "destaque" : ""}>
+                    <p>{evento.evento.toUpperCase()}</p>
+                    <p>{evento.horario}</p>
+                </ListaProgramacao>
+                ))}
                 </BoxGeral>
                 <BoxGeral>
-                    <img src={cartaz} alt="Comunicado cultos de fim do ano, igreja coerp" />
+                {cartaz && (
+                <img src={cartaz.url} alt={cartaz.alt}/> 
+                )}
                 </BoxGeral>
 
             </Box>

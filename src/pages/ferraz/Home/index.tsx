@@ -1,20 +1,61 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { Box, FaixaDaHome, FaixaDeAvisos, Galeria, GaleriaPc } from "../../styles/Home/styles";
 import imagemTop from "../../../assets/Ativo 5.png";
-import imagemCulto1 from "../../../assets/FotosCulto/Ferraz/IMG_2753.webp";
-import imagemCulto2 from "../../../assets/FotosCulto/Ferraz/IMG_3138.webp";
-import imagemCulto3 from "../../../assets/FotosCulto/Ferraz/IMG_3431.webp";
-import imagemCulto4 from "../../../assets/FotosCulto/Ferraz/IMG_3443.webp";
-import imagemCulto5 from "../../../assets/FotosCulto/Ferraz/IMG_3465.webp";
-import imagemCulto6 from "../../../assets/FotosCulto/Ferraz/IMG_3503.webp";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
 import { Button } from '@mui/material';
 import { Helmet } from 'react-helmet';
+import { useEffect, useState } from 'react';
+import client from '../../../CMS/Service/dato';
+import gql from 'graphql-tag';
 
 
 export function HomeF() {
+    interface Texto {
+        titulo: string;
+        subtitulo: string;
+        link: string;
+    }
+    interface Galeria {
+        url: string;
+    }
+    const [texto, setTexto] = useState<Texto>();
+    const [galeria, setGaleria] = useState<Galeria[]>([]);
 
+      useEffect(() => {
+        client.query({
+            query: gql` {
+                textohomeferraz{
+                  titulo
+                  subtitulo
+                  link
+                }
+              }`
+        })
+        .then((res) => {
+            setTexto(res.data.textohomeferraz);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    }, []);      
+    useEffect(() => {
+        client.query({
+            query: gql`{
+                fotoshomeferraz{
+                  galeria{
+                    url
+                  }
+                }
+              }`
+        })
+        .then((res) => {
+            setGaleria(res.data.fotoshomeferraz.galeria);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    }, []);
     return (
         <>
             <Helmet>
@@ -27,11 +68,12 @@ export function HomeF() {
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/X0SBqUJZRkU?&autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </Box>
             <FaixaDaHome>
-                <h1>
-                    Batismo
-                </h1>
+                    <h1>
+                        {texto?.titulo}
+                    </h1>
+                        
                     <h3>
-                       10 de Dezembro
+                        {texto?.subtitulo}
                     </h3>
             </FaixaDaHome>
             <FaixaDeAvisos>
@@ -39,7 +81,10 @@ export function HomeF() {
                     <div>
                         <h1>GALERIA</h1>
                     </div>
-                    <Galeria> <img src={imagemCulto1} alt="" /> <img src={imagemCulto2} alt="" /> <img src={imagemCulto3} alt="" /> <img src={imagemCulto4} alt="" /> <img src={imagemCulto5} alt="" /> <img src={imagemCulto6} alt="" /> </Galeria>
+                    <Galeria> {galeria.map((foto) => (
+                            <img src={foto.url} alt="" />
+                            ))}
+                    </Galeria>
                     <Button href='https://drive.google.com/drive/folders/1TccHOK4Az0HkYGA1QTj3VmTJOjkv3YHu' target="_blank" variant="contained">
                         Ver mais...
                     </Button>

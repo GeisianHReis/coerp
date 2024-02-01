@@ -4,11 +4,20 @@ import logoKids from "../../../assets/LogosMinisterios/kids.png";
 import logoCasais from "../../../assets/LogosMinisterios/CASAIS.png";
 import logoMissoes from "../../../assets/LogosMinisterios/MISSOES.png";
 import logoJovens from "../../../assets/LogosMinisterios/JOVENS.png";
-import logoMidia from "../../../assets/LogosMinisterios/MIDIA.png";
+import logoMidia from "../../../assets/LogosMinisterios/midia.png";
 import logoLouvor from "../../../assets/LogosMinisterios/LOUVOR.png";
 import logoInter from "../../../assets/LogosMinisterios/INTER.png";
 import { Box } from "../../styles/Ministerios/styles";
 import AlertDialogSlide from "./Modal";
+import { MinisterioUm } from "../../styles/Ministerios/styles";
+import { MinisterioMidia } from "../../styles/Ministerios/styles";
+import { MinisterioJovens } from "../../styles/Ministerios/styles";
+import { MinisterioMissoes } from "../../styles/Ministerios/styles";
+import { MinisterioLouvor } from "../../styles/Ministerios/styles";
+import { MinisterioInter } from "../../styles/Ministerios/styles";
+import { MinisterioCasais } from "../../styles/Ministerios/styles";
+import { CardScrool } from "../../styles/Ministerios/styles";
+import { BotaoUm } from "../../styles/Ministerios/styles";
 
 import { TopMobile } from "../../../components/TopMobile";
 import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
@@ -55,74 +64,74 @@ export function Ministerios() {
                     <h2>KIDS</h2>
                 </ListaDeMinisterios>
     </Box>*/}
-                <Grid container spacing={2} alignItems={"center"}>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            Ministério Infantil Coerp KIDS, um espaço dedicado a ensinar a Palavra de Deus às crianças. Nosso objetivo é proporcionar um aprendizado significativo e relevante, promovendo uma compreensão clara e correta dos princípios cristãos. Valorizamos o ambiente acolhedor e seguro, cultivando relacionamentos baseados no amor e no respeito.
+                <Grid container spacing={2} alignItems={"center"} >
+                    <CardScrool>
+                        <MinisterioUm>
+                            <img src={logoKids} alt="forma em geoide azul com o texto: coerp kids" />
+                            <BotaoUm>
+                                <h4>Conheça sobre:</h4>
+                                <p>Ensino acolhedor da Palavra de Deus.</p>
+                                <AlertDialogSlide titulo={coerpKids[0]} texto={coerpKids[1]} nomeLider1={coerpKids[2]} ></AlertDialogSlide>
+                            </BotaoUm>
+                        </MinisterioUm>
 
-                            <AlertDialogSlide titulo={coerpKids[0]} texto={coerpKids[1]} nomeLider1={coerpKids[2]} ></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={5} md={3}>
-                        <img src={logoKids} alt="forma em geoide azul com o texto: coerp kids"/>
-                    </Grid>
+                        <MinisterioMidia>
+                            <img src={logoMidia} alt="forma em geoide azul com o texto: coerp kids" />
+                            <BotaoUm>
+                                <h4>Conheça sobre:</h4>
+                                <p>Crucial para o crescimento do ministério de Jesus.</p>
+                                <AlertDialogSlide titulo={missoes[0]} texto={missoes[1]} nomeLider1={missoes[2]} ></AlertDialogSlide>
+                            </BotaoUm>
+                        </MinisterioMidia>
 
-                    <Grid item xs={5} md={3}>
-                        <img src={logoMissoes} alt=" forma em geoide azul com o texto: missões" />
-                    </Grid>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            Missão está no coração de Deus, e também no coração da igreja. O Ministério de Missões é uma jornada de propósito e compaixão, buscando alcançar...
-                            <AlertDialogSlide titulo={missoes[0]} texto={missoes[1]} nomeLider1={missoes[2]} ></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            Rede de Jovens! Somos uma comunidade de jovens apaixonados por Deus, entregues à obediência e à busca constante da Palavra de Deus como única forma de...
-                            <AlertDialogSlide titulo={jovens[0]} texto={jovens[1]} nomeLider1={jovens[2]} nomeLider2={jovens[3]}></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={5} md={3}>
-                        <img src={logoJovens} alt=" forma em geoide azul com o texto: jovens"/>
-                    </Grid>
+                        <MinisterioJovens>
+                            <img src={logoJovens} alt="forma em geoide azul com o texto: coerp kids" />
+                            <BotaoUm>
+                                <h4>Conheça sobre:</h4>
+                                <p>Jovens apaixonados por Deus, dedicados à Palavra.</p>
+                                <AlertDialogSlide titulo={jovens[0]} texto={jovens[1]} nomeLider1={jovens[2]} nomeLider2={jovens[3]}></AlertDialogSlide>
+                            </BotaoUm>
+                        </MinisterioJovens>
 
-                    <Grid item xs={5} md={3}>
-                        <img src={logoMidia} alt="forma em geoide azul com o texto: mídia"/>
-                    </Grid>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            O Ministério de Mídia é essencial para o crescimento do ministério de Jesus nos dias atuais. Cuidamos de detalhes que muitos não veem, mas que são cruciais. Através das...
-                            <AlertDialogSlide titulo={midias[0]} texto={midias[1]} nomeLider1={midias[2]} ></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            O Ministério de Louvor e Dança é uma equipe unida, instrumentos nas mãos de Deus, proclamando o Evangelho de Jesus através da música e da dança. Além de expressarmos...
-                            <AlertDialogSlide titulo={louvorDanca[0]} texto={louvorDanca[1]} nomeLider1={louvorDanca[2]} nomeLider2={louvorDanca[3]}></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={5} md={3}>
-                        <img src={logoLouvor} alt="forma em geoide azul com o texto: louvor" />
-                    </Grid>
+                        <MinisterioMissoes>
+                            <img src={logoMissoes} alt="forma em geoide azul com o texto: coerp kids" />
+                            <BotaoUm>
+                                <h4>Conheça sobre:</h4>
+                                <p>
+                                    Busca de propósito no coração de Deus.</p>
+                                <AlertDialogSlide titulo={midias[0]} texto={midias[1]} nomeLider1={midias[2]} ></AlertDialogSlide>
+                            </BotaoUm>
+                        </MinisterioMissoes>
 
-                    <Grid item xs={5} md={3}>
-                        <img src={logoInter} alt="forma em geoide azul com o texto: intecessão" />
-                    </Grid>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            Intercessão é orar por alguém ou por algo, pedindo o que está no coração de Deus. Interceder por algo que não se vê é um ato de fé. Eu creio que devemos ser um povo que tem...
-                            <AlertDialogSlide titulo={intercessao[0]} texto={intercessao[1]} nomeLider1={intercessao[2]} ></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            O Ministério de Casais é um lugar especial onde o amor e a comunhão florescem. Juntos, fortalecemos nossos laços matrimoniais, buscando alicerces sólidos na Palavra de Deus. Compartilhamos momentos de...
-                            <AlertDialogSlide titulo={casais[0]} texto={casais[1]} nomeLider1={casais[2]} nomeLider2={casais[3]} ></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={5} md={3}>
-                        <img src={logoCasais} alt="forma em geoide azul com o texto: casais"/>
-                    </Grid>
+                        <MinisterioLouvor>
+                            <img src={logoLouvor} alt="forma em geoide azul com o texto: coerp kids" />
+                            <BotaoUm>
+                                <h4>Conheça sobre:</h4>
+                                <p>
+                                    Proclamação do Evangelho com música e dança.</p>
+                                <AlertDialogSlide titulo={louvorDanca[0]} texto={louvorDanca[1]} nomeLider1={louvorDanca[2]} nomeLider2={louvorDanca[3]}></AlertDialogSlide>
+                            </BotaoUm>
+                        </MinisterioLouvor>
+
+                        <MinisterioInter>
+                            <img src={logoInter} alt="forma em geoide azul com o texto: coerp kids" />
+                            <BotaoUm>
+                                <h4>Conheça sobre:</h4>
+                                <p>
+                                    Intercessão: orar por algo invisível, fé.</p>
+                                <AlertDialogSlide titulo={intercessao[0]} texto={intercessao[1]} nomeLider1={intercessao[2]} ></AlertDialogSlide>
+                            </BotaoUm>
+                        </MinisterioInter>
+                        <MinisterioCasais>
+                            <img src={logoCasais} alt="forma em geoide azul com o texto: coerp kids" />
+                            <BotaoUm>
+                                <h4>Conheça sobre:</h4>
+                                <p>
+                                    Ministério de Casais: amor, comunhão, fortalecimento.</p>
+                                <AlertDialogSlide titulo={casais[0]} texto={casais[1]} nomeLider1={casais[2]} nomeLider2={casais[3]} ></AlertDialogSlide>
+                            </BotaoUm>
+                        </MinisterioCasais>
+                    </CardScrool>
                 </Grid>
             </Box>
             <FooterTelaMenor />

@@ -1,7 +1,7 @@
 import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
 import { setContext } from 'apollo-link-context';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { InMemoryCache } from '@apollo/client';
 
 const token = 'f338721efdf012d08a7dc185f31fa1';
 const httpLink = createHttpLink({

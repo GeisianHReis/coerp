@@ -5,7 +5,7 @@ export const Box = styled.main`
     flex-direction: column;
     justify-content: center;
 
-    margin-left: 12%;
+    margin-left: 5%;
     margin-right: 5%;
     margin-top: 120px;
     img{
@@ -36,7 +36,7 @@ export const Box = styled.main`
     
     @media screen and (max-width: 650px) {
         margin-left: 2%;
-        margin-top: 0;
+        margin-top: 3%;
     }
 `;
 export const BotaoSaibaMais = styled.button`

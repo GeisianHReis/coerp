@@ -5,8 +5,6 @@ import { useContext } from 'react';
 import UnidadeContext from "../../UnidadeContext";
 import { Helmet } from "react-helmet";
 
-
-
 export function TelaInicial() {
     const navigate = useNavigate();
     const location = useLocation();

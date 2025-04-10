@@ -1,30 +1,53 @@
 import Button from "@mui/material/Button";
-import { Side } from "../../../components/Side";
-import { Box, BoxGeral } from "../../styles/Cultos/styles";
+import { EventCard, OnlineSection } from "../../styles/Cultos/styles";
+import gql from 'graphql-tag';
+import { useEffect, useState } from "react";
+import client from "../../../CMS/Service/dato";
 
-import { TopMobile } from "../../../components/TopMobile";
-import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
-import { Helmet } from "react-helmet";
+const programacao = [
+    { date: "09/03", title: "A escolha da melhor parte - Pr. Gonçalves" },
+    { date: "02/03", title: "Tema da palavra - Pr. Nome" },
+    { date: "23/02", title: "Tema da palavra - Pr. Nome" },
+    { date: "16/02", title: "Tema da palavra - Pr. Nome" },
+    { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+    { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+    { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+    { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+    { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+    { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+    { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+];
 
 export function CultosF() {
+    const [url, setUrl] = useState();
+
+    useEffect(() => {
+        client.query({
+            query: gql`{
+                ultimatransmissao{
+                    culto
+                }
+            }`
+        })
+            .then((res) => {
+                setUrl(res.data.ultimatransmissao.culto);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
     return (
-        <BoxGeral>
-            <Helmet>
-                <title>Cultos Online Ao Vivo | Igreja Coerp - Participe Conosco!</title>
-                <meta name="description" content="Acesse os cultos online da Igreja Coerp e conecte-se virtualmente em momentos de adoração inspiradores. Junte-se à nossa comunidade para uma experiência significativa." />
-            </Helmet>
-            <TopMobile name="TRANSMISSÕES" />
-            <Side name="NOSSOS CULTOS" />
-            <Box>
-              <h1>ÚLTIMA TRANSMISSÃO</h1>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/cb-ZvRDtxlQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                <br/>
-                <Button href="https://www.youtube.com/@igrejacoerp9121/streams" target="_blank" variant="contained">
-                    Todas as transmissões
-                </Button>
-            </Box>
-            <FooterTelaMenor/>
-        </BoxGeral>
-        
+        <OnlineSection>
+            <div className="events-grid">
+                {programacao.map((event, index) => (
+                    <EventCard key={index}>
+                        <span className="date">{event.date}</span>
+                        <h3>{event.title}</h3>
+                        <div className="watch-button">Assistir ▶</div>
+                    </EventCard>
+                ))}
+            </div >
+        </OnlineSection >
+
     )
 };

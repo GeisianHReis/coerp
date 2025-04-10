@@ -1,54 +1,144 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import { Box, FaixaDaHome, FaixaDeAvisos, Galeria, GaleriaPc } from "../../styles/Home/styles";
-import imagemTop from "../../../assets/Ativo 5.png";
-import imagemCulto1 from "../../../assets/FotosCulto/Ferraz/IMG_0940.webp";
-import imagemCulto2 from "../../../assets/FotosCulto/Ferraz/IMG_0841.webp";
-import imagemCulto3 from "../../../assets/FotosCulto/Ferraz/IMG_1060.webp";
-import imagemCulto4 from "../../../assets/FotosCulto/Ferraz/IMG_1074.webp";
-import imagemCulto5 from "../../../assets/FotosCulto/Ferraz/IMG_0883.webp";
-import imagemCulto6 from "../../../assets/FotosCulto/Ferraz/IMG_0797.webp";
+import { Box, Section, EventCard, OnlineSection, Footer, HeaderContent, DateBox, UnitName, MainHeader, MainLogo, EventCardEvent } from "../../styles/Home/styles";
 import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
-import { Button } from '@mui/material';
+import { Button, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
 import { Helmet } from 'react-helmet';
-
+import { useEffect, useState } from 'react';
+import client from '../../../CMS/Service/dato';
+import gql from 'graphql-tag';
+import bannerImage from "../../../assets/IMG_1457 1.svg";
 
 export function HomeF() {
+    interface Event {
+        title: string;
+        date: string;
+        description: string;
+    }
+
+    const [events, setEvents] = useState<Event[]>([
+        {
+            title: "Páscoa Solidária",
+            date: "18/04 às 13h",
+            description: "Evento beneficente para ajudar famílias carentes.",
+        },
+        {
+            title: "Ordenação Pastoral",
+            date: "19/04 às 19h",
+            description: "Celebração especial para a ordenação de novos pastores.",
+        },
+        {
+            title: "Aniversário da Igreja",
+            date: "Mês de Abril",
+            description: "Comemoração do aniversário da nossa comunidade.",
+        }
+    ]);
+
+    const programacao = [
+        { date: "09/03", title: "A escolha da melhor parte - Pr. Gonçalves" },
+        { date: "02/03", title: "Tema da palavra - Pr. Nome" },
+        { date: "23/02", title: "Tema da palavra - Pr. Nome" },
+        { date: "16/02", title: "Tema da palavra - Pr. Nome" },
+        { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+        { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+        { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+        { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+        { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+        { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+        { date: "09/02", title: "Tema da palavra - Pr. Nome" },
+    ];
+
+    const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
+    const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        client.query({
+            query: gql`
+                query {
+                    upcomingEvents {
+                        title
+                        date
+                        description
+                    }
+                }
+            `
+        })
+            .then((res) => {
+                setEvents(res.data.upcomingEvents);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
+
+    const handleOpen = (event: Event) => {
+        setSelectedEvent(event);
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+        setSelectedEvent(null);
+    };
 
     return (
         <>
             <Helmet>
-                <title>Igreja Coerp - Comunidade Evangélica Redenção Plena | Seja Parte da Nossa Missão</title>
-                <meta name="description" content="Uma igreja que entendeu o ide do Senhor. Somos um só corpo, com um só propósito: compartilhar o amor de Cristo e transformar vidas. Venha fazer parte dessa missão!" />
+                <title>Igreja Coerp - Página Inicial</title>
             </Helmet>
             <TopMobile name="" />
-            <Box>
-                <img src={imagemTop}></img>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/X0SBqUJZRkU?&autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-            </Box>
-            <FaixaDaHome>
-                <h1>
-                    Entrega de Marmitas 11/08
-                </h1>
-                <h1>
-                    Envolva-se!
-                </h1>
+            <MainHeader>
+                <HeaderContent>
+                    <MainLogo>COERP</MainLogo>
+                    <DateBox>Desde 13 De Abril De 1976</DateBox>
+                    <UnitName>UNIDADE FERRAZ</UnitName>
+                </HeaderContent>
+            </MainHeader>
+            <Section>
+                <h2>O QUE VEM POR AÍ</h2>
+                <div className="events">
+                    {events.map((event, index) => (
+                        <EventCardEvent key={index}>
+                            <h3>{event.title}</h3>
+                            <p>{event.date}</p>
+                            <p>{event.description}</p>
+                            <Button variant="contained" onClick={() => handleOpen(event)}>Mais Informações</Button>
+                        </EventCardEvent>
+                    ))}
+                </div>
+            </Section>
 
-            </FaixaDaHome>
+            <OnlineSection>
+                <div className="events-grid">
+                    <EventCard style={{ backgroundColor: "#FFFFFF" }}>
+                        <h2>PROGRAMAÇÃO <span>ONLINE</span></h2>
+                        <p>Acompanhe nossos cultos pelo YouTube e fortaleça sua fé onde quer que esteja!</p>
+                        <div className="view-more">
+                            <Button variant="contained" style={{ backgroundColor: "#3663AC" }}>Ver Mais</Button>
+                        </div>
+                    </EventCard>
+                    {programacao.map((event, index) => (
+                        <EventCard key={index}>
+                            <span className="date">{event.date}</span>
+                            <h3>{event.title}</h3>
+                            <div className="watch-button">Assistir ▶</div>
+                        </EventCard>
+                    ))}
+                </div >
+            </OnlineSection >
 
-            <FaixaDeAvisos>
-                <GaleriaPc>
-                    <div>
-                        <h1>GALERIA</h1>
-                    </div>
-                    <Galeria> <img src={imagemCulto1} alt="" /> <img src={imagemCulto2} alt="" /> <img src={imagemCulto3} alt="" /> <img src={imagemCulto4} alt="" /> <img src={imagemCulto5} alt="" /> <img src={imagemCulto6} alt="" /> </Galeria>
-                    <Button href='https://drive.google.com/drive/folders/1TccHOK4Az0HkYGA1QTj3VmTJOjkv3YHu' target="_blank" variant="contained">
-                        Ver mais...
-                    </Button>
-                </GaleriaPc>
-
-            </FaixaDeAvisos>
             <FooterTelaMenor />
+
+            <Dialog open={open} onClose={handleClose}>
+                <DialogTitle>{selectedEvent?.title}</DialogTitle>
+                <DialogContent>
+                    <p><strong>Data:</strong> {selectedEvent?.date}</p>
+                    <p>{selectedEvent?.description}</p>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose} color="primary">Fechar</Button>
+                </DialogActions>
+            </Dialog>
         </>
-    )
-};
+    );
+}

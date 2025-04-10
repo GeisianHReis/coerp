@@ -14,7 +14,6 @@ function AppContent() {
 
   return (
     <>
-      {showTopMenuAndFooter && <TopMenu />}
       {showTopMenuAndFooter && <Header />}
       <Router />
       {showTopMenuAndFooter && <Footer />}

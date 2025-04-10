@@ -19,6 +19,12 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
+  "CMS": {
+    "RestURI": "https://site-api.datocms.com/items",
+    "GraphQLURI": "https://graphql.datocms.com",
+    "Token": "7b3c2bfff40811fc571b6e6a4187dc",
+    "CommentEntityId": "f338721efdf012d08a7dc185f31fa1"
+  },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

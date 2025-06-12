@@ -4,7 +4,6 @@ import { GlobalStyle } from "./styles/global"
 import { BrowserRouter, useLocation } from "react-router-dom"
 import { Router } from "./Router"
 import { Footer } from "./components/Footer"
-import { TopMenu } from "./components/TopMenu"
 import { Header } from "./components/Header"
 import { UnidadeProvider } from "./UnidadeContext"
 
@@ -14,7 +13,6 @@ function AppContent() {
 
   return (
     <>
-      {showTopMenuAndFooter && <TopMenu />}
       {showTopMenuAndFooter && <Header />}
       <Router />
       {showTopMenuAndFooter && <Footer />}

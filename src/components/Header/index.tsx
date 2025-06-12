@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { BoxMenu, ButtonMenu } from "./styles";
+import { BoxMenu, ButtonMenu, AgendaButton } from "./styles"; // Import AgendaButton
 import imagemLogo from "../../assets/Logo Coerp azul.png";
 import imagemLogoCaminho from "../../assets/coerp jesus é o caminho.png";
 import { useContext } from "react";
 import UnidadeContext from "../../UnidadeContext";
+import { FaCalendarAlt } from "react-icons/fa"; // Import a calendar icon
 
 export function Header() {
   const { unidadeSelecionada } = useContext(UnidadeContext);
@@ -18,7 +19,7 @@ export function Header() {
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
 
-    setVisible(prevScrollPos > currentScrollPos);
+    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10); // Show on scroll up or at the very top
 
     setPrevScrollPos(currentScrollPos);
   };
@@ -33,104 +34,101 @@ export function Header() {
     unidadeSelecionada === "Ferraz"
       ? navigate("/ferraz/home")
       : navigate("/guaianases/home");
-      window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   };
 
   const handleProgramacao = () => {
     unidadeSelecionada === "Ferraz"
       ? navigate("/ferraz/programacao")
       : navigate("/guaianases/programacao");
-      window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   };
 
   const handleCultos = () => {
     unidadeSelecionada === "Ferraz"
       ? navigate("/ferraz/cultos")
       : navigate("/guaianases/devocional");
-      window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   };
 
   const handleSobre = () => {
     unidadeSelecionada === "Ferraz"
       ? navigate("/ferraz/sobre")
       : navigate("/guaianases/sobre");
-      window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   };
 
   const handleMinisterios = () => {
     unidadeSelecionada === "Ferraz"
       ? navigate("/ferraz/Ministerios")
       : navigate("/guaianases/Ministerios");
-      window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   };
 
   const handleMudar = () => navigate("/");
 
+  const handleAgenda = () => {
+    unidadeSelecionada === "Ferraz"
+      ? navigate("/ferraz/programacao")
+      : navigate("/guaianases/programacao"); 
+    window.scrollTo(0, 0);
+  };
+
   return (
     <BoxMenu className={visible ? "visible" : "hidden"}>
-      {location.pathname === "/ferraz/home" ? (
-        <img src={imagemLogo} onClick={handleMudar} alt="Logo igreja coerp"/>
-      ) : location.pathname === "/guaianases/home" ? (
-        <img src={imagemLogoCaminho} onClick={handleMudar} alt="Logo igreja coerp"/>
+      {location.pathname.includes("/ferraz") ? ( 
+        <img src={imagemLogo} onClick={handleMudar} alt="Logo igreja coerp" />
+      ) : location.pathname.includes("/guaianases") ? (
+        <img
+          src={imagemLogoCaminho}
+          onClick={handleMudar}
+          alt="Logo igreja coerp"
+        />
       ) : (
-        <img src="" alt=""/>
+        <img src="" alt="" /> 
       )}
 
-      <ButtonMenu
-        onClick={handleHome}
-        className={
-          location.pathname === "/guaianases/home" ||
-            location.pathname === "/ferraz/home"
-            ? "active"
-            : ""
-        }
+      <nav> {/* Use a nav element for semantic grouping of navigation links */}
+        <ButtonMenu
+          onClick={handleHome}
+          className={
+            location.pathname.includes("home") ? "active" : "" // Simpler check for active home
+          }
+        >
+          Home
+        </ButtonMenu>
+        <ButtonMenu
+          onClick={handleCultos}
+          className={
+            location.pathname.includes("cultos") || location.pathname.includes("devocional")
+              ? "active"
+              : ""
+          }
+        >
+          {unidadeSelecionada === "Ferraz" ? "Cultos" : "Devocionais"}
+        </ButtonMenu>
+        <ButtonMenu
+          onClick={handleMinisterios}
+          className={
+            location.pathname.includes("Ministerios") ? "active" : ""
+          }
+        >
+          Ministérios
+        </ButtonMenu>
+        <ButtonMenu
+          onClick={handleSobre}
+          className={location.pathname.includes("sobre") ? "active" : ""}
+        >
+          Sobre Nós
+        </ButtonMenu>
+      </nav>
+
+      <AgendaButton
+        onClick={handleAgenda}
+        className={location.pathname.includes("agenda") ? "active" : ""}
       >
-        INÍCIO
-      </ButtonMenu>
-      <ButtonMenu
-        onClick={handleProgramacao}
-        className={
-          location.pathname === "/guaianases/programacao" ||
-            location.pathname === "/ferraz/programacao"
-            ? "active"
-            : ""
-        }
-      >
-        PROGRAMAÇÃO
-      </ButtonMenu>
-      <ButtonMenu
-        onClick={handleCultos}
-        className={
-          location.pathname === "/guaianases/devocional" ||
-            location.pathname === "/ferraz/cultos"
-            ? "active"
-            : ""
-        }
-      >
-        {unidadeSelecionada === "Ferraz" ? "CULTOS" : "DEVOCIONAIS"}
-      </ButtonMenu>
-      <ButtonMenu
-        onClick={handleMinisterios}
-        className={
-          location.pathname === "/guaianases/Ministerios" ||
-            location.pathname === "/ferraz/Ministerios"
-            ? "active"
-            : ""
-        }
-      >
-        MINISTÉRIOS
-      </ButtonMenu>
-      <ButtonMenu
-        onClick={handleSobre}
-        className={
-          location.pathname === "/guaianases/sobre" ||
-            location.pathname === "/ferraz/sobre"
-            ? "active"
-            : ""
-        }
-      >
-        SOBRE NÓS
-      </ButtonMenu>
+        Agenda <FaCalendarAlt size={16} /> {/* Calendar Icon */}
+      </AgendaButton>
     </BoxMenu>
   );
 }

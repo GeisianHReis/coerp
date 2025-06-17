@@ -9,18 +9,32 @@ const theme = {
   "button-text-white": "#fff",       
   "font-family-body": "Arial, sans-serif",
   "font-family-heading": "Georgia, serif", 
+  "background-blue-light": "#8DACDB",
 };
 
 export const AgendaContainer = styled.div`
-  background-color: ${theme["background-light-gray"]};
+  background-color: ${theme["background-blue-light"]};
   padding: 3em 5%; 
   width: 100%;
   box-sizing: border-box; 
   flex-direction: column;
   align-items: center;
 
+  padding-top: calc(50px + 20px);
+
   @media (max-width: 768px) {
-    padding: 2em 3%;
+    padding: 15px;
+    padding-top: calc(60px + 90px);
+  }
+
+  @media (max-width: 520px) {
+  padding: 12px;
+  padding-top: calc(60px + 140px);
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    padding-top: calc(70px + 130px);
   }
 `;
 
@@ -53,8 +67,8 @@ export const SectionTitle = styled.h2`
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 4px; /* Thickness of the line */
-    height: 100%; /* Height of the line */
+    width: 4px; 
+    height: 100%;
     background-color: ${theme["text-dark-blue"]};
     border-radius: 2px;
   }
@@ -86,7 +100,7 @@ export const MonthButton = styled.button`
   color: ${theme["text-dark-blue"]};
   cursor: pointer;
   padding: 0.5em;
-  display: flex; /* For centering the icon */
+  display: flex;
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease;

@@ -88,11 +88,11 @@ export function Header() {
         <img src="" alt="" /> 
       )}
 
-      <nav> {/* Use a nav element for semantic grouping of navigation links */}
+      <nav> 
         <ButtonMenu
           onClick={handleHome}
           className={
-            location.pathname.includes("home") ? "active" : "" // Simpler check for active home
+            location.pathname.includes("home") ? "active" : "" 
           }
         >
           Home
@@ -127,7 +127,7 @@ export function Header() {
         onClick={handleAgenda}
         className={location.pathname.includes("agenda") ? "active" : ""}
       >
-        Agenda <FaCalendarAlt size={16} /> {/* Calendar Icon */}
+        Agenda <FaCalendarAlt size={16} /> 
       </AgendaButton>
     </BoxMenu>
   );

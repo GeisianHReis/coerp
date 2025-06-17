@@ -10,17 +10,27 @@ const theme = {
 export const HeroContainer = styled.section`
   display: flex;
   flex-direction: column;
-  padding: 20px; 
-  background-color: transparent;
   box-sizing: border-box;
-  overflow: hidden; 
+  overflow: hidden;
+
+  padding: 20px; 
+  padding-top: calc(50px + 20px);
+  
+  background-color: transparent; 
 
   @media (max-width: 768px) {
     padding: 15px;
+    padding-top: calc(60px + 90px);
+  }
+
+  @media (max-width: 520px) {
+  padding: 12px;
+  padding-top: calc(60px + 140px);
   }
 
   @media (max-width: 480px) {
     padding: 10px;
+    padding-top: calc(70px + 130px);
   }
 `;
 

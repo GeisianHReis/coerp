@@ -3,16 +3,16 @@ import styled from "styled-components";
 export const BoxMenu = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distribute items with space between them */
-  padding: 0.5em 2em; /* Adjust padding as needed */
+  justify-content: space-between;
+  padding: 0.5em 2em;
 
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow like in the image */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Ensure it stays on top */
+  z-index: 1000;
   transition: top 0.3s ease-in-out;
 
   &.visible {
@@ -20,92 +20,88 @@ export const BoxMenu = styled.div`
   }
 
   &.hidden {
-    top: -100px; /* Adjust this value to control how much the header is hidden */
+    top: -100px;
   }
 
   img {
-    height: 3em; /* Adjust height instead of width to maintain aspect ratio, or set a fixed width if preferred */
-    margin: 0; /* Remove extra margin */
+    height: 3em; 
+    margin: 0;
     cursor: pointer;
   }
 
   nav {
     display: flex;
-    gap: 1em; /* Space between navigation buttons */
+    gap: 1em; 
   }
 
-  @media screen and (max-width: 768px) { /* Adjust breakpoint for responsiveness */
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     padding: 1em;
     img {
         margin-bottom: 1em;
     }
     nav {
-        flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+        flex-wrap: wrap; 
         justify-content: center;
     }
-    /* You might want to remove 'display: none' for smaller screens and handle it differently */
-    /* display: none; */ /* Removed to make it visible on smaller screens, consider a mobile menu */
   }
 `;
 
 export const ButtonMenu = styled.button`
-  background-color: transparent; /* No background for regular buttons */
-  border: none; /* No border for regular buttons */
+  background-color: transparent;
+  border: none;
   color: black;
-  font-size: 1em; /* Adjust font size */
-  padding: 0.5em 1em; /* Adjust padding */
+  font-size: 1em; 
+  padding: 0.5em 1em;
   cursor: pointer;
   transition: color 0.3s ease, background-color 0.3s ease;
 
   font-family: ${(props) => props.theme["font-family-botton"]};
 
   &:hover {
-    color: ${(props) => props.theme["dark-blue"]}; /* Color change on hover */
+    color: ${(props) => props.theme["dark-blue"]};
   }
 
   &.active {
     color: ${(props) => props.theme["dark-blue"]};
-    position: relative; /* Needed for the underline effect */
+    position: relative;
   }
 
-  /* Underline effect for active button */
   &.active::after {
     content: "";
     position: absolute;
-    bottom: -5px; /* Adjust position of the underline */
+    bottom: -5px; 
     left: 0;
     width: 100%;
-    height: 2px; /* Thickness of the underline */
+    height: 2px;
     background-color: ${(props) => props.theme["dark-blue"]};
   }
 
   @media screen and (max-width: 650px) {
-    /* You might want to make these buttons smaller or adjust their layout for mobile */
   }
 `;
 
 export const AgendaButton = styled(ButtonMenu)`
-  background-color: ${(props) => props.theme["dark-blue"]}; /* Blue background */
+  background-color: ${(props) => props.theme["dark-blue"]};
   color: white;
-  border-radius: 20px; /* More rounded corners */
-  padding: 0.5em 1.5em; /* Adjust padding to make it wider */
+  border-radius: 20px;
+  padding: 0.5em 1.5em;
   display: flex;
   align-items: center;
-  gap: 0.5em; /* Space between text and icon */
+  gap: 0.5em; 
 
   &:hover {
-    background-color: #315a99; /* Slightly darker blue on hover */
+    background-color: #315a99;
     color: white;
   }
 
   &.active {
-    background-color: #315a99; /* Maintain active state color */
+    background-color: #315a99; 
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for active state */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   &.active::after {
-    display: none; /* No underline for the agenda button */
+    display: none;
   }
 `;

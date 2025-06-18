@@ -1,76 +1,107 @@
 import styled from "styled-components";
 
 export const BoxMenu = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 2em;
 
-    margin-bottom: 3em;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    background-color: white;
-    img{
-        width: 15%;
-        margin: 3em 0.5em 0.5em 0.5em;
-        cursor: pointer;
-    }
-    @media screen and (max-width: 650px) {
-        display: none;
-    }
-    
   position: fixed;
   top: 0;
   width: 100%;
-  transition: top 0.3s;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
 
   &.visible {
     top: 0;
   }
 
   &.hidden {
-    top: -100px; /* Ajuste esse valor para controlar o quanto o cabeçalho fica oculto */
+    top: -100px;
   }
 
+  img {
+    height: 3em; 
+    margin: 0;
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    gap: 1em; 
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 1em;
+    img {
+        margin-bottom: 1em;
+    }
+    nav {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+  }
 `;
 
 export const ButtonMenu = styled.button`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 1em; 
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  font-family: ${(props) => props.theme["font-family-botton"]};
+
+  &:hover {
+    color: ${(props) => props.theme["dark-blue"]};
+  }
+
+  &.active {
+    color: ${(props) => props.theme["dark-blue"]};
     position: relative;
+  }
 
-    width: 12em;
-    height: 3em;
+  &.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: ${(props) => props.theme["dark-blue"]};
+  }
 
+  @media screen and (max-width: 650px) {
+  }
+`;
 
-    background-color: white;
+export const AgendaButton = styled(ButtonMenu)`
+  background-color: ${(props) => props.theme["dark-blue"]};
+  color: white;
+  border-radius: 20px;
+  padding: 0.5em 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em; 
 
-    border-radius: 1em;
-    border: solid 1px ${(props) => props.theme["dark-blue"]};;
-    color: black;
-    text-decoration: none;
-    margin: 3em 0.5em 0.5em 0.5em;
+  &:hover {
+    background-color: #315a99;
+    color: white;
+  }
 
-    font-family: ${(props) => props.theme["font-family-botton"]};
+  &.active {
+    background-color: #315a99; 
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 
-    transition: background 0.5s ease;
-
-    &:hover{
-        cursor: pointer;
-        background-color: ${(props) => props.theme["dark-blue"]};
-        color: white;
-    }
-    &.active{
-        background-color: ${(props) => props.theme["dark-blue"]};
-        color: white;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    }
-    &:first-child{
-        margin-left: 10%;
-    }
-    
-    @media screen and (max-width: 650px) {
-        display: none;
-    }
+  &.active::after {
+    display: none;
+  }
 `;

@@ -5,7 +5,7 @@ export const ListaProgramacao = styled.section`
     flex-direction: column;
     align-items: center;
     
-    margin-left: 12%;
+    margin-left: 8%;
     margin-right: 8%;
     margin-top: 120px;
     

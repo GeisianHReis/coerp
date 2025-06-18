@@ -7,7 +7,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
-import { Liderança } from "../../styles/Ministerios/styles";
+import { Liderança } from '../../styles/Ministerios/styles';
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -20,14 +20,12 @@ const Transition = React.forwardRef(function Transition(
 
 interface ModalMin{
   titulo: string;
-  texto: string;
-  fotoLider1: string;
-  fotoLider2?: string;
+  texto: React.ReactNode;
   nomeLider1: string;
   nomeLider2?: string;
 }
 
-export default function AlertDialogSlide({titulo, texto, fotoLider1, fotoLider2, nomeLider1, nomeLider2}: ModalMin) {
+export default function AlertDialogSlide({titulo, texto, nomeLider1, nomeLider2}: ModalMin) {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -40,8 +38,14 @@ export default function AlertDialogSlide({titulo, texto, fotoLider1, fotoLider2,
 
   return (
     <div>
-      <Button variant="contained" onClick={handleClickOpen}>
-        SAIBA MAIS ...
+       <Button
+        variant="contained"
+        onClick={handleClickOpen}
+        style={{ borderRadius: '14px', fontSize: '13px' , width: '202px',
+        padding: '3px 16px', textTransform: 'capitalize'}}
+      >
+        Saber Mais
+        
       </Button>
       <Dialog
         open={open}
@@ -57,14 +61,14 @@ export default function AlertDialogSlide({titulo, texto, fotoLider1, fotoLider2,
           </DialogContentText>
           <h3>Liderança</h3>
           <Liderança>
-          <img id="pr1" src={fotoLider1} /> {nomeLider1}
+           {nomeLider1}
           </Liderança>
           <Liderança>
-          <img id="pr1" src={fotoLider2} /> {nomeLider2}
+           {nomeLider2}
           </Liderança>
         </DialogContent>
         <DialogActions>
-          <Button variant="contained" onClick={handleClose}>Fechar!</Button>
+          <Button onClick={handleClose}>Fechar!</Button>
         </DialogActions>
       </Dialog>
     </div>

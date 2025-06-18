@@ -47,7 +47,7 @@ export function Devocional() {
                 <section>
                     <h2>Deus te chama a ser Forte</h2>
                     <h3>07 de agosto de 2023</h3>
-                    <p>Deus nos chama para obedecer, nos entregar e estar dispostos a servir a Jesus... <AlertDialogSlide titulo={segundoDevocional[0]} texto={textoComQuebrasDeLinhaDois} ></AlertDialogSlide></p>
+                    <p>Deus nos chama para obedecer, nos entregar e estar dispostos a servir a Jesus... <AlertDialogSlide titulo={segundoDevocional[0]} texto={textoComQuebrasDeLinhaDois} id={""} isOpen={false} ></AlertDialogSlide></p>
                 </section>
             </Container>
             <FooterTelaMenor />

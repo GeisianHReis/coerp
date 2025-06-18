@@ -1,6 +1,6 @@
 import React from 'react';
 import { DownloadSimple } from '@phosphor-icons/react';
-import { AgendaEventProps } from '../../pages/ferraz/Programacao';
+import { Event } from '../../pages/ferraz/Programacao';
 
 import {
   EventCardWrapper,
@@ -12,17 +12,17 @@ import {
 } from './styles';
 
 interface EventCardProps {
-  event: AgendaEventProps;
-  onMoreInfoClick: (event: AgendaEventProps) => void;
+  event: Event;
+  onMoreInfoClick: (event: Event) => void;
 }
 
 export function EventCard({ event, onMoreInfoClick }: EventCardProps) {
   return (
     <EventCardWrapper>
-      <EventDate>{event.date}</EventDate>
-      <EventTitle>{event.title}</EventTitle>
+      <EventDate>{event.horario}</EventDate>
+      <EventTitle>{event.evento}</EventTitle>
       <EventSeparator />
-      <EventDescription>{event.shortDescription}</EventDescription>
+      <EventDescription>{event.informacoes}</EventDescription>
       <MoreInfoButton onClick={() => onMoreInfoClick(event)}>
         Mais Informações <DownloadSimple size={20} />
       </MoreInfoButton>

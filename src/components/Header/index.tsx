@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { BoxMenu, ButtonMenu, AgendaButton } from "./styles"; // Import AgendaButton
+import { BoxMenu, ButtonMenu, AgendaButton } from "./styles";
 import imagemLogo from "../../assets/Logo Coerp azul.png";
 import imagemLogoCaminho from "../../assets/coerp jesus é o caminho.png";
 import { useContext } from "react";
 import UnidadeContext from "../../UnidadeContext";
-import { FaCalendarAlt } from "react-icons/fa"; // Import a calendar icon
+import { FaCalendarAlt } from "react-icons/fa";
 
 export function Header() {
   const { unidadeSelecionada } = useContext(UnidadeContext);

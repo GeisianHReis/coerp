@@ -1,5 +1,5 @@
-import React from 'react';
-import { DownloadSimple } from '@phosphor-icons/react'; 
+import React, { useCallback, useEffect, useState } from 'react';
+import { DownloadSimple } from '@phosphor-icons/react';
 import {
   UpcomingEventsContainer,
   SectionTitle,
@@ -9,60 +9,114 @@ import {
   EventTitle,
   EventSeparator,
   EventDescription,
-  MoreInfoButton,
+  MoreInfoButton
 } from './styles';
+import client from '../../cms/Dato/client';
+import gql from 'graphql-tag';
+import { v4 as uuidv4 } from 'uuid';
+import { EventModal } from '../EventModal';
 
-interface EventProps {
-  date: string;
-  title: string;
-  description: string;
-  infoLink?: string;
-}
-
-const upcomingEvents: EventProps[] = [
-  {
-    date: 'Dia 18/04 às 13h',
-    title: 'Páscoa Solidária',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel dui est. Cura bitur imper diet nisl sit amet dolor mole stie pelle nte.',
-    infoLink: '#pascoa-solidaria', 
-  },
-  {
-    date: 'Dia 19/04 às 19h',
-    title: 'Ordenação Pastoral',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel dui est. Cura bitur imper diet nisl sit amet dolor mole stie pelle nte.',
-    infoLink: '#ordenacao-pastoral', 
-  },
-  {
-    date: 'Mês de Abril',
-    title: 'Aniversário da Igreja',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel dui est. Cura bitur imper diet nisl sit amet dolor mole stie pelle nte.',
-    infoLink: '#aniversario-igreja',
-  },
-];
-
-export function UpcomingEvents() {
-  const handleMoreInfoClick = (link?: string) => {
-    if (link) {
-      console.log(`Navigating to/downloading info for: ${link}`);
+export interface Event {
+  key: string;
+  evento: string;
+  horario: string;
+  informacoes: string;
+  descricao: {
+    value: {
+      document: {
+        children: [
+          {
+            children: [
+              {
+                value: string;
+              }
+            ]
+          }
+        ]
+      }
     }
   };
+  mes: number;
+  destaque: boolean;
+}
 
+export function UpcomingEvents() {
+  const [events, setEvents] = useState<Event[]>([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
+
+  const fetchData = useCallback(() => {
+    client.query({
+      query: gql`
+            {
+              allProgramacaoferrazs (
+                filter: {destaque: {eq: true}}
+                orderBy: horario_ASC
+                first: 3
+              ) {
+                evento
+                horario
+                destaque
+                mes
+                informacoes
+                descricao {
+                  value
+                }
+              }
+            }
+          `
+    })
+      .then((res) => {
+        const eventsComKeys = res.data.allProgramacaoferrazs.map((event: Event) => ({
+          ...event,
+          key: uuidv4(),
+        }));
+        console.log(eventsComKeys);
+        setEvents(eventsComKeys);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
+  const handleOpenModal = (event: Event) => {
+    setSelectedEvent(event);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedEvent(null);
+  };
   return (
     <UpcomingEventsContainer>
       <SectionTitle>O QUE VEM POR AÍ</SectionTitle>
       <EventsGrid>
-        {upcomingEvents.map((event, index) => (
-          <EventCard key={index}>
-            <EventDate>{event.date}</EventDate>
-            <EventTitle>{event.title}</EventTitle>
+        {events.map((event) => (
+          <EventCard key={event.key}>
+            <EventDate>{event.horario}</EventDate>
+            <EventTitle>{event.evento}</EventTitle>
             <EventSeparator />
-            <EventDescription>{event.description}</EventDescription>
-            <MoreInfoButton onClick={() => handleMoreInfoClick(event.infoLink)}>
+            <EventDescription>{event.informacoes}</EventDescription>
+            <EventCard onClick={() => handleOpenModal(event)}>
               Mais Informações <DownloadSimple size={20} />
-            </MoreInfoButton>
+            </EventCard>
           </EventCard>
         ))}
       </EventsGrid>
+      {
+        isModalOpen && selectedEvent && (
+          <EventModal
+            isOpen={isModalOpen}
+            onClose={handleCloseModal}
+            event={selectedEvent}
+          />
+        )
+      }
     </UpcomingEventsContainer>
   );
 }

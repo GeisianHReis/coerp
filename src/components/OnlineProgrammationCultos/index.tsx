@@ -26,16 +26,11 @@ interface VideoProps {
   thumbnail: string;
 }
 
-export function OnlineProgrammation() {
+export function OnlineProgrammationCultos() {
   const [onlineVideos, setOnlineVideos] = useState<VideoProps[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [nextPageToken, setNextPageToken] = useState<string | undefined>(undefined);
   const loadVideos = useCallback(async (token?: string) => {
-    setIsLoading(true);
-    setError(null);
     try {
-      const data = await fetchYoutubeVideos(6, token);
+      const data = await fetchYoutubeVideos(15, token);
       
       const newVideos: VideoProps[] = data.items.map((item: YoutubeVideoItem) => ({
         id: item.id.videoId,
@@ -48,13 +43,9 @@ export function OnlineProgrammation() {
       }));
 
       setOnlineVideos(prevVideos => token ? [...prevVideos, ...newVideos] : newVideos);
-      setNextPageToken(data.nextPageToken);
 
     } catch (err) {
       console.error('Falha ao carregar vídeos do YouTube:', err);
-      setError('Não foi possível carregar os vídeos no momento.');
-    } finally {
-      setIsLoading(false);
     }
   }, []);
 
@@ -66,26 +57,9 @@ export function OnlineProgrammation() {
     window.open(link, '_blank');
   };
 
-  const handleViewMoreClick = () => {
-    window.open('https://www.youtube.com/@igrejacoerp', '_blank');
-  };
 
   return (
     <OnlineProgrammationContainer>
-      <LeftSection>
-        <TitleBlock>
-          <h1>PROGRAMAÇÃO</h1>
-          <OnlineText>ONLINE</OnlineText>
-        </TitleBlock>
-        <Description>
-          Acompanhe nossos cultos pelo Youtube e fortaleça sua fé onde quer que esteja!
-        </Description>
-        <ViewMoreButton onClick={handleViewMoreClick} disabled={isLoading}>
-          {isLoading ? 'Carregando...' : 'Ver Mais'}
-        </ViewMoreButton>
-        {error && <p style={{color: 'red', marginTop: '10px'}}>{error}</p>}
-      </LeftSection>
-
       <VideosGrid>
         {onlineVideos.map((video) => (
           <VideoCard key={video.id}> 
@@ -100,8 +74,6 @@ export function OnlineProgrammation() {
             </WatchButton>
           </VideoCard>
         ))}
-        {isLoading && onlineVideos.length === 0 && <p>Carregando vídeos...</p>}
-        {!isLoading && onlineVideos.length === 0 && !error && <p>Nenhum vídeo encontrado.</p>}
       </VideosGrid>
     </OnlineProgrammationContainer>
   );

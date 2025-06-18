@@ -1,6 +1,6 @@
 import React from 'react';
 import { X } from '@phosphor-icons/react';
-import { AgendaEventProps } from '../../pages/ferraz/Programacao';
+import { Event } from '../../pages/ferraz/Programacao';
 
 import {
   ModalOverlay,
@@ -16,7 +16,7 @@ import {
 interface EventModalProps {
   isOpen: boolean;
   onClose: () => void;
-  event: AgendaEventProps; // The event data to display
+  event: Event;
 }
 
 export function EventModal({ isOpen, onClose, event }: EventModalProps) {
@@ -26,14 +26,14 @@ export function EventModal({ isOpen, onClose, event }: EventModalProps) {
     <ModalOverlay onClick={onClose}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <ModalHeader>
-          <ModalTitle>{event.title}</ModalTitle>
+          <ModalTitle>{event.evento}</ModalTitle>
           <CloseButton onClick={onClose}>
             <X size={24} />
           </CloseButton>
         </ModalHeader>
         <ModalBody>
-          <ModalDate>{event.date}</ModalDate>
-          <ModalDescription>{event.fullDescription}</ModalDescription>
+          <ModalDate>{event.horario}</ModalDate>
+          <ModalDescription>{event.descricao?.value.document.children[0].children[0].value}</ModalDescription>
         </ModalBody>
       </ModalContent>
     </ModalOverlay>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Play } from '@phosphor-icons/react';
 import { fetchYoutubeVideos, YoutubeVideoItem } from '../../youtube/youtubeApi';
 import {
@@ -30,7 +30,6 @@ export function OnlineProgrammation() {
   const [onlineVideos, setOnlineVideos] = useState<VideoProps[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [nextPageToken, setNextPageToken] = useState<string | undefined>(undefined);
   const loadVideos = useCallback(async (token?: string) => {
     setIsLoading(true);
     setError(null);
@@ -48,7 +47,6 @@ export function OnlineProgrammation() {
       }));
 
       setOnlineVideos(prevVideos => token ? [...prevVideos, ...newVideos] : newVideos);
-      setNextPageToken(data.nextPageToken);
 
     } catch (err) {
       console.error('Falha ao carregar vídeos do YouTube:', err);

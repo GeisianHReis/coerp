@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const theme = {
-  "background-light-blue": "#f5f8ff", 
-  "text-dark-blue": "#3363B5",       
+  "background-light-blue": "#E6F0FF", 
+  "text-dark-blue": "#3663AC",       
   "text-gray": "#555",               
   "border-gray": "#ccc",             
   "button-blue": "#3363B5",         
@@ -75,10 +75,10 @@ export const EventCard = styled.div`
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
   padding: 1.5em;
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left; 
+  width: 100%;
 `;
 
 export const EventDate = styled.p`

@@ -1,4 +1,3 @@
-import React from 'react';
 import { X } from '@phosphor-icons/react';
 import { Event } from '../../pages/ferraz/Programacao';
 

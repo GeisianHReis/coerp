@@ -1,8 +1,7 @@
 import { ListaProgramacao, GaleriaDaliderança, Liderança, } from "../../styles/SobreNos/styles";
-import estatuto from "../../../assets/Documentos/Estatuto da Igreja.pdf"
+import estatutoPdf from "../../../assets/Documentos/Estatuto da Igreja.pdf"
 import doutrina from "../../../assets/Documentos/DOUTRINAS DO MINISTÉRIO COERP e CIDADE TIRADENTES.pdf"
 import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
-import fotoEdson from "../../../assets/LideresCoerp/edson.webp";
 import { Button } from "@mui/material";
 import { DownloadSimple } from "@phosphor-icons/react";
 import { Helmet } from "react-helmet";
@@ -94,7 +93,7 @@ export function SobreNosF() {
                         </Liderança>
                     ))}
                 </GaleriaDaliderança>
-                <Button href={estatuto} target="_blank" variant="contained">
+                <Button href={estatutoPdf} target="_blank" variant="contained">
                     Baixar nosso estatuto &nbsp;<DownloadSimple size={20} weight="bold" color="white" />
                 </Button>
                 <br />

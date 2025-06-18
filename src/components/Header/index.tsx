@@ -37,13 +37,6 @@ export function Header() {
     window.scrollTo(0, 0);
   };
 
-  const handleProgramacao = () => {
-    unidadeSelecionada === "Ferraz"
-      ? navigate("/ferraz/programacao")
-      : navigate("/guaianases/programacao");
-    window.scrollTo(0, 0);
-  };
-
   const handleCultos = () => {
     unidadeSelecionada === "Ferraz"
       ? navigate("/ferraz/cultos")

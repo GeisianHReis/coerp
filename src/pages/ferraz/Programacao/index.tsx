@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { CaretLeft, CaretRight, X } from '@phosphor-icons/react';
+import { useEffect, useState, useCallback } from 'react';
+import { CaretLeft, CaretRight} from '@phosphor-icons/react';
 import {
   AgendaContainer,
   HeaderSection,

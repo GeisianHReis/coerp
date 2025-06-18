@@ -1,13 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Play } from '@phosphor-icons/react';
 import { fetchYoutubeVideos, YoutubeVideoItem } from '../../youtube/youtubeApi';
 import {
   OnlineProgrammationContainer,
-  LeftSection,
-  TitleBlock,
-  OnlineText,
-  Description,
-  ViewMoreButton,
   VideosGrid,
   VideoCard,
   VideoMeta,

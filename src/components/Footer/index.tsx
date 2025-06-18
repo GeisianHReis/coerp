@@ -50,12 +50,8 @@ export function Footer() {
     setOpenSnackbar(false);
   };
 
-  const { unidadeSelecionada, setUnidadeSelecionada } = useContext(UnidadeContext);
+  const { unidadeSelecionada } = useContext(UnidadeContext);
   const navigate = useNavigate();
-
-  const handleLocationChange = (unit: 'Ferraz' | 'Guaianases') => {
-    setUnidadeSelecionada(unit);
-  };
 
   return (
     <FooterContainer>
@@ -92,25 +88,21 @@ export function Footer() {
 
         <LocationSection>
           <h3>ESTAMOS AQUI</h3>
-          <LocationButton onClick={() => handleLocationChange('Ferraz')}>
+          <LocationButton>
             Ferraz de Vasconcelos <CaretDown size={16} />
           </LocationButton>
-          {unidadeSelecionada === 'Ferraz' && (
             <AddressText>
               R: Quatorze de Outubro, 235 <br />
               Sítio Paredão - Ferraz de Vasconcelos
             </AddressText>
-          )}
 
-          <LocationButton onClick={() => handleLocationChange('Guaianases')}>
+          <LocationButton>
             Guaianases <CaretRight size={16} /> 
           </LocationButton>
-          {unidadeSelecionada === 'Guaianases' && (
             <AddressText>
               Rua Castanho Taques, 64B <br />
               Jardim São Paulo - Guaianases
             </AddressText>
-          )}
         </LocationSection>
 
         <ContributeSection>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { DownloadSimple } from '@phosphor-icons/react';
 import { Event } from '../../pages/ferraz/Programacao';
 

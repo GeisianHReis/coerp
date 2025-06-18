@@ -3,14 +3,14 @@ import axios from 'axios';
 // Sua chave de API do YouTube (substitua pelo valor real e use variáveis de ambiente em produção)
 // É ALTAMENTE RECOMENDADO usar um arquivo .env.local para isso no React
 // Ex: no .env.local -> REACT_APP_YOUTUBE_API_KEY=SUA_CHAVE_AQUI
-const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY || 'AIzaSyCLnN9wBlw_4CEljcEUOcC9luIf93JIDwc';
+const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
 
-const YOUTUBE_BASE_URL = 'https://www.googleapis.com/youtube/v3';
+const YOUTUBE_BASE_URL = process.env.YOUTUBE_BASE_URL;
 
 // ID do seu canal do YouTube. Você pode encontrá-lo na URL do seu canal, ou
 // nas configurações avançadas do seu canal no YouTube Studio.
 // Ex: https://www.youtube.com/channel/UC-your-channel-id
-const CHANNEL_ID = 'UCGLgjKNosmwLoRaDEVXR1gg';
+const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
 
 export interface YoutubeVideoItem {
   id: {

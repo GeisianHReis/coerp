@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { DownloadSimple } from '@phosphor-icons/react';
 import {
   UpcomingEventsContainer,
@@ -8,8 +8,7 @@ import {
   EventDate,
   EventTitle,
   EventSeparator,
-  EventDescription,
-  MoreInfoButton
+  EventDescription
 } from './styles';
 import client from '../../cms/Dato/client';
 import gql from 'graphql-tag';

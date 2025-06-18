@@ -36,5 +36,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/
-          server-dir: /home1/igre9112/novo.igrejacoerp.com.br
+          server-dir: /home1/igre9112/novo.igrejacoerp.com.br/
           delete-remote: true 

@@ -20,6 +20,7 @@ export function Devocional() {
         return parsed.modal || null;
     };
 
+
     return (
         <Box>
             <Helmet>
@@ -41,6 +42,12 @@ export function Devocional() {
                     <h3>30 de Julho de 2023</h3>
                     <p>O mesmo Deus que chamou Paulo ao ministério, também te chama hoje, não somente a Paulo, mas... <AlertDialogSlide id="modal1" isOpen={getIdFromURL() === "modal1"} titulo={primeiroDevocional[0]} texto={textoComQuebrasDeLinha} ></AlertDialogSlide>
                     </p>
+                </section>
+
+                <section>
+                    <h2>Deus te chama a ser Forte</h2>
+                    <h3>07 de agosto de 2023</h3>
+                    <p>Deus nos chama para obedecer, nos entregar e estar dispostos a servir a Jesus... <AlertDialogSlide titulo={segundoDevocional[0]} texto={textoComQuebrasDeLinhaDois} ></AlertDialogSlide></p>
                 </section>
             </Container>
             <FooterTelaMenor />

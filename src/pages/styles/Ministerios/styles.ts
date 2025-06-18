@@ -5,11 +5,12 @@ export const Box = styled.main`
     flex-direction: column;
     justify-content: center;
 
-    margin-left: 12%;
+    margin-left: 5%;
     margin-right: 5%;
     margin-top: 120px;
     img{
-        width: 100%;
+        width: 68%;
+        margin: 43px 37px 62px;
     }
     h1 {
         display: flex;
@@ -72,4 +73,168 @@ export const Liderança = styled.div`
     img{
         border-radius: 8px;
     }
+`;
+
+
+export const MinisterioUm = styled.div`
+  box-shadow: 4px 4px 4px #00000057;
+  background-color: rgb(54 99 173);
+  max-width: 261.72px;
+  height: 375.67px; 
+  border-radius: 11.57px;
+  padding: 18px;
+  margin: 22px;
+  flex-shrink: 0;
+
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  align-items: center; 
+
+  img {
+    max-width: 100%;
+    max-height: 150px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+`;
+
+export const BotaoUm = styled.div`
+  background-color: white;
+  padding: 11px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  width: 100%; 
+  text-align: center;
+
+  h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 13.8px;
+    margin-bottom: 10px;
+  }
+`;
+
+
+export const CardScrool = styled.section`
+width: auto;
+display: flex;
+overflow-x: scroll;
+margin:25px;
+
+  &::-webkit-scrollbar {
+    height: 6px; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #737984;
+    border-radius:50px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+`;
+
+
+export const MinisterioMidia = styled.div`
+box-shadow:4px 4px 4px #00000057;
+background-color:rgb(54 99 173);
+max-width:261.72px;
+height:375.67px;
+border-radius:11.57px;
+padding:18px;
+margin: 22px;
+flex-shrink: 0; 
+
+img{
+    width: 84%;
+    margin: 39px 18px 45px;
+}
+`;
+
+export const MinisterioJovens = styled.div`
+box-shadow:4px 4px 4px #00000057;
+background-color:rgb(54 99 173);
+max-width:261.72px;
+height:375.67px;
+border-radius:11.57px;
+padding:18px;
+margin: 22px;
+flex-shrink: 0; 
+
+img{
+    width: 79%;
+    margin: 43px 24px 47px;
+}
+`;
+
+export const MinisterioMissoes = styled.div`
+box-shadow:4px 4px 4px #00000057;
+background-color:rgb(54 99 173);
+max-width:261.72px;
+height:375.67px;
+border-radius:11.57px;
+padding:18px;
+margin: 22px;
+flex-shrink: 0; 
+
+img{
+    width: 94%;
+    margin: 32px 8px 37px;
+}
+`;
+
+export const MinisterioLouvor = styled.div`
+box-shadow:4px 4px 4px #00000057;
+background-color:rgb(54 99 173);
+max-width:261.72px;
+height:375.67px;
+border-radius:11.57px;
+padding:18px;
+margin: 22px;
+flex-shrink: 0; 
+
+img{
+    width: 84%;
+    margin: 50px 18px 33px;
+}
+`;
+
+
+export const MinisterioInter = styled.div`
+box-shadow:4px 4px 4px #00000057;
+background-color:rgb(54 99 173);
+max-width:261.72px;
+height:375.67px;
+border-radius:11.57px;
+padding:18px;
+margin: 22px;
+flex-shrink: 0; 
+
+img{
+    width: 98%;
+    margin: 41px 2px 21px;
+}
+`;
+
+
+export const MinisterioCasais = styled.div`
+box-shadow:4px 4px 4px #00000057;
+background-color:rgb(54 99 173);
+max-width:261.72px;
+height:375.67px;
+border-radius:11.57px;
+padding:18px;
+margin: 22px;
+flex-shrink: 0; 
+
+img{
+    width: 78%;
+    margin: 51px 25px 39px;
+}
 `;

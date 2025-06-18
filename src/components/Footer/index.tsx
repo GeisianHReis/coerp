@@ -1,11 +1,10 @@
 import * as React from 'react';
 import qrcoe from "../../assets/qrCode.webp";
-import logoCoerp from "../../assets/Logo Coerp azul.png"; // Assuming you have a logo for the footer
+import logoCoerp from "../../assets/Logo Coerp azul.png";
 import Alert from "@mui/material/Alert";
 import {
   FooterContainer,
   MainContent,
-  Section,
   LogoSection,
   SocialIcons,
   SocialButton,

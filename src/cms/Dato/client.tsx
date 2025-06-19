@@ -3,7 +3,7 @@ import { createHttpLink } from 'apollo-link-http';
 import { setContext } from 'apollo-link-context';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
-const token =  process.env.DATOCMS_API_TOKEN;
+const token =  import.meta.env.VITE_DATOCMS_API_TOKEN;
 const httpLink = createHttpLink({
   uri: 'https://graphql.datocms.com/',
 });

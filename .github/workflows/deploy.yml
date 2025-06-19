@@ -38,3 +38,4 @@ jobs:
           local-dir: dist/
           server-dir: public_html/novosite/
           delete-remote: true 
+          exclude: .htaccess 

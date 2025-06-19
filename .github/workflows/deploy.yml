@@ -38,3 +38,4 @@ jobs:
           local-dir: dist/
           server-dir: novo.igrejacoerp.com.br/
           delete-remote: true 
+          exclude: .htaccess 

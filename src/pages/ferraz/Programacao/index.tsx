@@ -87,7 +87,7 @@ export function ProgramacaoF() {
       client.query({
         query: gql`
             {
-              allProgramacaoferrazs {
+              allProgramacaoferrazs (first:100) {
                 evento
                 horario
                 destaque

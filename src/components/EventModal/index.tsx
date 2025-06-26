@@ -32,7 +32,12 @@ export function EventModal({ isOpen, onClose, event }: EventModalProps) {
         </ModalHeader>
         <ModalBody>
           <ModalDate>{event.horario}</ModalDate>
-          <ModalDescription>{event.descricao?.value.document.children[0].children[0].value}</ModalDescription>
+          <ModalDescription>
+            {event.descricao?.value.document.children[0].children[0].value}
+            <a href={event.descricao?.value.document.children[0].children[1]?.url} target="_blank" rel="noopener noreferrer">
+              {event.descricao?.value.document.children[0].children[1]?.children[0]?.value}
+            </a>
+          </ModalDescription>
         </ModalBody>
       </ModalContent>
     </ModalOverlay>

@@ -29,6 +29,14 @@ export interface Event {
             children: [
               {
                 value: string;
+              },
+              {
+                url?: string;
+                children: [
+                  {
+                    value: string;
+                  }
+                ];
               }
             ]
           }
@@ -95,6 +103,7 @@ export function ProgramacaoF() {
                 informacoes
                 descricao {
                   value
+                  links
                 }
               }
             }

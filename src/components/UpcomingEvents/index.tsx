@@ -28,6 +28,14 @@ export interface Event {
             children: [
               {
                 value: string;
+              },
+              {
+                url?: string;
+                children: [
+                  {
+                    value: string;
+                  }
+                ];
               }
             ]
           }

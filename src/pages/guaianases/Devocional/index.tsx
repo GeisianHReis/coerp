@@ -27,9 +27,6 @@ export function Devocional() {
                 <title>Devocionais | Igreja Coerp - Reflexões Diárias para Fortalecer Sua Fé</title>
                 <meta name="description" content="Acesse os devocionais da Igreja Coerp para reflexões semanais inspiradoras. Encontre mensagens que irão fortalecer sua fé e conectar você a Deus em momentos especiais de meditação." />
             </Helmet>
-
-            <TopMobile name="DEVOCIONAIS" />
-            <Side name="DEVOCIONAIS" />
             <h1>DEVOCIONAIS</h1>
             <Container>
                 <section>
@@ -50,8 +47,6 @@ export function Devocional() {
                     <p>Deus nos chama para obedecer, nos entregar e estar dispostos a servir a Jesus... <AlertDialogSlide titulo={segundoDevocional[0]} texto={textoComQuebrasDeLinhaDois} id={""} isOpen={false} ></AlertDialogSlide></p>
                 </section>
             </Container>
-            <FooterTelaMenor />
         </Box >
-
     )
 };

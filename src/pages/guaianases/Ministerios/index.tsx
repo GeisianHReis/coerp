@@ -37,24 +37,8 @@ export function Ministerios() {
                 <meta name="description" content="Explore os Ministérios da Igreja Coerp em Guaianases: Envolva-se em atividades significativas e fortaleça sua conexão espiritual. Descubra como cada ministério contribui para a comunidade. Fique por dentro de tudo!" />
             </Helmet>
             <TopMobile name="MINISTÉRIOS" />
-            <Side name="MINISTÉRIOS" />
             <Box>
                 <h1>NOSSOS MINISTÉRIOS</h1>
-                {/*<Box>
-                <ListaDeMinisterios>
-                    <h2>KIDS</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptate repellendus deleniti amet, molestiae perspiciatis est veritatis debitis magnam reiciendis, qui quibusdam autem modi consequatur. Quia aspernatur ipsum sunt nam.
-
-                    </p>
-                </ListaDeMinisterios>
-                <ListaDeMinisterios>
-                    <h2>KIDS</h2>
-                </ListaDeMinisterios>
-                <ListaDeMinisterios>
-                    <h2>KIDS</h2>
-                </ListaDeMinisterios>
-    </Box>*/}
                 <Grid container spacing={2} alignItems={"center"}>
                     <Grid item xs={7} md={9}>
                         <p>

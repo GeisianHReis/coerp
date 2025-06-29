@@ -7,7 +7,7 @@ import logoJovens from "../../../assets/LogosMinisterios/JOVENS.png";
 import logoMidia from "../../../assets/LogosMinisterios/MIDIA.png";
 import logoLouvor from "../../../assets/LogosMinisterios/LOUVOR.png";
 import logoInter from "../../../assets/LogosMinisterios/INTER.png";
-import { Box } from "../../styles/Ministerios/styles";
+import { BotaoUm, Box, CardScrool, MinisterioUm } from "../../styles/Ministerios/styles";
 import AlertDialogSlide from "./Modal";
 
 import { TopMobile } from "../../../components/TopMobile";
@@ -30,6 +30,64 @@ export function Ministerios() {
 
     const intercessao = ["Intercessão", "Intercessão é orar por alguém ou por algo, pedindo o que está no coração de Deus. Interceder por algo que não se vê é um ato de fé. Eu creio que devemos ser um povo que tem a alegria de Jesus por completo em nós. Devemos ser assim em todas as áreas de nossa vida e em nosso ministério. A intercessão não pode ser um fardo, e sim uma alegria, amor e satisfação no que fazemos, tendo comunhão e intimidade com Jesus, sempre atentos ao comando do Senhor. Devemos ser intercessores 24 horas, como está escrito em Isaías 21:8, \"Sobre a torre de vigia estou em pé continuamente de dia, e de guarda me ponho nas noites inteiras\". A torre de vigia representa aquele que está atento, vigiando contra todas as investidas do inimigo. O Atalaia, que é o vigia, o sentinela, geralmente está na torre de vigia para que sua visão seja mais ampla e, assim, consiga enxergar mais longe. E quando o inimigo vem, o vigia tem de tocar a trombeta e avisar o povo para que todos se preparem para a guerra, se protejam e não sejam pegos de sobressalto, sem aviso.", "Sônia Sepero"]
 
+    const ministerios = [
+        {
+            nome: "Coerp Kids",
+            slogan: "Cuidando do futuro com amor e dedicação",
+            descricao: coerpKids[1],
+            lideres: [coerpKids[2], coerpKids[3]],
+            logo: { url: logoKids },
+            key: "coerp-kids"
+        },
+        {
+            nome: "Missões",
+            slogan: "Alcançando o mundo com o amor de Cristo",
+            descricao: missoes[1],
+            lideres: [missoes[2]],
+            logo: { url: logoMissoes },
+            key: "missoes"
+        },
+        {
+            nome: "Rede de Jovens",
+            slogan: "Viver a Palavra, ser luz no mundo",
+            descricao: jovens[1],
+            lideres: [jovens[2], jovens[3]],
+            logo: { url: logoJovens },
+            key: "rede-de-jovens"
+        },
+        {
+            nome: "Midias",
+            slogan: "Conectando pessoas à mensagem de Jesus",
+            descricao: midias[1],
+            lideres: [midias[2]],
+            logo: { url: logoMidia },
+            key: "midias"
+        },
+        {
+            nome: "Louvor e Dança",
+            slogan: "Adorando com arte e paixão",
+            descricao: louvorDanca[1],
+            lideres: [louvorDanca[2], louvorDanca[3]],
+            logo: { url: logoLouvor },
+            key: "louvor-e-danca"
+        },
+        {
+            nome: "Intercessão",
+            slogan: "Orando com fé e propósito",
+            descricao: intercessao[1],
+            lideres: [intercessao[2]],
+            logo: { url: logoInter },
+            key: "intercessao"
+        },
+        {
+            nome: "Casais",
+            slogan: "Fortalecendo laços matrimoniais na fé",
+            descricao: casais[1],
+            lideres: [casais[2], casais[3]],
+            logo: { url: logoCasais },
+            key: "casais"
+        }
+    ];
     return (
         <>
             <Helmet>
@@ -37,95 +95,23 @@ export function Ministerios() {
                 <meta name="description" content="Explore os Ministérios da Igreja Coerp em Guaianases: Envolva-se em atividades significativas e fortaleça sua conexão espiritual. Descubra como cada ministério contribui para a comunidade. Fique por dentro de tudo!" />
             </Helmet>
             <TopMobile name="MINISTÉRIOS" />
-            <Side name="MINISTÉRIOS" />
             <Box>
                 <h1>NOSSOS MINISTÉRIOS</h1>
-                {/*<Box>
-                <ListaDeMinisterios>
-                    <h2>KIDS</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptate repellendus deleniti amet, molestiae perspiciatis est veritatis debitis magnam reiciendis, qui quibusdam autem modi consequatur. Quia aspernatur ipsum sunt nam.
-
-                    </p>
-                </ListaDeMinisterios>
-                <ListaDeMinisterios>
-                    <h2>KIDS</h2>
-                </ListaDeMinisterios>
-                <ListaDeMinisterios>
-                    <h2>KIDS</h2>
-                </ListaDeMinisterios>
-    </Box>*/}
-                <Grid container spacing={2} alignItems={"center"}>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            Ministério Infantil Coerp KIDS, um espaço dedicado a ensinar a Palavra de Deus às crianças. Nosso objetivo é proporcionar um aprendizado significativo e relevante, promovendo uma compreensão clara e correta dos princípios cristãos. Valorizamos o ambiente acolhedor e seguro, cultivando relacionamentos baseados no amor e no respeito.
-
-                            <AlertDialogSlide titulo={coerpKids[0]} texto={coerpKids[1]} nomeLider1={coerpKids[2]} ></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={5} md={3}>
-                        <img src={logoKids} />
-                    </Grid>
-
-                    <Grid item xs={5} md={3}>
-                        <img src={logoMissoes} />
-                    </Grid>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            Missão está no coração de Deus, e também no coração da igreja. O Ministério de Missões é uma jornada de propósito e compaixão, buscando alcançar...
-                            <AlertDialogSlide titulo={missoes[0]} texto={missoes[1]} nomeLider1={missoes[2]} ></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            Rede de Jovens! Somos uma comunidade de jovens apaixonados por Deus, entregues à obediência e à busca constante da Palavra de Deus como única forma de...
-                            <AlertDialogSlide titulo={jovens[0]} texto={jovens[1]} nomeLider1={jovens[2]} nomeLider2={jovens[3]}></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={5} md={3}>
-                        <img src={logoJovens} />
-                    </Grid>
-
-                    <Grid item xs={5} md={3}>
-                        <img src={logoMidia} />
-                    </Grid>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            O Ministério de Mídia é essencial para o crescimento do ministério de Jesus nos dias atuais. Cuidamos de detalhes que muitos não veem, mas que são cruciais. Através das...
-                            <AlertDialogSlide titulo={midias[0]} texto={midias[1]} nomeLider1={midias[2]} ></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            O Ministério de Louvor e Dança é uma equipe unida, instrumentos nas mãos de Deus, proclamando o Evangelho de Jesus através da música e da dança. Além de expressarmos...
-                            <AlertDialogSlide titulo={louvorDanca[0]} texto={louvorDanca[1]} nomeLider1={louvorDanca[2]} nomeLider2={louvorDanca[3]}></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={5} md={3}>
-                        <img src={logoLouvor} />
-                    </Grid>
-
-                    <Grid item xs={5} md={3}>
-                        <img src={logoInter} />
-                    </Grid>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            Intercessão é orar por alguém ou por algo, pedindo o que está no coração de Deus. Interceder por algo que não se vê é um ato de fé. Eu creio que devemos ser um povo que tem...
-                            <AlertDialogSlide titulo={intercessao[0]} texto={intercessao[1]} nomeLider1={intercessao[2]} ></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={7} md={9}>
-                        <p>
-                            O Ministério de Casais é um lugar especial onde o amor e a comunhão florescem. Juntos, fortalecemos nossos laços matrimoniais, buscando alicerces sólidos na Palavra de Deus. Compartilhamos momentos de...
-                            <AlertDialogSlide titulo={casais[0]} texto={casais[1]} nomeLider1={casais[2]} nomeLider2={casais[3]} ></AlertDialogSlide>
-                        </p>
-                    </Grid>
-                    <Grid item xs={5} md={3}>
-                        <img src={logoCasais} />
-                    </Grid>
+                <Grid container spacing={2} alignItems={"center"} >
+                    <CardScrool>
+                        {ministerios.map((ministerio) => (
+                            <MinisterioUm key={ministerio.key}>
+                                <img src={ministerio.logo?.url ?? ""} alt={ministerio.nome} />
+                                <BotaoUm>
+                                    <h4>{ministerio.nome}</h4>
+                                    <p>{ministerio.slogan}</p>
+                                    <AlertDialogSlide titulo={ministerio.nome} texto={ministerio.descricao} nomeLider1={ministerio.lideres?.[0] ?? ""} nomeLider2={ministerio.lideres?.[1] ?? ""} ></AlertDialogSlide>
+                               </BotaoUm>
+                            </MinisterioUm>
+                        ))}
+                    </CardScrool>
                 </Grid>
             </Box>
-            <FooterTelaMenor />
         </>
-    )
+    );
 };

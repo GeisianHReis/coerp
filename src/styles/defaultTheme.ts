@@ -11,6 +11,7 @@ export const defaultTheme = {
     "size-paragraph": "18px",
     "size-heading": "37px",
     "size-mobile-heading": "26px",
+    "size-mobile-minimal-heading": "20px",
     "size-side": "47px",
     "size-footer": "16px",
 

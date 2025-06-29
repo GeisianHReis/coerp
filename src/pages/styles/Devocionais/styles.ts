@@ -15,7 +15,30 @@ export const Box = styled.main`
     }
     }
     @media screen and (max-width: 650px) {
-        margin-top: 0;
+      margin-left: 2%;
+      margin-top: 30%;
+    }
+
+    @media screen and (max-width: 550px) {
+      margin-left: 2%;
+      margin-top: 35%;
+    }
+    @media screen and (max-width: 520px) {
+      margin-left: 2%;
+      margin-top: 48%;
+    }
+
+    @media screen and (max-width: 460px) {
+      margin-left: 2%;
+      margin-top: 57%;
+    }
+    @media screen and (max-width: 380px) {
+      margin-left: 2%;
+      margin-top: 62%;
+    }
+    @media screen and (max-width: 350px) {
+      margin-left: 2%;
+      margin-top: 70%;
     }
 `;
 

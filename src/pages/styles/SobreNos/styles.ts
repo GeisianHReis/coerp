@@ -18,6 +18,44 @@ export const ListaProgramacao = styled.section`
         margin-left: 5%;
         margin-right: 5%;
     }
+    @media screen and (max-width: 770px) {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 25%;
+    }
+    
+    @media screen and (max-width: 650px) {
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 30%;
+    }
+
+    @media screen and (max-width: 550px) {
+      margin-left: 5%;
+        margin-right: 5%;
+      margin-top: 35%;
+    }
+    @media screen and (max-width: 520px) {
+      margin-left: 5%;
+        margin-right: 5%;
+      margin-top: 48%;
+    }
+
+    @media screen and (max-width: 460px) {
+      margin-left: 5%;
+        margin-right: 5%;
+      margin-top: 57%;
+    }
+    @media screen and (max-width: 380px) {
+      margin-left: 5%;
+        margin-right: 5%;
+      margin-top: 62%;
+    }
+    @media screen and (max-width: 350px) {
+      margin-left: 5%;
+        margin-right: 5%;
+      margin-top: 70%;
+    }
 
     h1 {
         display: flex;

@@ -31,8 +31,6 @@ export function SobreNos() {
                 <title>Sobre Nós | Igreja Coerp - Conheça Nossa História</title>
                 <meta name="description" content="Descubra a história e valores da Igreja Coerp. Desde nossa origem até nossos princípios atuais, saiba mais sobre nós e nossa dedicação à comunidade." />
             </Helmet>
-            <TopMobile name="SOBRE NÓS" />
-            <Side name="SOBRE NÓS" />
             <ListaProgramacao>
 
                 <h1>NOSSA HISTÓRIA</h1>
@@ -117,7 +115,6 @@ export function SobreNos() {
                 </Button>
                 <br />
             </ListaProgramacao>
-            <FooterTelaMenor />
         </>
     )
 };

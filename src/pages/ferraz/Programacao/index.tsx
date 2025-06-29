@@ -48,9 +48,14 @@ export interface Event {
 }
 
 export function ProgramacaoF() {
-  const [currentMonth, setCurrentMonth] = useState('ABRIL.2025');
+  // Get current date for initial state
+  const today = new Date();
+  const currentMonthName = today.toLocaleString('pt-BR', { month: 'long' }).toUpperCase();
+  const currentYear = today.getFullYear();
+
+  const [currentMonth, setCurrentMonth] = useState(`${currentMonthName}.${currentYear}`);
   const [events, setEvents] = useState<Event[]>([]);
-  const [filteredEvents, setFilteredEvents] = useState<Event[]>([]); 
+  const [filteredEvents, setFilteredEvents] = useState<Event[]>([]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
@@ -62,65 +67,88 @@ export function ProgramacaoF() {
       'SETEMBRO': 9, 'OUTUBRO': 10, 'NOVEMBRO': 11, 'DEZEMBRO': 12
     };
     const monthPart = monthName.split('.')[0];
-    return monthMap[monthPart] || 1; 
+    return monthMap[monthPart] || 1;
   };
 
-
   const handleMonthChange = (direction: 'prev' | 'next') => {
-    const currentMonthNumber = getMonthNumber(currentMonth);
-    const currentYear = parseInt(currentMonth.split('.')[1], 10); 
+    const monthNames = [
+      'JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO',
+      'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'
+    ];
+
+    const [currentMonthNamePart, currentYearPart] = currentMonth.split('.');
+    const currentMonthNumber = getMonthNumber(currentMonthNamePart);
+    const currentYearDisplayed = parseInt(currentYearPart, 10); // Use a new variable to avoid confusion with the `currentYear` from `new Date()`
 
     let newMonthNumber = currentMonthNumber;
-    let newYear = currentYear;
+    let newYear = currentYearDisplayed;
 
     if (direction === 'prev') {
       newMonthNumber--;
       if (newMonthNumber < 1) {
-        newMonthNumber = 12; 
-        newYear--;  
+        newMonthNumber = 12;
+        newYear--;
       }
-    } else {
+    } else { // direction === 'next'
       newMonthNumber++;
       if (newMonthNumber > 12) {
-        newMonthNumber = 1; 
-        newYear++;       
+        newMonthNumber = 1;
+        newYear++;
       }
     }
 
-    const monthNames = ['JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'];
-    setCurrentMonth(`${monthNames[newMonthNumber - 1]}.${newYear}`); 
+    // Define the maximum allowed date (December 2025)
+    const maxYear = 2025;
+    const maxMonthNumber = 12; // December
+
+    // Get the current system date
+    const todayDate = new Date();
+    const currentSystemMonth = todayDate.getMonth() + 1; // getMonth() is 0-indexed
+    const currentSystemYear = todayDate.getFullYear();
+
+    // Prevent navigating before the current system month/year
+    if (newYear < currentSystemYear || (newYear === currentSystemYear && newMonthNumber < currentSystemMonth)) {
+        return; // Don't allow navigation
+    }
+
+    // Prevent navigating beyond December 2025
+    if (newYear > maxYear || (newYear === maxYear && newMonthNumber > maxMonthNumber)) {
+        return; // Don't allow navigation
+    }
+
+    setCurrentMonth(`${monthNames[newMonthNumber - 1]}.${newYear}`);
   };
 
-    const fetchData = useCallback(() => {
-      client.query({
-        query: gql`
-            {
-              allProgramacaoferrazs (first:100) {
-                evento
-                horario
-                destaque
-                mes
-                informacoes
-                descricao {
-                  value
-                  links
-                }
+  const fetchData = useCallback(() => {
+    client.query({
+      query: gql`
+          {
+            allProgramacaoferrazs (first:100) {
+              evento
+              horario
+              destaque
+              mes
+              informacoes
+              descricao {
+                value
+                links
               }
             }
-          `
+          }
+        `
+    })
+      .then((res) => {
+        const eventsComKeys = res.data.allProgramacaoferrazs.map((event: Event) => ({
+          ...event,
+          key: uuidv4(),
+        }));
+        console.log(eventsComKeys);
+        setEvents(eventsComKeys);
       })
-        .then((res) => {
-          const eventsComKeys = res.data.allProgramacaoferrazs.map((event: Event) => ({
-            ...event,
-            key: uuidv4(),
-          }));
-          console.log(eventsComKeys);
-          setEvents(eventsComKeys);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }, []);
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   useEffect(() => {
     fetchData();
@@ -129,7 +157,7 @@ export function ProgramacaoF() {
   useEffect(() => {
     const monthNumber = getMonthNumber(currentMonth);
     const filtered = events.filter(event => event.mes === monthNumber);
-    setFilteredEvents(filtered); 
+    setFilteredEvents(filtered);
   }, [events, currentMonth]);
 
   const handleOpenModal = (event: Event) => {
@@ -158,7 +186,7 @@ export function ProgramacaoF() {
       </HeaderSection>
 
       <EventsGrid>
-        {filteredEvents.map((event) => ( 
+        {filteredEvents.map((event) => (
           <EventCard key={event.key} event={event} onMoreInfoClick={handleOpenModal} />
         ))}
       </EventsGrid>

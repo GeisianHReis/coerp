@@ -89,7 +89,6 @@ export function MinisteriosF() {
                     </CardScrool>
                 </Grid>
             </Box>
-            <FooterTelaMenor />
         </>
     )
 };

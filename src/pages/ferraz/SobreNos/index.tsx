@@ -1,9 +1,8 @@
 import { ListaProgramacao, GaleriaDaliderança, Liderança, } from "../../styles/SobreNos/styles";
 import estatutoPdf from "../../../assets/Documentos/Estatuto da Igreja.pdf"
 import doutrina from "../../../assets/Documentos/DOUTRINAS DO MINISTÉRIO COERP e CIDADE TIRADENTES.pdf"
-import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Button } from "@mui/material";
-import { DownloadSimple } from "@phosphor-icons/react";
+import { DownloadSimpleIcon } from "@phosphor-icons/react";
 import { Helmet } from "react-helmet";
 import { useCallback, useEffect, useState } from "react";
 import client from "../../../cms/Dato/client";
@@ -94,11 +93,11 @@ export function SobreNosF() {
                     ))}
                 </GaleriaDaliderança>
                 <Button href={estatutoPdf} target="_blank" variant="contained">
-                    Baixar nosso estatuto &nbsp;<DownloadSimple size={20} weight="bold" color="white" />
+                    Baixar nosso estatuto &nbsp;<DownloadSimpleIcon size={20} weight="bold" color="white" />
                 </Button>
                 <br />
                 <Button href={doutrina} target="_blank" variant="contained">
-                    Baixar nossa doutrina &nbsp;<DownloadSimple size={20} weight="bold" color="white" />
+                    Baixar nossa doutrina &nbsp;<DownloadSimpleIcon size={20} weight="bold" color="white" />
                 </Button>
                 <br />
             </ListaProgramacao>

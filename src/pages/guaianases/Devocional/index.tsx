@@ -1,6 +1,3 @@
-import { Side } from "../../../components/Side";
-import { TopMobile } from "../../../components/TopMobile";
-import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Box, Container } from "../../styles/Devocionais/styles";
 import AlertDialogSlide from "./Modal";
 import queryString from "query-string";

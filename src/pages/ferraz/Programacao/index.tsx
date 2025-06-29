@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
-import { CaretLeft, CaretRight} from '@phosphor-icons/react';
+import { CaretLeftIcon, CaretRightIcon} from '@phosphor-icons/react';
 import {
   AgendaContainer,
   HeaderSection,
@@ -176,11 +176,11 @@ export function ProgramacaoF() {
         <SectionTitle>O QUE VEM POR AÍ</SectionTitle>
         <MonthNavigator>
           <MonthButton onClick={() => handleMonthChange('prev')}>
-            <CaretLeft size={24} />
+            <CaretLeftIcon size={24} />
           </MonthButton>
           <MonthDisplay>{currentMonth}</MonthDisplay>
           <MonthButton onClick={() => handleMonthChange('next')}>
-            <CaretRight size={24} />
+            <CaretRightIcon size={24} />
           </MonthButton>
         </MonthNavigator>
       </HeaderSection>

@@ -4,7 +4,6 @@ import AlertDialogSlide from "./Modal";
 import { MinisterioUm } from "../../styles/Ministerios/styles";
 import { CardScrool } from "../../styles/Ministerios/styles";
 import { BotaoUm } from "../../styles/Ministerios/styles";
-import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Helmet } from "react-helmet";
 import { useCallback, useEffect, useState } from "react";
 import client from "../../../cms/Dato/client";

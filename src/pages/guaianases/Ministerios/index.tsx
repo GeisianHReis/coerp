@@ -1,5 +1,4 @@
 import { Grid } from "@mui/material";
-import { Side } from "../../../components/Side";
 import logoKids from "../../../assets/LogosMinisterios/kids.png";
 import logoCasais from "../../../assets/LogosMinisterios/CASAIS.png";
 import logoMissoes from "../../../assets/LogosMinisterios/MISSOES.png";
@@ -11,7 +10,6 @@ import { BotaoUm, Box, CardScrool, MinisterioUm } from "../../styles/Ministerios
 import AlertDialogSlide from "./Modal";
 
 import { TopMobile } from "../../../components/TopMobile";
-import { FooterTelaMenor } from "../../../components/FooterTelaMenor";
 import { Helmet } from "react-helmet";
 
 export function Ministerios() {

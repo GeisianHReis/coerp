@@ -11,6 +11,7 @@ import { FooterTelaMenor } from '../../../components/FooterTelaMenor';
 import { TopMobile } from '../../../components/TopMobile';
 import { Button } from '@mui/material';
 import { Helmet } from 'react-helmet';
+import { HeroSection } from '../../../components/FixedSection';
 
 
 export function Home() {
@@ -21,20 +22,7 @@ export function Home() {
                 <title>Igreja Coerp - Comunidade Evangélica Redenção Plena | Seja Parte da Nossa Missão</title>
                 <meta name="description" content="Uma igreja que entendeu o ide do Senhor. Somos um só corpo, com um só propósito: compartilhar o amor de Cristo e transformar vidas. Venha fazer parte dessa missão!" />
             </Helmet>
-            <TopMobile name="" />
-            <Box>
-                <img src={imagemTop}></img>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/X0SBqUJZRkU?&autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-            </Box>
-            <FaixaDaHome>
-                <h1>
-                    FESTA DAS NAÇÕES
-                </h1>
-                <p>
-                    05/08 - NÃO PERCA!
-                </p>
-            </FaixaDaHome>
-
+            <HeroSection unitName="UNIDADE GUAIANASES" />
             <FaixaDeAvisos>
                 <GaleriaPc>
                     <div>
@@ -46,7 +34,6 @@ export function Home() {
                     </Button>
                 </GaleriaPc>
             </FaixaDeAvisos>
-            <FooterTelaMenor />
         </>
     )
 };

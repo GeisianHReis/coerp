@@ -102,7 +102,6 @@ export function SobreNosF() {
                 </Button>
                 <br />
             </ListaProgramacao>
-            <FooterTelaMenor />
         </>
     )
 };

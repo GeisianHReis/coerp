@@ -24,7 +24,7 @@ interface ModalMin{
   nomeLider2?: string;
 }
 
-export default function AlertDialogSlide({titulo, texto, nomeLider1, nomeLider2}: ModalMin) {
+export default function AlertDialogSlide({titulo, texto}: ModalMin) {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {

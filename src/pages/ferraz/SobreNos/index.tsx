@@ -43,7 +43,7 @@ export function SobreNosF() {
         client.query({
             query: gql`
                 {
-                allSobrenosferrazs {
+                allSobrenosferrazs (orderBy:nome_ASC) {
                     nome
                     foto {
                     url

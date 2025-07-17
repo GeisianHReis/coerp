@@ -36,6 +36,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/
-          server-dir: novo.igrejacoerp.com.br/
+          server-dir: public_html/
           delete-remote: true 
           exclude: .htaccess 

@@ -107,7 +107,8 @@ export const Liderança = styled.div`
 
 export const MinisterioUm = styled.div`
   box-shadow: 4px 4px 4px #00000057;
-  background-color: rgb(54 99 173);
+  background-color: white;
+  border: 2px solid rgb(54 99 173);
   max-width: 261.72px;
   height: 375.67px; 
   border-radius: 11.57px;

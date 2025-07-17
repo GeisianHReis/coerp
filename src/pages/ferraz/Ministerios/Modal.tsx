@@ -7,7 +7,6 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
-import { Liderança } from '../../styles/Ministerios/styles';
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -59,13 +58,6 @@ export default function AlertDialogSlide({titulo, texto, nomeLider1, nomeLider2}
           <DialogContentText id="alert-dialog-slide-description">
             {texto}
           </DialogContentText>
-          <h3>Liderança</h3>
-          <Liderança>
-           {nomeLider1}
-          </Liderança>
-          <Liderança>
-           {nomeLider2}
-          </Liderança>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Fechar!</Button>

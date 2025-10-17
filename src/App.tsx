@@ -9,7 +9,9 @@ import { UnidadeProvider } from "./UnidadeContext"
 
 function AppContent() {
   const location = useLocation();
-  const showTopMenuAndFooter = location.pathname !== '/inicial';
+  // Não mostrar header/footer/globalstyle na /admin/Dato
+  const hideLayout = location.pathname === '/admin/Dato';
+  const showTopMenuAndFooter = !hideLayout && location.pathname !== '/inicial';
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   AdminContainer,
   Sidebar,
@@ -6,6 +6,8 @@ import {
   SidebarMenu,
   MenuItem,
   MainContent,
+  MobileMenuButton,
+  MobileOverlay,
 } from './styles';
 
 interface AdminLayoutProps {
@@ -30,6 +32,8 @@ const menuItems: MenuItemData[] = [
 ];
 
 export function AdminLayout({ children, currentPage = 'eventos' }: AdminLayoutProps) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const handleMenuClick = (item: MenuItemData) => {
     if (item.comingSoon) {
       alert('Funcionalidade em desenvolvimento! 🚧');
@@ -38,11 +42,27 @@ export function AdminLayout({ children, currentPage = 'eventos' }: AdminLayoutPr
     if (item.path) {
       window.location.href = item.path;
     }
+    // Fechar menu mobile após clique
+    setIsMobileMenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
     <AdminContainer>
-      <Sidebar>
+      {/* Botão do menu mobile */}
+      <MobileMenuButton onClick={toggleMobileMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </MobileMenuButton>
+
+      {/* Overlay para fechar menu mobile */}
+      {isMobileMenuOpen && <MobileOverlay onClick={() => setIsMobileMenuOpen(false)} />}
+
+      <Sidebar isOpen={isMobileMenuOpen}>
         <SidebarHeader>
           <h2>Admin COERP</h2>
           <p>Painel de administração</p>

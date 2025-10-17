@@ -8,7 +8,7 @@ export const AdminContainer = styled.div`
   font-family: ${defaultTheme['font-family-default']};
 `;
 
-export const Sidebar = styled.aside`
+export const Sidebar = styled.aside<{ isOpen?: boolean }>`
   width: 250px;
   background: linear-gradient(135deg, ${defaultTheme['dark-blue']} 0%, ${defaultTheme.blue} 100%);
   color: ${defaultTheme.white};
@@ -17,6 +17,15 @@ export const Sidebar = styled.aside`
   position: fixed;
   height: 100vh;
   overflow-y: auto;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+
+  @media (max-width: 768px) {
+    transform: translateX(${props => props.isOpen ? '0' : '-100%'});
+    z-index: 1001;
+  }
 `;
 
 export const SidebarHeader = styled.div`
@@ -37,10 +46,28 @@ export const SidebarHeader = styled.div`
     margin: 0.5rem 0 0;
     color: rgba(255, 255, 255, 0.8);
   }
+
+  @media (max-width: 768px) {
+    padding: 0 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem; /* Espaço para o botão de fechar */
+    
+    h2 {
+      font-size: 1.3rem;
+    }
+    
+    p {
+      font-size: 0.85rem;
+    }
+  }
 `;
 
 export const SidebarMenu = styled.nav`
   padding: 0 1rem;
+
+  @media (max-width: 768px) {
+    padding: 0 0.75rem;
+  }
 `;
 
 export const MenuItem = styled.div<{ active?: boolean }>`
@@ -68,12 +95,32 @@ export const MenuItem = styled.div<{ active?: boolean }>`
     font-size: 0.95rem;
     font-weight: 500;
   }
+
+  @media (max-width: 768px) {
+    padding: 0.875rem 0.75rem;
+    margin-bottom: 0.25rem;
+    
+    .icon {
+      margin-right: 0.6rem;
+      font-size: 1.1rem;
+    }
+    
+    .label {
+      font-size: 0.9rem;
+    }
+  }
 `;
 
 export const MainContent = styled.main`
   flex: 1;
   margin-left: 250px;
   padding: 2rem;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    padding: 1rem;
+    padding-top: 4rem; /* Espaço para o botão do menu */
+  }
 `;
 
 export const PageHeader = styled.div`
@@ -97,6 +144,15 @@ export const PageHeader = styled.div`
     color: #666;
     margin: 0;
   }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
 `;
 
 export const ContentCard = styled.div`
@@ -104,6 +160,11 @@ export const ContentCard = styled.div`
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
 `;
 
 export const FormGroup = styled.div`
@@ -167,6 +228,11 @@ export const ButtonGroup = styled.div`
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 `;
 
 export const Button = styled.button<{ variant?: 'primary' | 'secondary' | 'danger' }>`
@@ -269,5 +335,62 @@ export const LoginCard = styled.div`
   p {
     color: #666;
     margin-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    margin: 1rem;
+  }
+`;
+
+// Componentes para menu mobile
+export const MobileMenuButton = styled.button`
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1002;
+  background: ${defaultTheme.blue};
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: ${defaultTheme.white};
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background: ${defaultTheme['dark-blue']};
+    transform: scale(1.05);
+  }
+`;
+
+export const MobileOverlay = styled.div`
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+
+  @media (max-width: 768px) {
+    display: block;
   }
 `;

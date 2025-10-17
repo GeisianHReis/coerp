@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { datoApi } from '../../../cms/Dato/apiClient';
+import { datoApi, ProgramacaoFerrazItem } from '../../../cms/Dato/apiClient';
 import { AdminLayout } from '../AdminLayout';
 import { envConfig } from '../../../utils/env';
 import {
@@ -12,6 +12,10 @@ import {
   Alert,
   LoginContainer,
   LoginCard,
+  EventsList,
+  EventItem,
+  EventInfo,
+  EventActions,
 } from '../styles';
 
 // Credenciais de login vindas de variáveis de ambiente
@@ -32,14 +36,50 @@ export default function AdminDatoPage() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const [fail, setFail] = useState('');
+  const [eventos, setEventos] = useState<ProgramacaoFerrazItem[]>([]);
+  const [loadingEventos, setLoadingEventos] = useState(false);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
 
   function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     if (user === USER && pass === PASS) {
       setLogged(true);
       setError('');
+      loadEventos(); // Carregar eventos após login
     } else {
       setError('Usuário ou senha inválidos');
+    }
+  }
+
+  async function loadEventos() {
+    setLoadingEventos(true);
+    try {
+      const eventosData = await datoApi.getAllProgramacaoFerraz();
+      setEventos(eventosData);
+      setFail(''); // Limpar erros anteriores
+    } catch (error: any) {
+      console.error('[Admin] Erro ao carregar eventos:', error);
+      setFail(`Erro ao carregar eventos: ${error.message}`);
+      setEventos([]); // Limpar lista em caso de erro
+    } finally {
+      setLoadingEventos(false);
+    }
+  }
+
+  async function handleDelete(eventoId: string, eventoNome: string) {
+    const confirmDelete = confirm(`Tem certeza que deseja excluir o evento "${eventoNome}"?`);
+    if (!confirmDelete) return;
+
+    setDeletingId(eventoId);
+    try {
+      await datoApi.deleteProgramacaoFerraz(eventoId);
+      setSuccess(`Evento "${eventoNome}" excluído com sucesso!`);
+      // Recarregar lista após exclusão
+      await loadEventos();
+    } catch (error: any) {
+      setFail(`Erro ao excluir evento: ${error.message}`);
+    } finally {
+      setDeletingId(null);
     }
   }
 
@@ -62,6 +102,8 @@ export default function AdminDatoPage() {
       setInformacoes('');
       setMes('');
       setDestaque(false);
+      // Recarregar lista após criação
+      await loadEventos();
     } catch (err: any) {
       setFail('Erro ao enviar: ' + (err?.message || 'Erro desconhecido'));
     } finally {
@@ -194,6 +236,57 @@ export default function AdminDatoPage() {
             </Button>
           </ButtonGroup>
         </form>
+      </ContentCard>
+
+      {/* Seção de eventos existentes */}
+      <ContentCard>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+          <h3 style={{ margin: 0, color: '#1e3a8a', fontSize: '1.25rem' }}>📋 Eventos Cadastrados</h3>
+          <Button 
+            variant="secondary" 
+            onClick={loadEventos}
+            disabled={loadingEventos}
+            style={{ fontSize: '0.9rem', padding: '0.5rem 1rem' }}
+          >
+            {loadingEventos ? '⏳ Carregando...' : '🔄 Atualizar'}
+          </Button>
+        </div>
+
+        {loadingEventos ? (
+          <Alert type="info">⏳ Carregando eventos...</Alert>
+        ) : eventos.length === 0 ? (
+          <Alert type="info">📭 Nenhum evento cadastrado ainda.</Alert>
+        ) : (
+          <EventsList>
+            {eventos.map((evento) => (
+              <EventItem key={evento.id}>
+                <EventInfo>
+                  <div className="evento-nome">
+                    {evento.destaque && <span className="destaque">⭐</span>}
+                    <strong>{evento.evento}</strong>
+                  </div>
+                  <div className="evento-horario">🕐 {evento.horario}</div>
+                  {evento.informacoes && (
+                    <div className="evento-info">{evento.informacoes}</div>
+                  )}
+                  {evento.mes && (
+                    <div className="evento-mes">📅 Mês: {evento.mes}</div>
+                  )}
+                </EventInfo>
+                <EventActions>
+                  <Button
+                    variant="danger"
+                    onClick={() => handleDelete(evento.id, evento.evento)}
+                    disabled={deletingId === evento.id}
+                    style={{ fontSize: '0.85rem', padding: '0.5rem 0.75rem' }}
+                  >
+                    {deletingId === evento.id ? '⏳' : '🗑️ Excluir'}
+                  </Button>
+                </EventActions>
+              </EventItem>
+            ))}
+          </EventsList>
+        )}
       </ContentCard>
     </AdminLayout>
   );

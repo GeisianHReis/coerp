@@ -13,6 +13,8 @@ export interface IDatoAPIClient {
     payload: CreateItemPayload;
   }): Promise<TData>;
   createProgramacaoFerraz(input: CreateProgramacaoFerrazInput): Promise<CreateProgramacaoFerrazPayload>;
+  getAllProgramacaoFerraz(): Promise<ProgramacaoFerrazItem[]>;
+  deleteProgramacaoFerraz(itemId: string): Promise<void>;
 }
 
 // Tipos de exemplo para uma mutation (ajuste conforme o schema real do DatoCMS)
@@ -26,6 +28,15 @@ export interface CreateProgramacaoFerrazInput {
 }
 
 export interface CreateProgramacaoFerrazPayload {
+  id: string;
+  evento: string;
+  horario: string;
+  informacoes?: string;
+  mes?: number;
+  destaque?: boolean;
+}
+
+export interface ProgramacaoFerrazItem {
   id: string;
   evento: string;
   horario: string;
@@ -80,9 +91,74 @@ class DatoAPIClient implements IDatoAPIClient {
 
     try {
       const result = await managementClient.createItem(payload as any);
-      return result.data.attributes;
+      
+      // Retornar o objeto completo com ID e attributes
+      return {
+        id: result.data.id,
+        evento: result.data.attributes.evento,
+        horario: result.data.attributes.horario,
+        informacoes: result.data.attributes.informacoes,
+        mes: result.data.attributes.mes,
+        destaque: result.data.attributes.destaque
+      };
     } catch (error: any) {
+      console.error('[DatoCMS] Erro ao criar evento:', error);
       throw new Error(`Erro ao criar programação: ${error.message}`);
+    }
+  }
+
+  async getAllProgramacaoFerraz(): Promise<ProgramacaoFerrazItem[]> {
+    const MODEL_ID = 'FyHNgln3Qt-vRk8SaNqfmQ';
+    
+    try {
+      // Primeira tentativa: buscar com filtro
+      let result;
+      try {
+        result = await managementClient.getAllItems(MODEL_ID);
+      } catch (filterError) {
+        console.warn('[DatoCMS] Filtro falhou, tentando buscar todos os itens');
+        // Segunda tentativa: buscar todos e filtrar manualmente
+        result = await managementClient.getItems();
+      }
+      
+      // Verificar se result.data existe e é array
+      if (!result.data || !Array.isArray(result.data)) {
+        console.error('[DatoCMS] Estrutura inesperada da resposta');
+        return [];
+      }
+      
+      // Filtrar apenas itens do modelo correto se necessário
+      let filteredData = result.data;
+      if (!MODEL_ID || result.data.length > 0) {
+        filteredData = result.data.filter((item: any) => 
+          item.relationships?.item_type?.data?.id === MODEL_ID ||
+          item.type === 'item' // Fallback se a estrutura for diferente
+        );
+      }
+      
+      // Transformar resposta JSON:API em array simples
+      const eventos = filteredData.map((item: any) => ({
+        id: item.id,
+        evento: item.attributes?.evento || 'Sem nome',
+        horario: item.attributes?.horario || 'Sem horário',
+        informacoes: item.attributes?.informacoes || null,
+        mes: item.attributes?.mes || null,
+        destaque: item.attributes?.destaque || false
+      }));
+      
+      return eventos;
+    } catch (error: any) {
+      console.error('[DatoCMS] Erro ao buscar eventos:', error);
+      throw new Error(`Erro ao buscar programações: ${error.message}`);
+    }
+  }
+
+  async deleteProgramacaoFerraz(itemId: string): Promise<void> {
+    try {
+      await managementClient.deleteItem(itemId);
+    } catch (error: any) {
+      console.error('[DatoCMS] Erro ao excluir evento:', error);
+      throw new Error(`Erro ao excluir programação: ${error.message}`);
     }
   }
 }

@@ -394,3 +394,86 @@ export const MobileOverlay = styled.div`
     display: block;
   }
 `;
+
+// Componentes para listagem de eventos
+export const EventsList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
+export const EventItem = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.25rem;
+  background: #f8f9fb;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  gap: 1rem;
+
+  &:hover {
+    border-color: ${defaultTheme.blue};
+    background: #f0f4ff;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+`;
+
+export const EventInfo = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .evento-nome {
+    font-family: ${defaultTheme['font-family-heading']};
+    font-size: 1.1rem;
+    color: ${defaultTheme['dark-blue']};
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .destaque {
+      font-size: 1rem;
+    }
+  }
+
+  .evento-horario {
+    font-family: ${defaultTheme['font-family-botton']};
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+  }
+
+  .evento-info {
+    font-family: ${defaultTheme['font-family-paragraph']};
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.4;
+  }
+
+  .evento-mes {
+    font-family: ${defaultTheme['font-family-botton']};
+    font-size: 0.85rem;
+    color: #888;
+  }
+`;
+
+export const EventActions = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 100px;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+  }
+`;

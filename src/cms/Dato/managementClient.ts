@@ -70,8 +70,9 @@ export class DatoManagementClient {
   }
 
   async getItems(modelId?: string): Promise<any> {
+    // DatoCMS usa filter[item_type] ao invés de filter[type]
     const url = modelId 
-      ? `${baseUrl}/items?filter[type]=${modelId}`
+      ? `${baseUrl}/items?filter[item_type]=${modelId}`
       : `${baseUrl}/items`;
     
     const response = await fetch(url, {
@@ -81,7 +82,35 @@ export class DatoManagementClient {
 
     if (!response.ok) {
       const error = await response.text();
+      console.error('[DatoCMS] Erro na resposta:', response.status, error);
       throw new Error(`DatoCMS API Error (${response.status}): ${error}`);
+    }
+
+    return response.json();
+  }
+
+  async getAllItems(modelId: string): Promise<any> {
+    return this.getItems(modelId);
+  }
+
+  async deleteItem(itemId: string): Promise<any> {
+    if (!managementToken || managementToken === 'SEU_TOKEN_DE_MANAGEMENT_AQUI') {
+      throw new Error('Token de management não configurado. Configure VITE_DATO_MANAGEMENT_TOKEN no .env.local');
+    }
+
+    const response = await fetch(`${baseUrl}/items/${itemId}`, {
+      method: 'DELETE',
+      headers: this.baseHeaders,
+    });
+
+    if (!response.ok) {
+      const error = await response.text();
+      throw new Error(`DatoCMS API Error (${response.status}): ${error}`);
+    }
+
+    // DELETE pode retornar 204 No Content
+    if (response.status === 204) {
+      return null;
     }
 
     return response.json();

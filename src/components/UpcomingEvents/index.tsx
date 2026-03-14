@@ -90,11 +90,6 @@ export function UpcomingEvents() {
     fetchData();
   }, [fetchData]);
 
-  const handleOpenModal = (event: Event) => {
-    setSelectedEvent(event);
-    setIsModalOpen(true);
-  };
-
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedEvent(null);
@@ -109,7 +104,7 @@ export function UpcomingEvents() {
             <EventTitle>{event.evento}</EventTitle>
             <EventSeparator />
             <EventDescription>{event.informacoes}</EventDescription>
-            <EventCard onClick={() => handleOpenModal(event)}>
+            <EventCard as="button" onClick={() => window.open('https://www.sympla.com.br/evento/celebracao-de-aniversario-50-anos-da-coerp/3345273?algoliaID=9c8da1994516efc0fdaa83927d8cd4aa', '_blank')}>
               Mais Informações <DownloadSimple size={20} />
             </EventCard>
           </EventCard>

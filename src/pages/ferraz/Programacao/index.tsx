@@ -98,7 +98,7 @@ export function ProgramacaoF() {
     }
 
     // Define the maximum allowed date (December 2025)
-    const maxYear = 2025;
+    const maxYear = 2026;
     const maxMonthNumber = 12; // December
 
     // Get the current system date

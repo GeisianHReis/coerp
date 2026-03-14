@@ -105,7 +105,7 @@ export function UpcomingEvents() {
             <EventSeparator />
             <EventDescription>{event.informacoes}</EventDescription>
             <EventCard as="button" onClick={() => window.open('https://www.sympla.com.br/evento/celebracao-de-aniversario-50-anos-da-coerp/3345273?algoliaID=9c8da1994516efc0fdaa83927d8cd4aa', '_blank')}>
-              Mais Informações <DownloadSimple size={20} />
+              <span style={{ color: '#111', fontWeight: 'bold' }}>Mais Informações</span> <DownloadSimple size={20} />
             </EventCard>
           </EventCard>
         ))}

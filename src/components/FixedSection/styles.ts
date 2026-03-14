@@ -122,46 +122,29 @@ export const UnitIndicator = styled.span`
 export const ImageArea = styled.div`
   position: relative;
   width: 100%;
-  height: 400px;
-  overflow: hidden;
+  min-height: 0;
+  height: auto;
+  overflow: visible;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  padding: 0 5%;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   box-sizing: border-box;
-
-  margin-top: -80px; 
-  z-index: 5; 
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-
-  @media (max-width: 1024px) {
-    height: 350px;
-    margin-top: -60px; /* Adjusted */
-  }
-
-  @media (max-width: 768px) {
-    height: 300px;
-    margin-top: -50px; /* Adjusted */
-    justify-content: center;
-    padding: 0 3%;
-  }
-
-  @media (max-width: 480px) {
-    height: 250px;
-    margin-top: -40px; /* Adjusted */
-  }
+  margin: 0;
+  z-index: 5;
+  background: transparent;
 `;
 
 export const BackgroundImageWrapper = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(70%);
-  object-position: center 20%;
+  display: block;
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  filter: none;
+  background: transparent;
 `;
 
 export const FoundingDate = styled.p`

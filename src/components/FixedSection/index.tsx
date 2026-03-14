@@ -1,18 +1,12 @@
 import { useState } from 'react';
 import {
   HeroContainer,
-  TopHeaderArea,
-  Tagline,
-  MainLogoImage,
-  UnitIndicator,
   ImageArea,
   BackgroundImageWrapper,
-  FoundingDate,
 } from './styles';
 
 
-import heroBackground from '../../assets/capa.jpg';
-import coerpLogo from '../../assets/capa_coerp.svg';
+import heroBackground from '../../assets/50anos.png';
 import client from '../../cms/Dato/client';
 import gql from 'graphql-tag';
 
@@ -36,32 +30,23 @@ export function HeroSection({ unitName }: HeroSectionProps) {
     const cartazData = res.data.cartazhomeferraz.cartaz;
     setCartaz(cartazData.url);
     console.log('Dados do cartaz:', cartazData);
+      console.log('URL do cartaz:', unitName);
+      console.log('URL do cartaz:', cartaz);
   }).catch((error) => {
     console.error('Erro ao buscar dados do cartaz:', error);
   });
   return (
     <HeroContainer>
-      {!cartaz || cartaz === '' ? (
-        <><TopHeaderArea>
-          <Tagline>"Um Só Corpo Um Só Propósito,</Tagline>
-          <MainLogoImage src={coerpLogo} alt="COERP Logo" />
-          <UnitIndicator>{unitName}</UnitIndicator>
-        </TopHeaderArea>
-          <ImageArea>
-            <BackgroundImageWrapper src={heroBackground} alt="COERP cartaz" />
-            <FoundingDate>Desde 13 de Abril de 1976</FoundingDate>
-          </ImageArea>
-        </>
-      ) : (
-        <>
-        <TopHeaderArea> 
-        </TopHeaderArea>
-          <ImageArea>
-            <BackgroundImageWrapper src={cartaz} alt="COERP cartaz" />
-          </ImageArea>
-        </>
-      )}
-
+      <ImageArea>
+        <a
+          href="https://www.sympla.com.br/evento/celebracao-de-aniversario-50-anos-da-coerp/3345273?algoliaID=9c8da1994516efc0fdaa83927d8cd4aa"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ display: 'block', width: '100%' }}
+        >
+          <BackgroundImageWrapper src={heroBackground} alt="COERP 50 anos" style={{ cursor: 'pointer' }} />
+        </a>
+      </ImageArea>
     </HeroContainer>
   );
 }

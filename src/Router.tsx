@@ -8,11 +8,14 @@ import { Ministerios } from "./pages/guaianases/Ministerios";
 
 import { TelaInicial } from "./pages/TelaInicial";
 
-import { HomeF } from "./pages/ferraz/Home";
-import { CultosF } from "./pages/ferraz/Cultos";
-import { MinisteriosF } from "./pages/ferraz/Ministerios";
-import { ProgramacaoF } from "./pages/ferraz/Programacao";
-import { SobreNosF } from "./pages/ferraz/SobreNos";
+
+
+import { HomeF } from './pages/ferraz/Home';
+import { ProgramacaoF } from './pages/ferraz/Programacao';
+import { CultosF } from './pages/ferraz/Cultos';
+import { SobreNosF } from './pages/ferraz/SobreNos';
+import { MinisteriosF } from './pages/ferraz/Ministerios';
+import AdminDatoPage from './pages/admin/Dato';
 
 export function Router(){
     return(
@@ -31,6 +34,8 @@ export function Router(){
         <Route index path="/ferraz/cultos" element={<CultosF />} />
         <Route index path="/ferraz/sobre" element={<SobreNosF />} />
         <Route index path="/ferraz/ministerios" element={<MinisteriosF />} />
+
+        <Route path="/admin/Dato" element={<AdminDatoPage />} />
     </Routes>
     )
 }

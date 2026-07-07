@@ -15,7 +15,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ unitName }: HeroSectionProps) {
   const [cartaz, setCartaz] = useState<string>('');
-
+  console.log('unitName:', unitName);
   useEffect(() => {
     let isMounted = true;
 

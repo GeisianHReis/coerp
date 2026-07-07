@@ -1,12 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   HeroContainer,
   ImageArea,
   BackgroundImageWrapper,
 } from './styles';
 
-
-import heroBackground from '../../assets/50anos.png';
+import heroBackground from '../../assets/Ativo 5.webp';
 import client from '../../cms/Dato/client';
 import gql from 'graphql-tag';
 
@@ -16,25 +15,36 @@ interface HeroSectionProps {
 
 export function HeroSection({ unitName }: HeroSectionProps) {
   const [cartaz, setCartaz] = useState<string>('');
-  client.query({
-    query: gql`
-          query {
-            cartazhomeferraz {
-                cartaz {
-                url
-                }
+
+  useEffect(() => {
+    let isMounted = true;
+
+    client.query({
+      query: gql`
+        query {
+          cartazhomeferraz {
+            cartaz {
+              url
             }
+          }
         }
-        `
-  }).then((res) => {
-    const cartazData = res.data.cartazhomeferraz.cartaz;
-    setCartaz(cartazData.url);
-    console.log('Dados do cartaz:', cartazData);
-      console.log('URL do cartaz:', unitName);
-      console.log('URL do cartaz:', cartaz);
-  }).catch((error) => {
-    console.error('Erro ao buscar dados do cartaz:', error);
-  });
+      `,
+    })
+      .then((res) => {
+        if (!isMounted) return;
+
+        const cartazData = res.data.cartazhomeferraz.cartaz;
+        setCartaz(cartazData?.url ?? '');
+      })
+      .catch((error) => {
+        console.error('Erro ao buscar dados do cartaz:', error);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   return (
     <HeroContainer>
       <ImageArea>
@@ -44,7 +54,7 @@ export function HeroSection({ unitName }: HeroSectionProps) {
           rel="noopener noreferrer"
           style={{ display: 'block', width: '100%' }}
         >
-          <BackgroundImageWrapper src={heroBackground} alt="COERP 50 anos" style={{ cursor: 'pointer' }} />
+          <BackgroundImageWrapper src={cartaz || heroBackground} alt="COERP 50 anos" style={{ cursor: 'pointer' }} />
         </a>
       </ImageArea>
     </HeroContainer>
